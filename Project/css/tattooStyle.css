@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body{
+    width: 1024px;
+    height: 2641px;
+    background-color: #ffffff;
+}
+
+#tattooNav {
+    height: 76px;
+    margin: 0px;
+}
+
+.navbar-brand{
+padding: 22.8px 0px 14.1px 61.2px;
+}
+
+.Tatuatori {
+    padding: 35px 0px 26px 385px; 
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: right;
+    color: #6c7178;
+  }
+
+.Tattoo-Design {
+  padding: 35px 0px 26px 16px; 
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: right;
+  color: #6c7178;
+}  
+
+.Blog {
+    padding: 35px 0px 26px 18px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: right;
+    color: #6c7178;
+  }
+
+.Contattaci {
+  float: left;
+  padding: 32px 19px 24px 72px;  
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: right;
+  color: #6c7178;
+}
+
+#Tattoo-Art-1 {
+    padding: 0px;
+    position: relative;
+  }
+
+.Tattoo-Image-1{
+    position: absolute;
+    top:0;
+}
+.Text-1-Tattoo-Art-1 {
+  padding: 128.9px 677.9px 0px 45.1px;
+  font-family: Montserrat;
+  font-size: 15.8px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.Text-2-Tattoo-Art-1 {
+  padding: 0px 479.9px 128.5px 45.1px;
+  font-family: Montserrat;
+  font-size: 51.8px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.Red {
+  color: #d80e47;
+}
+
+#bodyMenu {
+padding-left: 57px;
+padding-right: 57px;
+padding-top: 33.3px;
+}
+
+.text-1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700 !important;
+  font-size: 23px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #d80e47;
+}
+
+.text-2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700 !important;
+  color: #d80e47;
+  font-size: 14px;
+}
+
+.text-3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700 !important;
+  color: #d80e47;
+  font-size: 18px;
+}
+
+.lazy {
+  padding: 0;
+  margin-top: 18px;
+}
+
+#Rectangle {
+  width: 218.9px;
+  height: 161.3px;
+  opacity: 0.24;
+  border-radius: 8.6px;
+  background-color: #383838;
+}
+
+#Tattoo-Art-2 {
+  padding-top: 26px; 
+  padding-bottom: 53px;
+  position: relative;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.img-Tattoo-Art-2 {
+  border-radius: 18px;
+}
+
+.Text-1-Tattoo-Art-2 {
+  padding: 144px 445px 150px 28px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  position: absolute;
+  top:0;
+}
+
+.Red-2 {
+  font-family: Montserrat;
+  font-size: 27.5px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #d80e47;
+}
+
+.row{
+  margin-top: 18px; 
+}
+.col {
+  padding: 0;
+}
+
+#space-text1{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700 !important;
+  color: #6c7178;
+  font-size: 12px;
+  margin-top: 12.4px;
+  margin-bottom: 0; 
+  padding-left: 5.5px;
+}
+
+#space-text2{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700 !important;
+  color: #d80e47;
+  margin-bottom: 0; 
+  font-size: 12px;
+  padding-left: 5.5px;
+}
+
+#space-text3{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700 !important;
+  color: #a8a8a8;
+  font-size: 12px;
+  padding-left: 5.5px;
+}
+
+#square{
+  border-radius: 8.6px;
+}
