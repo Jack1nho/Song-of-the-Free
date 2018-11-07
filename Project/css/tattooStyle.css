@@ -2,8 +2,8 @@
 
 body{
     width: 1024px;
-    height: 2641px;
     background-color: #ffffff;
+    font-family: Montserrat;
 }
 
 #tattooNav {
@@ -17,7 +17,6 @@ padding: 22.8px 0px 14.1px 61.2px;
 
 .Tatuatori {
     padding: 35px 0px 26px 385px; 
-    font-family: Montserrat;
     font-size: 12px;
     font-weight: normal;
     font-style: normal;
@@ -30,7 +29,6 @@ padding: 22.8px 0px 14.1px 61.2px;
 
 .Tattoo-Design {
   padding: 35px 0px 26px 16px; 
-  font-family: Montserrat;
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
@@ -43,7 +41,6 @@ padding: 22.8px 0px 14.1px 61.2px;
 
 .Blog {
     padding: 35px 0px 26px 18px;
-    font-family: Montserrat;
     font-size: 12px;
     font-weight: normal;
     font-style: normal;
@@ -57,7 +54,6 @@ padding: 22.8px 0px 14.1px 61.2px;
 .Contattaci {
   float: left;
   padding: 32px 19px 24px 72px;  
-  font-family: Montserrat;
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
@@ -79,7 +75,6 @@ padding: 22.8px 0px 14.1px 61.2px;
 }
 .Text-1-Tattoo-Art-1 {
   padding: 128.9px 677.9px 0px 45.1px;
-  font-family: Montserrat;
   font-size: 15.8px;
   font-weight: normal;
   font-style: normal;
@@ -91,7 +86,6 @@ padding: 22.8px 0px 14.1px 61.2px;
 
 .Text-2-Tattoo-Art-1 {
   padding: 0px 479.9px 128.5px 45.1px;
-  font-family: Montserrat;
   font-size: 51.8px;
   font-weight: bold;
   font-style: normal;
@@ -105,14 +99,13 @@ padding: 22.8px 0px 14.1px 61.2px;
   color: #d80e47;
 }
 
-#bodyMenu {
+#bodyMenu-1 {
 padding-left: 57px;
 padding-right: 57px;
 padding-top: 33.3px;
 }
 
 .text-1 {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 700 !important;
   font-size: 23px;
   font-weight: normal;
@@ -125,17 +118,29 @@ padding-top: 33.3px;
 }
 
 .text-2 {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 700 !important;
   color: #d80e47;
   font-size: 14px;
 }
 
 .text-3 {
-  font-family: 'Montserrat', sans-serif;
   font-weight: 700 !important;
   color: #d80e47;
   font-size: 18px;
+}
+
+.text-4 {
+  font-weight: 700 !important;
+  color: black;
+  font-size: 24px;
+  margin: 0;
+}
+
+.text-5 {
+  font-weight: 700 !important;
+  color: #d80e47;
+  font-size: 28px;
+  margin-bottom: 44px;
 }
 
 .lazy {
@@ -165,7 +170,6 @@ padding-top: 33.3px;
 
 .Text-1-Tattoo-Art-2 {
   padding: 144px 445px 150px 28px;
-  font-family: Montserrat;
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
@@ -178,7 +182,6 @@ padding-top: 33.3px;
 }
 
 .Red-2 {
-  font-family: Montserrat;
   font-size: 27.5px;
   font-weight: bold;
   font-style: normal;
@@ -188,15 +191,14 @@ padding-top: 33.3px;
   color: #d80e47;
 }
 
-.row{
+.row {
   margin-top: 18px; 
 }
 .col {
   padding: 0;
 }
 
-#space-text1{
-  font-family: 'Montserrat', sans-serif;
+#space-text1 {
   font-weight: 700 !important;
   color: #6c7178;
   font-size: 12px;
@@ -205,8 +207,7 @@ padding-top: 33.3px;
   padding-left: 5.5px;
 }
 
-#space-text2{
-  font-family: 'Montserrat', sans-serif;
+#space-text2 {
   font-weight: 700 !important;
   color: #d80e47;
   margin-bottom: 0; 
@@ -214,14 +215,100 @@ padding-top: 33.3px;
   padding-left: 5.5px;
 }
 
-#space-text3{
-  font-family: 'Montserrat', sans-serif;
+#space-text3 {
   font-weight: 700 !important;
   color: #a8a8a8;
   font-size: 12px;
   padding-left: 5.5px;
 }
 
-#square{
+#bodyMenu-2 {
+  padding: 0px;
+  margin-top: 58px;
+  width: 1024px;
+  height: 346px;
+}
+
+#bodyMenu-3 {
+  margin-top: 64px;
+}
+
+#last-img {
+  border-top-left-radius: 8.6px;
+  border-bottom-left-radius: 8.6px;
+
+}
+
+#last-section {
+  padding-left: 59px;
+}
+
+.number {
+  font-size: 36px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #d80e47;
+}
+
+.list {
+  padding-left: 19px;
+  margin-bottom: 41px;
+}
+
+#bodyMenu-3 {
+  padding: 0;
+}
+
+#last-text {
+  color: #333333;
+  font-size: 12px;
+  text-align: center;
+  padding: 0px 131px 39px 131px;
+  margin:0;
+}
+
+#square {
   border-radius: 8.6px;
 }
+
+.footer {
+  background-color: #2f3339;
+  width: 1024px;
+  height: 310px;
+  padding: 0;
+}
+
+.footer-2 {
+  background-color: #22262c; 
+  height: 100px;
+  padding: 0;
+  position: relative;
+}
+
+.Copyright {
+  position: absolute;
+  color: #ffffff;
+  font-size: 10px;
+  top: 50%;
+  left: 16%;
+  transform: translate(-50%,-50%);
+  }
+
+  .footer-col {
+    margin: 5%;
+  }
+
+  .text-footer-1 {
+    color: #ffffff;
+    margin-top: 30px;
+    font-size: 12px;
+  }
+  
+  .text-footer-2 {
+    color: #ffffff;
+    margin-top: 30px;
+    font-size: 12px;
+  }
