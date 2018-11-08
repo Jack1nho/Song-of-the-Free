@@ -69,11 +69,11 @@ padding: 22.8px 0px 14.1px 61.2px;
     position: relative;
   }
 
-.Tattoo-Image-1{
+#Tattoo-Image-1{
     position: absolute;
     top:0;
 }
-.Text-1-Tattoo-Art-1 {
+#Text-1-Tattoo-Art-1 {
   padding: 128.9px 677.9px 0px 45.1px;
   font-size: 15.8px;
   font-weight: normal;
@@ -84,7 +84,7 @@ padding: 22.8px 0px 14.1px 61.2px;
   color: #ffffff;
 }
 
-.Text-2-Tattoo-Art-1 {
+#Text-2-Tattoo-Art-1 {
   padding: 0px 479.9px 128.5px 45.1px;
   font-size: 51.8px;
   font-weight: bold;
@@ -95,7 +95,7 @@ padding: 22.8px 0px 14.1px 61.2px;
   color: #ffffff;
 }
 
-.Red {
+#Red {
   color: #d80e47;
 }
 
@@ -105,7 +105,7 @@ padding-right: 57px;
 padding-top: 33.3px;
 }
 
-.text-1 {
+#text-1 {
   font-weight: 700 !important;
   font-size: 23px;
   font-weight: normal;
@@ -117,26 +117,26 @@ padding-top: 33.3px;
   color: #d80e47;
 }
 
-.text-2 {
+#text-2 {
   font-weight: 700 !important;
   color: #d80e47;
   font-size: 14px;
 }
 
-.text-3 {
+#text-3 {
   font-weight: 700 !important;
   color: #d80e47;
   font-size: 18px;
 }
 
-.text-4 {
+#text-4 {
   font-weight: 700 !important;
   color: black;
   font-size: 24px;
   margin: 0;
 }
 
-.text-5 {
+#text-5 {
   font-weight: 700 !important;
   color: #d80e47;
   font-size: 28px;
@@ -164,11 +164,11 @@ padding-top: 33.3px;
   padding-right: 0px;
 }
 
-.img-Tattoo-Art-2 {
+#img-Tattoo-Art-2 {
   border-radius: 18px;
 }
 
-.Text-1-Tattoo-Art-2 {
+#Text-1-Tattoo-Art-2 {
   padding: 144px 445px 150px 28px;
   font-size: 20px;
   font-weight: 500;
@@ -181,7 +181,7 @@ padding-top: 33.3px;
   top:0;
 }
 
-.Red-2 {
+#Red-2 {
   font-size: 27.5px;
   font-weight: bold;
   font-style: normal;
@@ -193,9 +193,11 @@ padding-top: 33.3px;
 
 .row {
   margin-top: 18px; 
+  width: 910px;
 }
 .col {
-  padding: 0;
+
+  width: 182px;
 }
 
 #space-text1 {
@@ -243,7 +245,7 @@ padding-top: 33.3px;
   padding-left: 59px;
 }
 
-.number {
+#number {
   font-size: 36px;
   font-weight: normal;
   font-style: normal;
@@ -253,7 +255,7 @@ padding-top: 33.3px;
   color: #d80e47;
 }
 
-.list {
+#list {
   padding-left: 19px;
   margin-bottom: 41px;
 }
@@ -288,7 +290,7 @@ padding-top: 33.3px;
   position: relative;
 }
 
-.Copyright {
+#Copyright {
   position: absolute;
   color: #ffffff;
   font-size: 10px;
@@ -297,18 +299,18 @@ padding-top: 33.3px;
   transform: translate(-50%,-50%);
   }
 
-  .footer-col {
-    margin: 5%;
-  }
+.footer-col {
+  margin: 5%;
+}
 
-  .text-footer-1 {
-    color: #ffffff;
-    margin-top: 30px;
-    font-size: 12px;
-  }
-  
-  .text-footer-2 {
-    color: #ffffff;
-    margin-top: 30px;
-    font-size: 12px;
-  }
+#text-footer-1 {
+  color: #ffffff;
+  margin-top: 30px;
+  font-size: 12px;
+}
+
+#text-footer-2 {
+  color: #ffffff;
+  margin-top: 30px;
+  font-size: 12px;
+}
