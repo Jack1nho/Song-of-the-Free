@@ -1,8 +1,39 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
+@media (max-width: 768px) {
+  .navbar {
+      display: none;   
+  }
+  .nav-res {
+      visibility: visible;
+      background-color: #2f3339;
+      min-height: 46px;
+  }
+
+  .img-res {
+      width: 180px;
+      margin:0;
+      padding:0;
+     
+  }
+
+  .botton-res {
+      float: left;
+      padding-left: 40px;
+      padding-top: 7px;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-res {
+    display: none;
+    background-color: #2f3339;
+  }  
+}
+
 body{
-    background-color: #ffffff;
-    font-family: Montserrat;
+  background-color: #ffffff;
+  font-family: Montserrat;
 }
 
 .wrapper {
@@ -17,8 +48,8 @@ body{
 }
 
 .navbar {
-    height: 76px;
-    padding: 0px;
+  min-height: 76px;
+  padding: 0px;
 }
 
 .navbar-brand {
@@ -26,20 +57,16 @@ body{
 }
 
 .Tatuatori {
-    padding: 0px;
-    margin: 35px 16px 26px 403.2px;
-    font-size: 12px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 0.5px;
-    color: #6c7178;
-  }
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  color: #6c7178;
+}
 
 .Tattoo-Design {
-  padding: 0px;
-  margin: 35px 18px 26px 0px;
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
@@ -49,21 +76,17 @@ body{
   color: #6c7178;
 }  
 
-.Blog {
-    padding: 0px;
-    margin: 35px 72px 26px 0px;
-    font-size: 12px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 0.5px;
-    color: #6c7178;
-  }
+.Blog {   
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  color: #6c7178;
+}
 
-.Contattaci {
-  padding: 0px;
-  margin: 32px 0px 24px 72px;   
+.Contattaci {    
   font-size: 12px;
   font-weight: normal;
   font-style: normal;
@@ -74,17 +97,24 @@ body{
 }
 
 .Tattoo-Art-1 {
-    padding: 0px;
-    position: relative;
-    margin-bottom: 33.3px;
-  }
+  padding: 0px;
+  position: relative;
+  margin-bottom: 33.3px;
+  margin-top: auto;
+}
+
+.Image-1 {
+  width:100%;
+}
 
 .Tattoo-Image-1{
-    position: absolute;
-    top:0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 40px;
 }
+
 .Text-1-Tattoo-Art-1 {
-  padding: 128.9px 677.9px 0px 45.1px;
   font-size: 15.8px;
   font-weight: normal;
   font-style: normal;
@@ -96,7 +126,6 @@ body{
 }
 
 .Text-2-Tattoo-Art-1 {
-  padding: 0px 479.9px 128.5px 45.1px;
   font-size: 51.8px;
   font-weight: bold;
   font-style: normal;
@@ -152,17 +181,18 @@ body{
 .lazy {
   padding: 0;
   margin-top: 18px;
+  width: calc(100% + 20px);
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
-.slick-slide {
-  outline: none;
-}
 .Rectangle {
   width: 218.9px;
   height: 161.3px;
   opacity: 0.24;
   border-radius: 8.6px;
   background-color: #383838;
+  width: 100%;
 }
 
 .Tattoo-Art-2 {
@@ -175,10 +205,14 @@ body{
 
 .img-Tattoo-Art-2 {
   border-radius: 18px;
+  width: 100%;  
 }
 
 .Text-1-Tattoo-Art-2 {
-  padding: 144px 445px 150px 28px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 40px;
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
@@ -186,8 +220,6 @@ body{
   line-height: normal;
   letter-spacing: normal;
   color: #ffffff;
-  position: absolute;
-  top:0;
 }
 
 .Red-2 {
@@ -199,8 +231,6 @@ body{
   letter-spacing: normal;
   color: #d80e47;
 }
-
-
 
 .space-text1 {
   font-weight: 700 !important;
@@ -236,7 +266,6 @@ body{
 }
 
 .last-section {
-  padding: 0;
   margin-top: 58px;
 }
 
@@ -278,11 +307,12 @@ body{
 
 .square {
   border-radius: 8.6px;
+  width: 100%;
 }
 
 .footer {
   background-color: #2f3339;
-  height: 310px;
+  min-height: 310px;
   padding: 0;
 }
 
