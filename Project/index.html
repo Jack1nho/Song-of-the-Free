@@ -25,48 +25,51 @@
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active p-1">
-              <a class="nav-link Tatuatori" href="#">Tatuatori <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#">Tatuatori <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item p-1">
-              <a class="nav-link Tattoo-Design" href="#">Tattoo Design</a>
+              <a class="nav-link" href="#">Tattoo Design</a>
             </li>
             <li class="nav-item p-1 pr-5">
-              <a class="nav-link Blog" href="#">Blog</a>
+              <a class="nav-link" href="#">Blog</a>
             </li>
             <li class="nav-item pr-4">
-                <a class="nav-link Contattaci" href="#">Contattaci 🦄</a>
+                <a class="nav-link" href="#">Contattaci 🦄</a>
             </li>
           </ul>
         </div>
     </nav>
 
-    <nav class="nav-res text-center">
+    <nav class="nav-res">
         <div id="myNav" class="overlay">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <div class="overlay-content">
                     <a href="#">Tatuatori</a>
                     <a href="#">Tattoo Design</a>
-                    <a href="#">Blog</a>
+                    <a href="#">Blog<br><br></a>
                     <a href="#">Contattaci 🦄</a>
                 </div>
         </div>
-        <div class="botton-res" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-bars fa-1x" style="color:white;" aria-hidden="true"></i></div>
-        
-        <a class="navbar-brand-res" href="#">
-                <img class="img-res mx-auto" src="images/lama-logo.png">
-        </a>
+        <div class="d-flex justify-content-between">
+            <div class="botton-res p-3" onclick="openNav()"><i class="fa fa-bars fa-1x" style="color:white;" aria-hidden="true"></i></div>
+            
+            <a class="navbar-brand-res" href="#">
+                    <img class="img-res mx-auto p-1" src="images/lama-logo.png">
+            </a>
+            <div class="p-3"></div>
+    </div>
     </nav>
 
-    <div class="container-fluid Tattoo-Art-1">
-            <img src="https://via.placeholder.com/1024x388/000000" class="img-fluid Image-1">
-            <div class="Tattoo-Image-1">
-                <h1 class="Text-1-Tattoo-Art-1">TROVA IL TUO TATUAGGIO PERFETTO</h1>
-                <h1 class="Text-2-Tattoo-Art-1">FLASH IT, <span class="Red">BOOK</span> IT</h1>
+    <div class="jumbotron jumbotron-fluid Jumbotron-1">
+            <div class="container">
+                <h1 class="Text-1-Jumbotron-1">TROVA IL TUO TATUAGGIO PERFETTO</h1>
+                <h1 class="Text-2-Jumbotron-1">FLASH IT, <span class="Red">BOOK</span> IT</h1>
             </div>    
     </div>
+    
 
     <div class="container-wrapper">
-        <h1 class="text-left text-1">Migliori tatuatori di Milano</h1>
+        <h1 class="text-1">Migliori tatuatori di Milano</h1>
 
         <div class="container-fluid lazy">
             <div><img data-lazy="https://via.placeholder.com/219x161.jpg/383838" class="img-fluid Rectangle"></div>
@@ -79,12 +82,11 @@
 
         <a class="text-2" href="#">Vedi tutti i migliori tatuatori ></a>
 
-        <div class="container-fluid Tattoo-Art-2">
-            <img src="https://via.placeholder.com/910x300.jpg/383838" class="img-fluid img-Tattoo-Art-2">
-            <h2 class="Text-1-Tattoo-Art-2">Una selezione di artisti verificati per<br><span class="Red-2">QUALITÀ E ORIGINALITÀ.</span></h2>
+        <div class="jumbotron Jumbotron-2">
+            <h2 class="Text-Jumbotron-2">Una selezione di artisti verificati per<br><span class="Red-2">QUALITÀ E ORIGINALITÀ.</span></h2>
         </div>
 
-        <h3 class="text-left text-3">Tutti i tattoo design</h3>
+        <h3 class="text-3">Tutti i tattoo design</h3>
         
         <div class="row row-grid">
             <div class="col">
@@ -194,24 +196,24 @@
         <a class="text-2" href="#">Vedi tutti i tatuaggi ></a>
     
         <div class="row last-section">
-            <div class="col-xs-12 col-sm-6 last-col">
-            <h2 class="text-left text-4">I migliori tatuatori della tua città</h2>
-            <h2 class="text-left text-5">A PORTATA DI CLICK.</h2>
+            <div class="col-md-6 order-2 order-md-1">
+            <h2 class="text-4">I migliori tatuatori della tua città</h2>
+            <h2 class="text-5">A PORTATA DI CLICK.</h2>
                 <div class="list">
-                    <h3 class="text-left list-number"><span class="number">&thinsp;1.&nbsp;</span><strong>Scegli</strong> il tuo artista preferito</h3>
-                    <h3 class="text-left list-number"><span class="number">2.&nbsp;</span><strong>Visualizza</strong> i migliori design disponibili</h3>
-                    <h3 class="text-left list-number"><span class="number">3.&nbsp;</span><strong>Prenota</strong> il tattoo and get inked!</h3>
+                    <h3 class="list-number"><span class="number">&thinsp;1.&nbsp;</span><strong>Scegli</strong> il tuo artista preferito</h3>
+                    <h3 class="list-number"><span class="number">2.&nbsp;</span><strong>Visualizza</strong> i migliori design disponibili</h3>
+                    <h3 class="list-number"><span class="number">3.&nbsp;</span><strong>Prenota</strong> il tattoo and get inked!</h3>
                 </div>
                 <a class="text-2 text-tattoer" href="#">Vedi tutti i tatuatori ></a>
             </div>
-            <div class="col-xs-12 col-sm-6">    
-                <img class="last-img" src="https://via.placeholder.com/502x346/000000">
+            <div class="col-md-6 order-1 order-md-2">    
+                <img class="last-img img-fluid" src="https://via.placeholder.com/502x346/000000">
             </div>            
         </div>
                 
 
-    <div class="container-fluid bodyMenu-2 text-center">
-        <h4 class="last-text ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+    <div class="container-fluid big-text text-center">
+        <h4 class="last-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
     </div>
     </div>
 
@@ -236,7 +238,7 @@
             </div>
         </div>       
     </div>
-    <div class="align-middle footer-2 container-fluid">
+    <div class=" footer-2 container-fluid">
             <p id="Copyright">Copyright TattooLama © 2018. Tutti i Diritti Riservati</p>
     </div>
   </div>    

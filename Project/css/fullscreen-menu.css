@@ -13,10 +13,10 @@
 
 .overlay-content {
     position: absolute;
-    left: 0px;
+    left: 35px;
     right: 0px;
     margin: 0 auto;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
 }
 

@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  .container-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .navbar {
       display: none;   
   }
@@ -13,29 +18,46 @@
   .img-res {
       width: 180px;
       margin:0;
-      padding:0;
-     
+      padding:0;   
   }
 
-  .botton-res {
-      float: left;
-      padding-left: 40px;
-      padding-top: 7px;
+  .botton-res {   
+      font-size:30px;
+      cursor:pointer;
+  }
+
+  .text-2 {
+    text-align: center;
+  }
+
+  .last-img {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: -20px;
   }
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .nav-res {
     display: none;
     background-color: #2f3339;
   }  
-}
 
-@media screen and (max-width: 768px) {
   .container-wrapper {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  .last-img {
+    border-top-left-radius: 8.6px;
+    border-bottom-left-radius: 8.6px;
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 895px) {
+ 
 }
 
 html {
@@ -68,84 +90,30 @@ body{
   margin-left: 61.2px;
 }
 
-.Tatuatori {
+.nav-link {
   font-size: 12px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
   letter-spacing: 0.5px;
   color: #6c7178;
 }
 
-.Tattoo-Design {
-  font-size: 12px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: 0.5px;
-  color: #6c7178;
-}  
-
-.Blog {   
-  font-size: 12px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: 0.5px;
-  color: #6c7178;
-}
-
-.Contattaci {    
-  font-size: 12px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: 0.5px;
-  color: #6c7178;
-}
-
-.Tattoo-Art-1 {
-  padding: 0px;
-  position: relative;
+.Jumbotron-1 {
   margin-bottom: 33.3px;
-  margin-top: auto;
+  background-image: url('https://via.placeholder.com/1024x388/000000');
+  background-size: cover;
+  background-position: center center;
 }
 
-.Image-1 {
-  width:100%;
-}
-
-.Tattoo-Image-1{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 40px;
-}
-
-.Text-1-Tattoo-Art-1 {
+.Text-1-Jumbotron-1 {
   font-size: 15.8px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #ffffff;
-  margin: 0;
+  
 }
 
-.Text-2-Tattoo-Art-1 {
+.Text-2-Jumbotron-1 {
   font-size: 51.8px;
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #ffffff;
-  margin: 0;
+  
 }
 
 .Red {
@@ -155,12 +123,6 @@ body{
 .text-1 {
   font-weight: 700 !important;
   font-size: 23px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
   color: #d80e47;
 }
 
@@ -207,40 +169,23 @@ body{
   width: 100%;
 }
 
-.Tattoo-Art-2 {
-  padding-top: 26px; 
-  padding-bottom: 53px;
-  position: relative;
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-.img-Tattoo-Art-2 {
+.Jumbotron-2 {
+  margin-top: 26px; 
+  margin-bottom: 53px;
+  background-image: url('https://via.placeholder.com/910x300.jpg/383838');
+  background-size: cover;
+  background-position: center center;
   border-radius: 18px;
-  width: 100%;  
 }
 
-.Text-1-Tattoo-Art-2 {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 40px;
+.Text-Jumbotron-2 {
   font-size: 20px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #ffffff;
 }
 
 .Red-2 {
   font-size: 27.5px;
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #d80e47;
 }
 
@@ -268,16 +213,11 @@ body{
   padding-left: 5.5px;
 }
 
-.bodyMenu-2 {
+.big-text {
   margin-top: 64px;
+  margin-bottom: 39px;
 }
 
-.last-img {
-  border-top-left-radius: 8.6px;
-  border-bottom-left-radius: 8.6px;
-  max-width: 502px;
-  width: 100%;
-}
 
 .last-section {
   margin-top: 58px;
@@ -286,6 +226,7 @@ body{
 .list-number {
   font-size: 16px;
 }
+
 .number {
   font-size: 36px;
   font-weight: bold;
@@ -301,10 +242,6 @@ body{
   margin-bottom: 41px;
 }
 
-.last-col{
-  position: relative;
-}
-
 .text-tattoer {
   position: absolute;
   bottom: 0px;
@@ -313,7 +250,6 @@ body{
 .last-text {
   color: #333333;
   font-size: 12px;
-  margin-bottom: 39px;
   line-height: 200%;
 }
 
