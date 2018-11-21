@@ -1,29 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 @media screen and (max-width: 768px) {
-  .container-wrapper {
-    padding-left: 1rem;
+  .container-wrapper > * {
+    padding-left: 1rem ;
     padding-right: 1rem;
   }
 
   .navbar {
-      display: none;   
+    display: none;   
   }
   .nav-res {
-      visibility: visible;
-      background-color: #2f3339;
-      min-height: 46px;
+    visibility: visible;
+    background-color: #2f3339;
+    min-height: 46px;
   }
 
   .img-res {
-      width: 180px;
-      margin:0;
-      padding:0;   
+    width: 180px;
+    margin:0;
+    padding:0;   
   }
 
   .botton-res {   
-      font-size:30px;
-      cursor:pointer;
+    font-size: 30px;
+    cursor: pointer;
   }
 
   .text-2 {
@@ -34,7 +34,19 @@
     width: 100%;
     margin-bottom: 30px;
     margin-top: -20px;
+    max-height: 346px;
   }
+  
+  .last-section .col-last-image {
+    padding: 0;
+  }
+
+  .Jumbotron-2 {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    border-radius: 0px;
+  }
+  
 }
 
 @media screen and (min-width: 768px) {
@@ -54,10 +66,10 @@
     width: 100%;
   }
 
-}
+  .Jumbotron-2 {
+    border-radius: 18px;
+  }
 
-@media screen and (max-width: 895px) {
- 
 }
 
 html {
@@ -175,7 +187,6 @@ body{
   background-image: url('https://via.placeholder.com/910x300.jpg/383838');
   background-size: cover;
   background-position: center center;
-  border-radius: 18px;
 }
 
 .Text-Jumbotron-2 {
@@ -218,7 +229,6 @@ body{
   margin-bottom: 39px;
 }
 
-
 .last-section {
   margin-top: 58px;
 }
@@ -247,7 +257,7 @@ body{
   bottom: 0px;
 }
 
-.last-text {
+.normal-text {
   color: #333333;
   font-size: 12px;
   line-height: 200%;
