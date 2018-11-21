@@ -64,6 +64,7 @@
     border-top-left-radius: 8.6px;
     border-bottom-left-radius: 8.6px;
     width: 100%;
+    box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.16), 0 8px 16px 0 rgba(0, 0, 0, 0.24);
   }
 
   .Jumbotron-2 {
@@ -263,6 +264,7 @@ body{
 .square {
   border-radius: 8.6px;
   width: 100%;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
 .footer {
