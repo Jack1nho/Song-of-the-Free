@@ -200,24 +200,21 @@ body{
   color: #d80e47;
 }
 
-.space-text1 {
+.textNome {
   font-weight: 700 !important;
   color: #6c7178;
   font-size: 12px;
-  margin-top: 12.4px;
-  margin-bottom: 0; 
   padding-left: 5.5px;
 }
 
-.space-text2 {
+.textArtista {
   font-weight: 700 !important;
   color: #d80e47;
-  margin-bottom: 0; 
   font-size: 12px;
   padding-left: 5.5px;
 }
 
-.space-text3 {
+.textPrezzo {
   font-weight: 700 !important;
   color: #a8a8a8;
   font-size: 12px;
