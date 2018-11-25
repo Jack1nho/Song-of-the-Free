@@ -46,6 +46,10 @@
     margin-right: 0rem;
     border-radius: 0px;
   }
+
+  .list{
+    padding-left: 0px;
+  }
   
 }
 
@@ -246,7 +250,7 @@ body{
 }
 
 .list {
-  padding-left: 19px;
+  padding-left: 0px;
   margin-bottom: 41px;
 }
 
