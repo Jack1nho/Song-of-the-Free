@@ -1,0 +1,43 @@
+.footer {
+    background-color: #2f3339;
+    min-height: 310px;
+    padding: 0;
+  }
+  
+  .footer-2 {
+    background-color: #22262c; 
+    height: 100px;
+    padding: 0;
+    position: relative;
+  }
+  
+  #Copyright {
+    position: absolute;
+    color: #ffffff;
+    font-size: 10px;
+    top: 50%;
+    left: 7%;
+    transform: translate(0%,0%);
+    }
+  
+  .footer-col {
+    margin: 5%;
+  }
+  
+  .footer-row {
+    margin: 0;
+  }
+  
+  .text-footer-1 {
+    color: #ffffff;
+    margin-top: 30px;
+    font-size: 12px;
+    line-height: 150%;
+  }
+  
+  .text-footer-2 {
+    color: #ffffff;
+    margin-top: 30px;
+    font-size: 12px;
+  }
+  
