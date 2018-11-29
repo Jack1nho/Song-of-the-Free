@@ -72,7 +72,7 @@
 
             <div class="container-wrapper">
                 <div class="row main-row">
-                    <div class="col-3 p-0 sticky-menu position-relative">
+                    <div class="d-none d-md-block col-md-3 p-0 sticky-menu">
                         <nav class="side-menu">
                             <a href="#biografia"><span class="rect"></span>Biografia</a><br>
                             <a href="#tattoo_design"><span class="rect"></span>Tattoo Design</a><br>
@@ -82,14 +82,14 @@
                         <button type="button" class="btn bottone-consulenza m-3">Richiedi Consulenza</button>
                     </div>
 
-                    <div class="col-9 pl-5">
-                        <div class="row">
-                            <div class="col">
+                    <div class="col col-lg-9 pl-md-5">
+                        <div class="row row-artist">
+                            <div class="col-12 col-lg">
                                 <img src="https://via.placeholder.com/240x171" class="img-artist">
                             </div>
-                            <div class="col">
-                                <h1 class="nome m-0">GIANMAURIZIO</h1>
-                                <h1 class="cognome m-0">FERCIONI</h1>
+                            <div class="col-12 col-lg col-name">
+                                <h1 class="nome">GIANMAURIZIO</h1>
+                                <h1 class="cognome">FERCIONI</h1>
                                 <span class="badge badge-secondary top-artist"><i class="fas fa-star"></i>&nbsp;&nbsp;&nbsp;TOP ARTIST</span>
                             </div>   
                         </div>
@@ -185,7 +185,7 @@
                                     </div>
                             </div>
 
-                            <div class="my-4">
+                            <div class="my-4 impagination">
                                 <hr>
                                     <button class="disabled btn bottone-next btn-sm mx-2" type="button">Pagine precedente</button>
                                     <button class="btn bottone-next btn-sm mx-2" type="button">Prossima pagina</button>
@@ -195,36 +195,33 @@
                         <div class="portfolio" id="portfolio">
                                 <h2 class="text-3 my-4">Ultimi tattoo di Gianmaurizio Fercioni</h2>
                                 <div class="row row-grid">
-                                        <div class="col-6 col-sm-6 col-md-3 col-lg">
+                                        <div class="col-6 col-lg pb-3">
                                             <img id="myImg" class="square" src="https://via.placeholder.com/168x168.jpg/eae9e5"> 
                                                  
                                         </div>
-                                        <div class="col-6 col-sm-6 col-md-3 col-lg">
+                                        <div class="col-6 col-lg pb-sm-3">
                                             <img id="myImg" class="square" src="https://via.placeholder.com/168x168.jpg/eae9e5"> 
                                                 
                                         </div>
-                                        <div class="d-none d-md-block col-md-3 col-lg">
+                                        <div class="col-6 col-lg">
                                             <img id="myImg" class="square" src="https://via.placeholder.com/168x168.jpg/d7dbe0">
                                                 
                                         </div>
-                                        <div class="d-none d-md-block col-md-3 col-lg">
+                                        <div class="col-6 col-lg">
                                             <img id="myImg" class="square" src="https://via.placeholder.com/168x168.jpg/383838">
                                                 
                                         </div>
                                 </div>
-                                <div id="myModal" class="modal">
-                                        <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
-                                        <img class="modal-content" id="img01">
-                                </div> 
-
-                                <div class="jumbotron jumbotron-fluid Jumbotron-artista my-5 ">
-                                    <div class="row container-fluid">
-                                        <div class="col-10">
-                                            <h2 class="text-1-jumbotron-artista">Vuoi una consulenza da Gianmaurizio Fercioni?</h2> 
-                                            <h3 class="text-2-jumbotron-artista">Descrivi la tua idea di tattoo e Gianmaurizio Fercioni ti risponderà a breve!</h3> 
-                                        </div>
-                                        <div class="col-2">
-                                            <button type="button" class="btn bottone-consulenza-2 float-right">Richiedi Consulenza</button>
+                                <div class="jumbotron jumbotron-fluid Jumbotron-artista my-5">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-10">
+                                                <h2 class="text-1-jumbotron-artista">Vuoi una consulenza da Gianmaurizio Fercioni?</h2> 
+                                                <h3 class="text-2-jumbotron-artista">Descrivi la tua idea di tattoo e Gianmaurizio Fercioni ti risponderà a breve!</h3> 
+                                            </div>
+                                            <div class="col-12 col-lg-2">
+                                                <button type="button" class="btn bottone-consulenza-2 float-lg-right">Richiedi Consulenza</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>      

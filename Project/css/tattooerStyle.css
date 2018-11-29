@@ -1,3 +1,33 @@
+@media screen and (max-width: 768px) {
+  .row-artist {
+    text-align: center;
+  }
+
+  .col-name {
+    margin-top:20px;
+  }
+
+  .nome, .cognome {
+    font-size: 25.9px !important;
+  }
+
+  .top-artist, .text-back, .impagination, .text-2-jumbotron-artista {
+    display: none;
+  }
+
+  .bottone-consulenza-2 {
+    width: 100% !important;
+  }
+  
+  .Jumbotron-artista {
+    text-align: center;
+  }
+}
+
+.Jumbotron-1 {
+  min-height: 128px;
+}
+
 .text-back {
   font-size: 12px;
   letter-spacing: 0.5px;
@@ -83,6 +113,9 @@
   font-weight: bold;
   color: #000000;
   padding: 0;
+  position: relative;
+  top:-12px;
+  left: -2px;
 }
 
 .cognome {
@@ -90,6 +123,9 @@
   font-weight: bold;
   color: #d80e47;
   padding: 0;
+  position: relative;
+  top: -25px;
+  left: -5px;
 }
 
 .top-artist {
@@ -101,6 +137,8 @@
   font-weight: 300;
   color: #ffffff;
   border-radius: 0;
+  position: relative;
+  top: -4px;
 }
 
 .main-row {
