@@ -9,9 +9,10 @@
 
   .nome, .cognome {
     font-size: 25.9px !important;
+    margin-top: 10px;
   }
 
-  .top-artist, .text-back, .impagination, .text-2-jumbotron-artista {
+  .text-back, .impagination, .text-2-jumbotron-artista {
     display: none;
   }
 
@@ -22,7 +23,39 @@
   .Jumbotron-artista {
     text-align: center;
   }
+
+  .top-sticky-menu {
+    width: 100%;
+   
+    background-color:#ffffff;
+    visibility: visible;
+    border-bottom: 0.5px solid rgba(0,0,0,0.5);
+    position: fixed;
+    top: -59px;
+    display: block;
+    transition: top 0.3s;
+    z-index: 1;
+    padding-left: 7px;
+    padding-top: 19px;
+  }
+
+  .nav-link.sticky {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+  }
+
+  .nav-link.sticky:hover {
+    color: #d80e47;
+  }
 }
+
+@media screen and (min-width: 768px) { 
+  .top-sticky-menu {
+    display: none;
+  }
+} 
 
 .Jumbotron-1 {
   min-height: 128px;
@@ -36,16 +69,22 @@
   margin-bottom: 39px;
 }
 
+.main-row {
+  margin-top: 39px;
+}
+
+/*------SIDEMENU------*/
+
 .sticky-menu {
-  
+  position: fixed;
+  z-index: 1;
 }
 
 .side-menu {
   width: 256px;
   height: 346px;
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.25);
-  background-color: #ffffff;
-      
+  background-color: #ffffff;     
 }
 
 .side-menu a {
@@ -102,6 +141,7 @@
   font-weight: bold;
 }
 
+/*------TOPMENU ARTIST------*/
 
 .img-artist {
   border-radius: 12px;
@@ -141,9 +181,7 @@
   top: -4px;
 }
 
-.main-row {
-  margin-top: 39px;
-}
+/*------BOTTONE PAGINE GRID------*/
 
 .bottone-next {
   width: 150px;
@@ -181,20 +219,14 @@
   border-style: none;
 }
 
-.bottone-prev {
-  width: 150px;
-  height: 32px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14);
-  background-color: #d80e47;
-  border-style: none;
-  display:inline-block;
-  position:relative;
-  left: 205px;
-}
+/*------JUMBOTRON CONSULENZA------*/
 
 .Jumbotron-artista {
   background-color: #d80e47;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-1-jumbotron-artista {

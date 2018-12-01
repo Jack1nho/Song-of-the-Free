@@ -37,7 +37,8 @@
     position: absolute;
     top: 20px;
     right: 45px;
-    font-size: 60px;
+    font-size: 30px;
+    
 }
 
 @media screen and (max-height: 450px) {
