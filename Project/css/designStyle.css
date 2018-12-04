@@ -1,0 +1,105 @@
+@media screen and (max-width: 768px) {
+    .Jumbotron-1 {
+        display: none;
+    }
+
+    .bottone-richiesta {
+        width: 174.8px;
+        height: 40.3px;
+        border-radius: 15.1px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14);
+        background-color: #d80e47;
+        color: #ffffff;
+        font-family: Montserrat;
+        font-size:14px;
+        font-weight: bold;
+        border-style: none;
+    }
+
+    .bottone-richiesta:hover {
+        background-color: #ffffff;
+        color: #d80e47;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .div-prezzo {
+        height: 68.5px;
+        box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.1);
+        align-items: center;
+    }
+
+    .description {
+        line-height: 130% !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .bottone-richiesta {
+        width: 150px;
+        height: 32px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14);
+        background-color: #d80e47;
+        color: #ffffff;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: bold;
+        border-style: none;
+    }
+      
+    .bottone-richiesta:hover {
+        background-color: #ffffff;
+        color: #d80e47;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .div-prezzo {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .description br {
+        display: none;
+    }
+}
+
+.Text-2-Jumbotron-1 .Red {
+    padding-left: 220px;
+}
+
+.img-design {
+    border-radius: 8.4px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.24);
+}
+
+.description {
+    font-family: Montserrat;
+    font-size: 12px;
+    line-height: 90%;
+    color: #333333;
+}
+
+.grey {
+    color: #444444;
+}
+
+.img-artist {
+    border-radius: 6.9px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5), 0 2px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.card {
+    border-radius: 4px;
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.04), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    border-style: none;
+}
+
+.card-header {
+    border-style: none;
+    background-color: #ffffff;
+}

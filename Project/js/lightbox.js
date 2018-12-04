@@ -7,6 +7,7 @@ var img1 = document.getElementsByClassName("img1")[0];
 var img2 = document.getElementsByClassName("img2")[0];
 var img3 = document.getElementsByClassName("img3")[0];
 var img4 = document.getElementsByClassName("img4")[0];
+var img5 = document.getElementsByClassName("img5")[0];
 
 function well(id){
     modal.style.display = "block";
@@ -26,12 +27,14 @@ nextimg.onclick = function() {
     if(modalImg.src == img1.src) {modalImg.src =img2.src; return}
     if(modalImg.src == img2.src) {modalImg.src = img3.src; return}
     if(modalImg.src == img3.src) {modalImg.src = img4.src; return}
+    if(modalImg.src == img4.src) {modalImg.src = img5.src; return}
 }
 
 previmg.onclick = function() {
     if(modalImg.src == img2.src) {modalImg.src = img1.src; return}
     if(modalImg.src == img3.src) {modalImg.src = img2.src; return}
     if(modalImg.src == img4.src) {modalImg.src = img3.src; return}
+    if(modalImg.src == img5.src) {modalImg.src = img4.src; return}
 }
 
 window.onclick = function(event) {

@@ -36,5 +36,13 @@ $(document).ready(function(){
             // instead of a settings object
           ]
       });
+
+    $('.single-item').slick({
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 4
+    });
           
   });
+
+  
