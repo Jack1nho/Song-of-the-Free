@@ -18,8 +18,10 @@
     <link rel="stylesheet" type="text/css" href="css/tattooerStyle.css"/>
     <link rel="stylesheet" type="text/css" href="css/lightbox.css"/>
     <link rel="stylesheet" type="text/css" href="css/designStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="css/modalStyle.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
     integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 
   </head>
   <body data-spy="scroll" data-target="#top-sticky-menu">
@@ -101,7 +103,134 @@
                             
                             <div class="row div-prezzo mt-5">
                                 <div class="col-6 col-md-12"><h2 class="text-3 prezzo mt-2 ml-md-auto ml-3"><span class="grey">Prezzo: </span>€ 450,00</h2></div>
-                                <div class="col-6 col-md-12 container-fluid"><button type="button" class="btn bottone-richiesta mt-0">Invia richiesta</button></div>
+                                <div class="col-6 col-md-12 container-fluid"><button type="button" class="btn bottone-richiesta mt-0" id="bottone-richiesta" data-toggle="modal" data-target="#myModalEmail">Invia richiesta</button></div>
+                            
+                                    <!-- The Modal -->
+                                    <div class="modal fade" id="myModalGrazie">
+                                        <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <div class=" modal-grazie">
+                                                    <h1 class="grazie">Grazie!</h1>
+                                                    <h1 class="mid-text">Abbiamo ricevuto la tua richiesta</h1>
+                                                    <hr>
+                                                    <h2 class="little-text">Abbiamo inviato la tua richiesta di informazioni al tatuatore che hai scelto. 
+                                                        Al più presto ti risponderà per dirti se è possibile e quando potrai fare il tatuaggio!</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal fade" id="myModalWhatsApp">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <div class="modal-whatsapp">
+                                                    <h1 class="text-3">Prenota il tattoo</h1>
+                                                    <hr>
+                                                    <h2 class="little-text text-left">Invia una richiesta di prenotazione al tatuatore indicando il mese in cui vorresti essere 
+                                                        tatuato e la zona del corpo in cui vorresti tatuarti. L’artista, senza impegno, ti proporrà la data e l’orario 
+                                                        per l’appuntamento.</h2>
+                                                        <form class="my-4">
+                                                            <div class="form-row">
+                                                                <div class="form-group col-md-6">
+                                                                <label class="label" for="inputData">Seleziona la data</label>
+                                                                <input type="email" class="form-control data-form" id="inputData" placeholder="Email">
+                                                                </div>
+                                                                <div class="form-group col-md-6">
+                                                                <label class="label" for="inputOrario">Seleziona l'orario</label>
+                                                                <input type="password" class="form-control data-form" id="inputOrario" placeholder="Password">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="label" for="inputZone">Indica la zona in cui vorresti tatuarti:</label>
+                                                                <input type="text" class="form-control zone-form" id="inputZone" placeholder="Es. Avambraccio, Quadricipite, Spalla">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="label" for="areaInfo">Chiedi al tatuatore qualsiasi informazione! (opzionale)</label>
+                                                                <textarea class="form-control area-form" id="areaInfo" rows="3" placeholder="Es. Posso cambiare la dimensione?"></textarea>
+                                                            </div>
+
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                                <label class="custom-control-label" for="customCheck1">Accetto termini e condizioni del servizio</label>
+                                                            </div>
+                                                                <button type="submit" class="btn bottone-whatsapp mt-4">Contatta su Whatsapp</button>
+                                                        </form> 
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal fade" id="myModalEmail">
+                                        <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <!-- Modal body -->
+                                            <div class="modal-body">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <div class="modal-whatsapp">
+                                                    <h1 class="text-3">Prenota il tattoo</h1>
+                                                    <hr>
+                                                    <h2 class="little-text text-left">Invia una richiesta di prenotazione al tatuatore indicando il mese in cui vorresti essere 
+                                                        tatuato e la zona del corpo in cui vorresti tatuarti. L’artista, senza impegno, ti proporrà la data e l’orario 
+                                                        per l’appuntamento.</h2>
+                                                        <form class="my-4">
+
+                                                            <div class="form-group">
+                                                                <label class="label" for="inputNome">Nome:</label>
+                                                                <input type="text" class="form-control nome-form" id="inputNome" placeholder="Es. Mario">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="label" for="inputEmail">Email: </label>
+                                                                <input type="email" class="form-control email-form" id="inputEmail" placeholder="Es. mariorossi@example.com">
+                                                            </div>
+                                                            <div class="form-row">
+                                                                <div class="form-group col-md-6">
+                                                                <label class="label" for="inputData">Seleziona la data</label>
+                                                                <input type="email" class="form-control data-form" id="inputData" placeholder="Email">
+                                                                </div>
+                                                                <div class="form-group col-md-6">
+                                                                <label class="label" for="inputOrario">Seleziona l'orario</label>
+                                                                <input type="password" class="form-control data-form" id="inputOrario" placeholder="Password">
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="label" for="inputZone">Indica la zona in cui vorresti tatuarti:</label>
+                                                                <input type="text" class="form-control zone-form" id="inputZone" placeholder="Es. Avambraccio, Quadricipite, Spalla">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <label class="label" for="areaInfo">Chiedi al tatuatore qualsiasi informazione! (opzionale)</label>
+                                                                <textarea class="form-control area-form" id="areaInfo" rows="3" placeholder="Es. Posso cambiare la dimensione?"></textarea>
+                                                            </div>
+
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                                <label class="custom-control-label" for="customCheck1">Accetto termini e condizioni del servizio</label>
+                                                            </div>
+
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                                <label class="custom-control-label" for="customCheck2">Voglio iscrivermi alla newsletter di Tattoolama! (Opzionale)</label>
+                                                            </div>
+                                                                <button type="submit" class="btn bottone-whatsapp mt-4">Richiedi informazioni</button>
+                                                        </form> 
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+
+
                             </div>
                         </div>
                     </div>
@@ -196,11 +325,11 @@
                                 </div>
                                 
 
-                                <div id="myModal" class="modal">
+                                <div id="myLightbox" class="lightbox">
                                     <span class="closeX"><i class="fas fa-times"></i></span>
                                     <span class="next"><i class="fa fa-angle-right"></i></span>
                                     <span class="prev"><i class="fa fa-angle-left"></i></span>
-                                    <img class="modal-content" id="img01">
+                                    <img class="modal-content-lightbox" id="img01">
                                 </div>
                         </div>
                 </div>
@@ -283,6 +412,8 @@
                     <p id="Copyright">Copyright TattooLama © 2018. Tutti i Diritti Riservati</p>
             </div>
         </div> 
+
+        
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -299,6 +430,7 @@
     <script type="text/javascript" src="js/slidedown-menu.js"></script>
     <script type="text/javascript" src="js/lightbox.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtoeHsbl1-XHEoBmxGBfhQxStYjblpo74&callback=initMap"></script>
+    
 
   </body>
 </html>

@@ -71,6 +71,12 @@
     padding-left: 220px;
 }
 
+.grey {
+    color: #444444;
+}
+
+/*------TATTOO SECTION------*/
+
 .img-design {
     border-radius: 8.4px;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.24);
@@ -83,14 +89,14 @@
     color: #333333;
 }
 
-.grey {
-    color: #444444;
-}
+/*------ARTIST SECTION------*/
 
 .img-artist {
     border-radius: 6.9px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5), 0 2px 5px 0 rgba(0, 0, 0, 0.24);
 }
+
+/*------ACCORDION------*/
 
 .card {
     border-radius: 4px;
