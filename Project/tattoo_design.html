@@ -18,7 +18,8 @@
     <link rel="stylesheet" type="text/css" href="css/tattooerStyle.css"/>
     <link rel="stylesheet" type="text/css" href="css/lightbox.css"/>
     <link rel="stylesheet" type="text/css" href="css/designStyle.css"/>
-    <link rel="stylesheet" type="text/css" href="css/modalStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="css/modalStyle.css"/>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
     integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
@@ -103,7 +104,7 @@
                             
                             <div class="row div-prezzo mt-5">
                                 <div class="col-6 col-md-12"><h2 class="text-3 prezzo mt-2 ml-md-auto ml-3"><span class="grey">Prezzo: </span>€ 450,00</h2></div>
-                                <div class="col-6 col-md-12 container-fluid"><button type="button" class="btn bottone-richiesta mt-0" id="bottone-richiesta" data-toggle="modal" data-target="#myModalEmail">Invia richiesta</button></div>
+                                <div class="col-6 col-md-12 container-fluid"><button type="button" class="btn bottone-richiesta mt-0" id="bottone-richiesta" data-toggle="modal" data-target="#myModalWhatsApp">Invia richiesta</button></div>
                             
                                     <!-- The Modal -->
                                     <div class="modal fade" id="myModalGrazie">
@@ -138,13 +139,17 @@
                                                         per l’appuntamento.</h2>
                                                         <form class="my-4">
                                                             <div class="form-row">
-                                                                <div class="form-group col-md-6">
-                                                                <label class="label" for="inputData">Seleziona la data</label>
-                                                                <input type="email" class="form-control data-form" id="inputData" placeholder="Email">
+                                                                <div class="form-group col-sm-6">
+                                                                    <label class="label" for="inputData">Seleziona la data</label>
+                                                                    <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                                                                        <input class="form-control datetimepicker-input data-form" data-target="#datetimepicker4" data-toggle="datetimepicker" id="inputData" placeholder="Qualsiasi data"/>   
+                                                                    </div>
                                                                 </div>
                                                                 <div class="form-group col-md-6">
-                                                                <label class="label" for="inputOrario">Seleziona l'orario</label>
-                                                                <input type="password" class="form-control data-form" id="inputOrario" placeholder="Password">
+                                                                    <label class="label" for="inputOrario">Seleziona l'orario</label>
+                                                                    <div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+                                                                        <input type="text" class="form-control datetimepicker-input data-form" data-target="#datetimepicker3" data-toggle="datetimepicker" id="inputOrario" placeholder="Qualsiasi orario"/>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
@@ -193,13 +198,17 @@
                                                                 <input type="email" class="form-control email-form" id="inputEmail" placeholder="Es. mariorossi@example.com">
                                                             </div>
                                                             <div class="form-row">
-                                                                <div class="form-group col-md-6">
-                                                                <label class="label" for="inputData">Seleziona la data</label>
-                                                                <input type="email" class="form-control data-form" id="inputData" placeholder="Email">
+                                                                <div class="form-group col-sm-6">
+                                                                    <label class="label" for="inputData">Seleziona la data</label>
+                                                                    <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                                                                        <input class="form-control datetimepicker-input data-form" data-target="#datetimepicker4" data-toggle="datetimepicker" id="inputData" placeholder="Qualsiasi data"/>   
+                                                                    </div>
                                                                 </div>
                                                                 <div class="form-group col-md-6">
-                                                                <label class="label" for="inputOrario">Seleziona l'orario</label>
-                                                                <input type="password" class="form-control data-form" id="inputOrario" placeholder="Password">
+                                                                    <label class="label" for="inputOrario">Seleziona l'orario</label>
+                                                                    <div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+                                                                        <input type="text" class="form-control datetimepicker-input data-form" data-target="#datetimepicker3" data-toggle="datetimepicker" id="inputOrario" placeholder="Qualsiasi orario"/>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="form-group">
@@ -213,13 +222,13 @@
                                                             </div>
 
                                                             <div class="custom-control custom-checkbox">
-                                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                                <label class="custom-control-label" for="customCheck1">Accetto termini e condizioni del servizio</label>
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                                                <label class="custom-control-label" for="customCheck2">Accetto termini e condizioni del servizio</label>
                                                             </div>
 
                                                             <div class="custom-control custom-checkbox">
-                                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                                                <label class="custom-control-label" for="customCheck2">Voglio iscrivermi alla newsletter di Tattoolama! (Opzionale)</label>
+                                                                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                                                <label class="custom-control-label" for="customCheck3">Voglio iscrivermi alla newsletter di Tattoolama! (Opzionale)</label>
                                                             </div>
                                                                 <button type="submit" class="btn bottone-whatsapp mt-4">Richiedi informazioni</button>
                                                         </form> 
@@ -430,6 +439,22 @@
     <script type="text/javascript" src="js/slidedown-menu.js"></script>
     <script type="text/javascript" src="js/lightbox.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtoeHsbl1-XHEoBmxGBfhQxStYjblpo74&callback=initMap"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker3').datetimepicker({
+                format: 'LT'
+            });
+        });
+
+        $(function () {
+                $('#datetimepicker4').datetimepicker({
+                    format: 'L'
+                });
+            });
+    </script>
     
 
   </body>

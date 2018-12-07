@@ -44,7 +44,7 @@
 }
 
 .data-form {
-  width: 140px;
+  max-width: 140px;
   height: 32px;
   border-radius: 6px;
   background-color: #f6f6f6;
