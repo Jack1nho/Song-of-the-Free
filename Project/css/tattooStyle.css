@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 @media screen and (max-width: 768px) {
-  .container-wrapper > * {
+  .container-wrapper {
     padding-left: 1rem ;
     padding-right: 1rem;
   }
@@ -14,7 +14,7 @@
     margin-left: 0rem;
     margin-right: 0rem;
     border-radius: 0px;
-  }
+  } 
 
   .last-img {
     width: 100%;
@@ -35,9 +35,13 @@
     padding-right: 1rem;
   }
 
+  .container-wrapper-2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .last-img {
-    border-top-left-radius: 8.6px;
-    border-bottom-left-radius: 8.6px;
+    border-radius: 8.6px;
     width: 100%;
     box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.16), 0 8px 16px 0 rgba(0, 0, 0, 0.24);
   }
@@ -46,6 +50,10 @@
     border-radius: 18px;
   }
 
+  .list-123 {
+    position: absolute;
+    bottom: -7px;
+  }
 }
 
 /*------- BODY-------*/
@@ -67,6 +75,12 @@ body{
 }
 
 .container-wrapper {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-wrapper-2 {
   max-width: 1024px;
   width: 100%;
   margin: 0 auto;
@@ -130,6 +144,12 @@ body{
   color: #d80e47;
   font-size: 28px;
   margin-bottom: 44px;
+}
+
+.text-2:hover{
+  text-decoration: none;
+  color: #d80e47;
+  opacity: 0.8;
 }
 
 /*------SLICK------*/
@@ -224,11 +244,6 @@ body{
 .list {
   padding-left: 19px;
   margin-bottom: 41px;
-}
-
-.text-tattoer {
-  position: absolute;
-  bottom: 0px;
 }
 
 /*------DESCRIPTION TEXT------*/

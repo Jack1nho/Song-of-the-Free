@@ -4,7 +4,7 @@
     }
 
     .bottone-richiesta {
-        width: 174.8px;
+        width: 160px;
         height: 40.3px;
         border-radius: 15.1px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14);
@@ -32,6 +32,10 @@
 
     .description {
         line-height: 130% !important;
+    }
+
+    .prezzo {
+        font-size: 15px !important;
     }
 }
 
@@ -108,4 +112,40 @@
 .card-header {
     border-style: none;
     background-color: #ffffff;
+}
+
+.btn-link:focus {
+    text-decoration: none;
+}
+
+.collapsed {
+    color: #24272c;
+}
+
+.arrow-accordion {
+    cursor: pointer;
+}
+
+.collapsed.arrow-accordion {
+    -webkit-transition:all 300ms ease-in 0s;
+    -moz-transition: all 300ms ease-in 0s;
+    -o-transition: all 300ms ease-in 0s;
+    transition: all 300ms ease-in 0s;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.arrow-accordion {
+    -webkit-transition:all 300ms ease-in 0s;
+    -moz-transition: all 300ms ease-in 0s;
+    -o-transition: all 300ms ease-in 0s;
+    transition: all 300ms ease-in 0s;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }

@@ -24,7 +24,7 @@ span.onclick = function() {
 }
 
 nextimg.onclick = function() {
-    if(modalImg.src == img1.src) {modalImg.src =img2.src; return}
+    if(modalImg.src == img1.src) {modalImg.src = img2.src; return}
     if(modalImg.src == img2.src) {modalImg.src = img3.src; return}
     if(modalImg.src == img3.src) {modalImg.src = img4.src; return}
     if(modalImg.src == img4.src) {modalImg.src = img5.src; return}
@@ -42,3 +42,21 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+$(document).on('keydown',  function (e) {
+    if($('#myLightbox').is(':visible')) {
+                var key = e.which;
+                    if (key == 37) { 
+                        if(modalImg.src == img2.src) {modalImg.src = img1.src; return}
+                        if(modalImg.src == img3.src) {modalImg.src = img2.src; return}
+                        if(modalImg.src == img4.src) {modalImg.src = img3.src; return}
+                        if(modalImg.src == img5.src) {modalImg.src = img4.src; return}
+                    }
+                    if (key ==39) {
+                        if(modalImg.src == img1.src) {modalImg.src = img2.src; return}
+                        if(modalImg.src == img2.src) {modalImg.src = img3.src; return}
+                        if(modalImg.src == img3.src) {modalImg.src = img4.src; return}
+                        if(modalImg.src == img4.src) {modalImg.src = img5.src; return}
+                    }
+            }
+        });

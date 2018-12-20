@@ -41,3 +41,7 @@
   letter-spacing: 0.5px;
   color: #6c7178;
 }
+
+.nav-link:hover {
+  color: #d80e47;
+}

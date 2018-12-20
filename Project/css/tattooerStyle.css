@@ -26,7 +26,6 @@
 
   .top-sticky-menu {
     width: 100%;
-   
     background-color:#ffffff;
     visibility: visible;
     border-bottom: 0.5px solid rgba(0,0,0,0.5);
@@ -67,6 +66,12 @@
   color: #6c7178;
   margin-left: 33px;
   margin-bottom: 39px;
+}
+
+.text-back:hover {
+  text-decoration: none;
+  opacity: 0.8;
+  color: #6c7178;
 }
 
 .main-row {
