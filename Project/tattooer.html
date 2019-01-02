@@ -94,7 +94,7 @@
 
             <div class="container-wrapper">
                 <div class="row main-row">
-                    <div class="d-none d-md-block col-md-3 p-0">
+                    <div class="sidebar d-none d-md-block col-md-3 p-0">
                         <div class="sticky-menu" id="sticky-menu">
                             <nav class="side-menu">
                                 <a href="#biografia"><span class="rect"></span>Biografia</a><br>
@@ -292,8 +292,10 @@
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
@@ -305,6 +307,22 @@
     <script type="text/javascript" src="js/slidedown-menu.js"></script>
     <script type="text/javascript" src="js/lightbox.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtoeHsbl1-XHEoBmxGBfhQxStYjblpo74&callback=initMap"></script>
+    <script type="text/javascript">
+        var AltezzaElement = $(".sidebar").outerHeight();
+        var AltezzaBox = $("#sticky-menu").outerHeight();
 
+        $(window).scroll(function () {
+
+            
+            if ($(window).scrollTop() > (AltezzaElement - AltezzaBox)) {
+                $("#sticky-menu").css("position", "absolute");
+                $("#sticky-menu").css("bottom", "30px");
+            } else {
+                $("#sticky-menu").css("position", "fixed");
+                $("#sticky-menu").css("bottom", "auto");
+            }
+            
+        });
+    </script>
   </body>
 </html>

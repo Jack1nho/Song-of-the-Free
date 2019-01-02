@@ -462,12 +462,21 @@
         });
 
         $(function () {
-                $('#datetimepicker4').datetimepicker({
-                    format: 'L'
-                });
+            $('#datetimepicker4').datetimepicker({
+                format: 'L'
             });
-    </script>
-    
+        });
 
+        $(document).ready(function (){
+            $(".bottone-richiesta").click(function (){
+                $("body").addClass("fixed");
+                $("html").addClass("fixed");
+            });
+            $(".close").click(function (){
+                $("body").removeClass("fixed");
+                $("html").removeClass("fixed");
+            });
+        });
+    </script>
   </body>
 </html>
