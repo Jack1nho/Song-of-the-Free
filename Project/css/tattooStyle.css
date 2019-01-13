@@ -90,9 +90,13 @@ body{
 
 .Jumbotron-1 {
   margin-bottom: 33.3px;
-  background-image: url('https://via.placeholder.com/1024x388/000000');
+  background-image: url('../images/hero-tattoolama.jpg');
   background-size: cover;
-  background-position: center center;
+  background-position: center 3%;
+  -webkit-background-size: cover;
+  height: 337.7px;
+  display: flex;
+  align-items: center;
 }
 
 .Text-1-Jumbotron-1 {
@@ -106,6 +110,39 @@ body{
   font-weight: bold;
   color: #ffffff;
   
+}
+
+.Jumbotron-list-design {
+  margin-bottom: 33.3px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url('../images/hero-tattoo-design.jpg');
+  background-position: center 18%;
+  -webkit-background-size: cover;
+  height: 337.7px;
+  display: flex;
+  align-items: center;
+}
+
+.Jumbotron-list-tattooer {
+  margin-bottom: 33.3px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url('../images/hero-choosetattoo.jpg');
+  background-position: center 25%;
+  -webkit-background-size: cover;
+  height: 337.7px;
+  display: flex;
+  align-items: center;
+}
+
+.Jumbotron-design {
+  margin-bottom: 33.3px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url('../images/scegli-il-tuo-design.jpg');
+  background-position: center 65%;
+  -webkit-background-size: cover;
+  height: 190px;
+  display: flex;
+  align-items: center;
 }
 
 .Red {
@@ -176,9 +213,13 @@ body{
 .Jumbotron-2 {
   margin-top: 26px; 
   margin-bottom: 53px;
-  background-image: url('https://via.placeholder.com/910x300.jpg/383838');
+  background-image: url('../images/tattolama-donna-tatuata.jpg');
   background-size: cover;
-  background-position: center center;
+  background-position: center 0%;
+  -webkit-background-size: cover;
+  display: flex;
+  align-items: center;
+  height: 300px;
 }
 
 .Text-Jumbotron-2 {
@@ -260,12 +301,14 @@ body{
 }
 
 /* GENERAL */
+
 .fixed{
   overflow: hidden;
   width: 100%;
 }
 
 /* SLICK HOME */
+
 @media screen and (max-width: 480px){
   .slickHome{
       width: 110%;
