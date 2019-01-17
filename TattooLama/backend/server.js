@@ -24,28 +24,50 @@ const tatuatori = mongoose.model("tatuatori")
 //FORM DI INSERIMENTO - TATUATORI
 app.get('/api/insert/tatuatori', (req, res) => {
     
-    tatuatori.create({ name: 'Tatautore', surname: 'Di prova' }, function (error, result) {
-       if(error) {
-       return result.end(error)
+    tatuatori.create({ 
+    name: 'Tatautore', 
+    surname: 'Di prova', 
+    biography: 'lol', 
+    city: 'Catania', 
+    address:'Un posto', 
+    telephone:'3400022522',
+    working_email:'i',
+    private_email:'i2',
+    cover:'bella',
+    image:'una',
+    ranking_display:1 }, function (error, result) {
+        if(error) {
+        return result.end(error)
     } else {
-        console.log('ok')
+        console.log('Tatuatore inserito con successo')
         }
     });
-
 });
 
-//API - ULTIMI TATUATORI
-app.get('/api/get/tatuatori/last', (req, res) => {
+
+//API - MIGLIORI TATUATORI
+app.get('/api/get/tatuatori/best', (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 
-  tatuatori.find({}, function(err, tatuatoriList){
+  tatuatori.find({ranking_display: 1}, function(err, tatuatoriList){
     if(err){ console.log('error..'); } else {
         res.json(tatuatoriList);
     }
   }).limit(10).sort({_id: -1});
-
 });
+
+//API - ULTIMI TATUATORI
+app.get('/api/get/tatuatori/last', (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  
+    tatuatori.find({}, function(err, tatuatoriList){
+      if(err){ console.log('error..'); } else {
+          res.json(tatuatoriList);
+      }
+    }).limit(10).sort({_id: -1});
+  });
 
 //SCHEMA TATTOO IMAGES
 require("./models/tattooimages.js")
@@ -55,10 +77,10 @@ const tattooimages = mongoose.model("tattooimages")
 app.get('/api/insert/tattooimages', (req, res) => {
 
     tattooimages.create({associated_artist: 1, price: 40, style: 'Di prova' }, function (error, result) {
-       if(error) {
-       return result.end(error)}
-       else{
-        return console.log("inserito con successo")
+        if(error) {
+        return result.end(error)}
+        else{
+        return console.log("Tattoo image inserita con successo")
        }
     });
 
