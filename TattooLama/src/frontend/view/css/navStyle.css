@@ -1,0 +1,47 @@
+@media screen and (max-width: 768px) {
+  .navbar.navbar-expand-md {
+      display: none;   
+    }
+    .nav-res {
+      visibility: visible;
+      background-color: #2f3339;
+      min-height: 46px;
+    }
+  
+    .img-res {
+      width: 180px;
+      margin:0;
+      padding:0;   
+    }
+  
+    .botton-res {   
+      font-size: 30px;
+      cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-res {
+      display: none;
+      background-color: #2f3339;
+    }
+}
+
+.navbar {
+  min-height: 76px;
+  padding: 0px;
+}
+
+.navbar-brand {
+  margin-left: 61.2px;
+}
+
+.nav-link {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #6c7178;
+}
+
+.nav-link:hover {
+  color: #d80e47;
+}
