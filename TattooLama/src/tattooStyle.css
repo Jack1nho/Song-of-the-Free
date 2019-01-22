@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+@media screen and (max-width: 768px) {
+  .container-wrapper {
+    padding-left: 1rem ;
+    padding-right: 1rem;
+  }
+
+  .text-2 {
+    text-align: center;
+  }
+
+  .Jumbotron-2 {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    border-radius: 0px !important;
+  } 
+
+  .last-img {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: -20px;
+    max-height: 346px;
+  }
+  
+  .last-section .col-last-image {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+    
+  .container-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .container-wrapper-2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .last-img {
+    border-radius: 8.6px;
+    width: 100%;
+    box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.16), 0 8px 16px 0 rgba(0, 0, 0, 0.24);
+  }
+
+  .Jumbotron-2 {
+    border-radius: 18px;
+  }
+
+  .list-123 {
+    position: absolute;
+    bottom: -7px;
+  }
+}
+
+/*------- BODY-------*/
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif !important;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.container-wrapper {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-wrapper-2 {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*------TOP PAGE JUMBOTRON------*/
+
+.Jumbotron-1 {
+  margin-bottom: 33.3px;
+  background-image: url('./images/hero-tattoolama.jpg');
+  background-size: cover;
+  background-position: center 3%;
+  -webkit-background-size: cover;
+  height: 337.7px;
+  display: flex;
+  align-items: center;
+}
+
+.Text-1-Jumbotron-1 {
+  font-size: 15.8px;
+  color: #ffffff;
+  
+}
+
+.Text-2-Jumbotron-1 {
+  font-size: 51.8px;
+  font-weight: bold;
+  color: #ffffff;
+  
+}
+
+.Jumbotron-list-design {
+  margin-bottom: 33.3px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url('./images/hero-tattoo-design.jpg');
+  background-position: center 18%;
+  background-size: cover;
+  height: 337.7px;
+  display: flex;
+  align-items: center;
+}
+
+.Jumbotron-list-tattooer {
+  margin-bottom: 33.3px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url('./images/hero-choosetattoo.jpg');
+  background-position: center 25%;
+  background-size: cover;
+  height: 337.7px;
+  display: flex;
+  align-items: center;
+}
+
+.Jumbotron-design {
+  margin-bottom: 33.3px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url('./images/scegli-il-tuo-design.jpg');
+  background-position: center 65%;
+  background-size: cover;
+  height: 190px;
+  display: flex;
+  align-items: center;
+}
+
+.Red {
+  color: #d80e47;
+}
+
+/*------TEXT PAGE------*/
+
+.text-1 {
+  font-weight: 700 !important;
+  font-size: 23px;
+  color: #d80e47;
+}
+
+.text-2 {
+  font-weight: 700 !important;
+  color: #d80e47;
+  font-size: 14px;
+}
+
+.text-3 {
+  font-weight: 700 !important;
+  color: #d80e47;
+  font-size: 18px;
+}
+
+.text-4 {
+  font-weight: 700 !important;
+  color: black;
+  font-size: 24px;
+  margin: 0;
+}
+
+.text-5 {
+  font-weight: 700 !important;
+  color: #d80e47;
+  font-size: 28px;
+  margin-bottom: 44px;
+}
+
+.text-2:hover{
+  text-decoration: none;
+  color: #d80e47;
+  opacity: 0.8;
+}
+
+/*------SLICK------*/
+
+.lazy {
+  padding: 0;
+  margin-top: 18px;
+  width: calc(100% + 20px);
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.Rectangle {
+  width: 218.9px;
+  height: 161.3px;
+  opacity: 0.24;
+  border-radius: 8.6px;
+  background-color: #383838;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/*------JUMBOTRON 2------*/
+
+.Jumbotron-2 {
+  margin-top: 26px; 
+  margin-bottom: 53px;
+  background-image: url('./images/tattolama-donna-tatuata.jpg');
+  background-size: cover;
+  background-position: center 0%;
+  -webkit-background-size: cover;
+  display: flex;
+  align-items: center;
+  height: 300px;
+}
+
+.Text-Jumbotron-2 {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.Red-2 {
+  font-size: 27.5px;
+  font-weight: bold;
+  color: #d80e47;
+}
+
+/*------GRID MENU------*/
+
+.textNome {
+  font-weight: 700 !important;
+  color: #6c7178;
+  font-size: 12px;
+  padding-left: 5.5px;
+}
+
+.textArtista {
+  font-weight: 700 !important;
+  color: #d80e47;
+  font-size: 12px;
+  padding-left: 5.5px;
+}
+
+.textPrezzo {
+  font-weight: 700 !important;
+  color: #a8a8a8;
+  font-size: 12px;
+  padding-left: 5.5px;
+}
+
+.square {
+  border-radius: 8.6px;
+  width: 100%;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*------LAST SECTION------*/
+
+.last-section {
+  margin-top: 58px;
+}
+
+.list-number {
+  font-size: 16px;
+}
+
+.number {
+  font-size: 36px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #d80e47;
+}
+
+.list {
+  padding-left: 19px;
+  margin-bottom: 41px;
+}
+
+/*------DESCRIPTION TEXT------*/
+
+.big-text {
+  margin-top: 64px;
+  margin-bottom: 39px;
+}
+
+.normal-text {
+  color: #333333;
+  font-size: 12px;
+  line-height: 200%;
+}
+
+/* GENERAL */
+
+.fixed{
+  overflow: hidden;
+  width: 100%;
+}
+
+/* SLICK HOME */
+
+@media screen and (max-width: 480px){
+  .slickHome{
+      width: 110%;
+  }
+  .slickHome .slick-track{
+      margin-left: 30px;
+  }
+  .slickHome .slick-dots{
+      margin-left: -8px;
+  }
+}
