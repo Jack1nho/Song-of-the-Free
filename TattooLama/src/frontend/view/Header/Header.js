@@ -4,6 +4,7 @@ import Logo from '../../../images/tattoolama-logo.png';
 import Logo2 from '../../../images/lama-logo.png';
 import Bars from '../../../images/bars-solid.svg';
 import Close from '../../../images/times-solid.svg';
+import { Link } from 'react-router-dom';
 
 
 
@@ -27,23 +28,22 @@ class Header extends Component {
         return(
             <div>
                 <nav className="container navbar navbar-expand-md">
-                    <a className="navbar-brand" href="index.html">
-                        <img src={Logo} alt=""/>
-                    </a>
+                
+                     <Link className="navbar-brand" to='/'><img src={Logo} alt=""/></Link>
                     
                     <div className="collapse navbar-collapse">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item active p-1">
-                        <a className="nav-link" href="list_tattooer.html">Tatuatori <span className="sr-only">(current)</span></a>
+                            <Link className="nav-link" to='/list_tatuatori'>Tatuatori <span className="sr-only">(current)</span></Link>
                         </li>
                         <li className="nav-item p-1">
-                        <a className="nav-link" href="list_design.html">Tattoo Design</a>
+                            <Link className="nav-link" to='/list_design'>Tattoo Design</Link>
                         </li>
                         <li className="nav-item p-1 pr-5">
-                        <a className="nav-link" href="">Blog</a>
+                            <Link className="nav-link" to='/Blog'>Blog</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="">Contattaci 🦄</a>
+                            <Link className="nav-link" to='/Contacts'>Contattaci <span role="img" aria-label="emoji">🦄</span></Link>
                         </li>
                     </ul>
                     </div>
@@ -53,18 +53,17 @@ class Header extends Component {
                     <div id="myNav" className="overlay">
                             <a className="closebtn" onClick={this.closeNav}><img src={Close} alt=""/></a>
                             <div className="overlay-content">
-                                <a href="list_tattooer.html">Tatuatori</a>
-                                <a href="list_design.html">Tattoo Design</a>
-                                <a href="">Blog<br></br><br></br></a>
-                                <a href="">Contattaci 🦄</a>
+                                <Link to='/list_tatuatori'>Tatuatori</Link>
+                                <Link to='/list_design'>Tattoo Design</Link>
+                                <Link to='/Blog'>Blog<br></br><br></br></Link>
+                                <Link to='/Contacts'>Contattaci <span role="img" aria-label="emoji">🦄</span></Link>
                             </div>
                     </div>
                     <div className="d-flex justify-content-between">
-                        <div className="botton-res p-3" onClick={this.openNav}><img src={Bars} aria-hidden="true" alt=""/></div>
+                        <div className="botton-res p-3" onClick={this.openNav}><img src={Bars} style={{Color:'white'}} aria-hidden="true" alt=""/></div>
                         
-                        <a className="navbar-brand-res" href="index.html">
-                            <img className="img-res mx-auto p-1" src={Logo2} alt=""/>
-                        </a>
+                            <Link className="navbar-brand-res" to='/'><img className="img-res mx-auto p-1" src={Logo2} alt=""/></Link>
+                        
                         <div className="p-3"></div>
                     </div>
                 </nav>
