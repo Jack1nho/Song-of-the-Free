@@ -53,7 +53,8 @@ app.post('/api/insert/tatuatori', (req, res) => {
         private_email: req.body.private,
         cover: req.body.cover,
         image: req.body.image,
-        ranking_display: req.body.rank }, function (error, result) {
+        ranking_display: req.body.rank, 
+        url: req.body.url}, function (error, result) {
             if(error) {
             return result.end(error)
         } else {
@@ -87,6 +88,15 @@ app.get('/api/get/tatuatori/last', (req, res) => {
     }).limit(10).sort({_id: -1});
   });
 
+  //API - CANCELLAZIONE TATUATORI
+  app.get('/api/tatuatori/delete', (req, res) => {
+    // tatuatori.find(req.body.name) 
+    tatuatori.deleteOne(req.body.name);
+    res.send('Cancellazione avvenuta con successo')
+  });
+
+  
+
 //SCHEMA TATTOO IMAGES
 require("./models/tattooimages.js")
 const tattooimages = mongoose.model("tattooimages")
@@ -102,9 +112,11 @@ app.post('/api/insert/tattooimages', (req, res) => {
 
     tattooimages.create({
         
+        name_design: req.body.design_name,
         associated_artist: req.body.associated, 
         price: req.body.price, 
-        style: req.body.style }, function (error, result) {
+        style: req.body.style,
+        url_design: req.body.url_design }, function (error, result) {
         if(error) {
             return result.end(error)}
         else{
@@ -126,4 +138,3 @@ app.get('/api/get/tattooimages/last', (req, res) => {
     }).limit(10).sort({_id: -1});
   
   });
-  

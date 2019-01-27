@@ -44,6 +44,10 @@ const tatuatoriSchema = mongoose.Schema({
     ranking_display:{
         type: Number,
         required: true 
+    },
+    url:{
+        type: String,
+        required: true
     }
 })
 

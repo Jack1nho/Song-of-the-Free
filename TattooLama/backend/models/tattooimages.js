@@ -1,6 +1,10 @@
 const mongoose = require("mongoose")
 
 const tattooImagesSchema = mongoose.Schema({
+    name_design:{
+        type: String,
+        required: true
+    },
     associated_artist:{
         type: Number,
         required: true
@@ -10,6 +14,10 @@ const tattooImagesSchema = mongoose.Schema({
         required: true
     },
     style:{
+        type: String,
+        required: true
+    },
+    url_design:{
         type: String,
         required: true
     }
