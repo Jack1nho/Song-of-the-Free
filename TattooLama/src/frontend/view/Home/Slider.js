@@ -1,17 +1,29 @@
 import React, {Component} from 'react';
 
 class Slider extends Component {
+    constructor(){
+        super();
+
+        this.state = {
+            Tattooer: []
+        }
+    }
+    
+    componentDidMount() {
+        fetch('http://localhost:5000/api/get/tatuatori/best')
+        .then(response => response.json())
+        .then(data => this.setState({
+            Tattooer: data
+        }))
+    }
 
     render(){
         return(
-            <div className="slickHome">
-                <div><img data-lazy="https://via.placeholder.com/219x161.jpg/383838" className="img-fluid Rectangle" alt=""/></div>
-                <div><img data-lazy="https://via.placeholder.com/219x161.jpg/383838" className="img-fluid Rectangle" alt=""/></div>
-                <div><img data-lazy="https://via.placeholder.com/219x161.jpg/383838" className="img-fluid Rectangle" alt=""/></div>
-                <div><img data-lazy="https://via.placeholder.com/219x161.jpg/383838" className="img-fluid Rectangle" alt=""/></div>
-                <div><img data-lazy="https://via.placeholder.com/219x161.jpg/383838" className="img-fluid Rectangle" alt=""/></div>
-                <div><img data-lazy="https://via.placeholder.com/219x161.jpg/383838" className="img-fluid Rectangle" alt=""/></div>         
-            </div>
+            <ul className="slickHome">
+            {this.state.Tattooer.map((item, i) => {
+                return <li key={i}><div><img data-lazy="https://via.placeholder.com/219x161.jpg/383838" className="img-fluid Rectangle" alt=""/></div> </li>     
+            })}      
+            </ul>
         );
     }
 }
