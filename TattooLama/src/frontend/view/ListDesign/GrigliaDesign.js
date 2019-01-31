@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class GrigliaHome extends Component {
+class GrigliaDesign extends Component {
     constructor(){
         super();
 
@@ -16,7 +16,7 @@ class GrigliaHome extends Component {
             Design: data
         }))
     }
-
+    
     render(){
         return(
             <div>
@@ -106,4 +106,4 @@ class GrigliaHome extends Component {
     }
 }
 
-export default GrigliaHome;
+export default GrigliaDesign;

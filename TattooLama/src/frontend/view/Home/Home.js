@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => (
   <div>
-    <div className="jumbotron jumbotron-fluid Jumbotron-1">
+        <div className="jumbotron jumbotron-fluid Jumbotron-1">
           <div className="container">
               <h1 className="Text-1-Jumbotron-1">TROVA IL TUO TATUAGGIO PERFETTO</h1>
               <h1 className="Text-2-Jumbotron-1">FLASH IT, <span className="Red">BOOK</span> IT</h1>

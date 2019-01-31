@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class GrigliaHome extends Component {
+class GrigliaTattooer extends Component {
     constructor(){
         super();
 
@@ -13,10 +13,10 @@ class GrigliaHome extends Component {
         fetch('http://localhost:5000/api/get/tattooimages/last')
         .then(response => response.json())
         .then(data => this.setState({
-            Design: data
+            Tattooer: data
         }))
     }
-
+    
     render(){
         return(
             <div>
@@ -28,9 +28,8 @@ class GrigliaHome extends Component {
                                     <a href="" >
                                         <img className="square" src={item.image} alt=""/>
                                         <div>
-                                            <h4 className="mt-2 mb-0 textNome">{item.name}</h4>
-                                            <h4 className="mb-0 textArtista">{item.associated_artist}</h4>
-                                            <h4 className="textPrezzo">{item.price}</h4>
+                                            <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
+                                            <h4 class="textNome">{item.name}</h4>
                                         </div>
                                     </a>
                                 </li>  
@@ -41,9 +40,8 @@ class GrigliaHome extends Component {
                                     <a href="" >
                                         <img className="square" src={item.image} alt=""/>
                                         <div>
-                                            <h4 className="mt-2 mb-0 textNome">{item.name}</h4>
-                                            <h4 className="mb-0 textArtista">{item.associated_artist}</h4>
-                                            <h4 className="textPrezzo">{item.price}</h4>
+                                            <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
+                                            <h4 class="textNome">{item.name}</h4>
                                         </div>
                                     </a>
                                 </li>
@@ -52,9 +50,8 @@ class GrigliaHome extends Component {
                                 <a href="" >
                                     <img className="square" src={item.image} alt=""/>
                                     <div>
-                                        <h4 className="mt-2 mb-0 textNome">{item.name}</h4>
-                                        <h4 className="mb-0 textArtista">{item.associated_artist}</h4>
-                                        <h4 className="textPrezzo">{item.price}</h4>
+                                        <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
+                                        <h4 class="textNome">{item.name}</h4>
                                     </div>
                                 </a>
                             </li>  
@@ -69,9 +66,8 @@ class GrigliaHome extends Component {
                                     <a href="" >
                                         <img className="square" src={item.image} alt=""/>
                                         <div>
-                                            <h4 className="mt-2 mb-0 textNome">{item.name}</h4>
-                                            <h4 className="mb-0 textArtista">{item.associated_artist}</h4>
-                                            <h4 className="textPrezzo">{item.price}</h4>
+                                            <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
+                                            <h4 class="textNome">{item.name}</h4>
                                         </div>
                                     </a>
                                 </li>  
@@ -82,9 +78,8 @@ class GrigliaHome extends Component {
                                     <a href="" >
                                         <img className="square" src={item.image} alt=""/>
                                         <div>
-                                            <h4 className="mt-2 mb-0 textNome">{item.name}</h4>
-                                            <h4 className="mb-0 textArtista">{item.associated_artist}</h4>
-                                            <h4 className="textPrezzo">{item.price}</h4>
+                                            <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
+                                            <h4 class="textNome">{item.name}</h4>
                                         </div>
                                     </a>
                                 </li>
@@ -93,9 +88,8 @@ class GrigliaHome extends Component {
                                 <a href="" >
                                     <img className="square" src={item.image} alt=""/>
                                     <div>
-                                        <h4 className="mt-2 mb-0 textNome">{item.name}</h4>
-                                        <h4 className="mb-0 textArtista">{item.associated_artist}</h4>
-                                        <h4 className="textPrezzo">{item.price}</h4>
+                                        <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
+                                        <h4 class="textNome">{item.name}</h4>
                                     </div>
                                 </a>
                             </li>  
@@ -106,4 +100,4 @@ class GrigliaHome extends Component {
     }
 }
 
-export default GrigliaHome;
+export default GrigliaTattooer;

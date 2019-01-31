@@ -21,7 +21,7 @@ class Slider extends Component {
         return(
             <ul className="slickHome">
             {this.state.Tattooer.map((item, i) => {
-                return <li key={i}><div><img data-lazy="https://via.placeholder.com/219x161.jpg/383838" className="img-fluid Rectangle" alt=""/></div> </li>     
+                return <li key={i}><div><img data-lazy={item.image} className="img-fluid Rectangle" alt=""/></div></li>     
             })}      
             </ul>
         );
