@@ -8,23 +8,23 @@ class Portfolio extends Component {
                                 <h2 class="text-3 my-4">Ultimi tattoo di Gianmaurizio Fercioni</h2>
                                 <div class="row row-grid">
                                         <div class="col-6 col-lg pb-3">
-                                            <img id="myImg" class="square img1" src="https://via.placeholder.com/168x168.jpg/eae9e5" onclick="well(this.src)"/>
+                                            <img id="myImg" class="square img1" src="https://via.placeholder.com/168x168.jpg/eae9e5" onclick="well(this.src)" alt=""/>
                                         </div>
                                         <div class="col-6 col-lg pb-sm-3">
-                                            <img id="myImg" class="square img2" src="https://via.placeholder.com/168x168.jpg/eae9e9" onclick="well(this.src)"/>
+                                            <img id="myImg" class="square img2" src="https://via.placeholder.com/168x168.jpg/eae9e9" onclick="well(this.src)" alt=""/>
                                         </div>
                                         <div class="col-6 col-lg">
-                                            <img id="myImg" class="square img3" src="https://via.placeholder.com/168x168.jpg/d7dbe0" onclick="well(this.src)"/>
+                                            <img id="myImg" class="square img3" src="https://via.placeholder.com/168x168.jpg/d7dbe0" onclick="well(this.src)" alt=""/>
                                         </div>
                                         <div class="col-6 col-lg">
-                                            <img id="myImg" class="square img4" src="https://via.placeholder.com/168x168.jpg/383838" onclick="well(this.src)"/>
+                                            <img id="myImg" class="square img4" src="https://via.placeholder.com/168x168.jpg/383838" onclick="well(this.src)" alt=""/>
                                         </div>
 
                                         <div id="myLightbox" class="lightbox">
                                             <span class="closeX"><i class="fas fa-times"></i></span>
                                             <span class="next"><i class="fa fa-angle-right"></i></span>
                                             <span class="prev"><i class="fa fa-angle-left"></i></span>
-                                            <img class="modal-content-lightbox" id="img01"/>
+                                            <img class="modal-content-lightbox" id="img01" alt=""/>
                                         </div>
                                 </div>
                                 <div class="jumbotron jumbotron-fluid Jumbotron-artista my-5">

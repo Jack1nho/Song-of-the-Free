@@ -1,0 +1,290 @@
+@media screen and (max-width: 768px) {
+    .row-artist {
+      text-align: center;
+    }
+  
+    .col-name {
+      margin-top:20px;
+    }
+  
+    .nome, .cognome {
+      font-size: 25.9px !important;
+      margin-top: 10px;
+    }
+  
+    .text-back, .impagination, .text-2-jumbotron-artista {
+      display: none;
+    }
+  
+    .bottone-consulenza-2 {
+      width: 100% !important;
+    }
+    
+    .Jumbotron-artista {
+      text-align: center;
+    }
+  
+    .top-sticky-menu {
+      width: 100%;
+      background-color:#ffffff;
+      visibility: visible;
+      border-bottom: 0.5px solid rgba(0,0,0,0.5);
+      position: fixed;
+      top: -59px;
+      display: block;
+      transition: top 0.3s;
+      z-index: 1;
+      padding-left: 7px;
+      padding-top: 19px;
+    }
+  
+    .nav-link.sticky {
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: bold;
+      color: #000000;
+    }
+  
+    .nav-link.sticky:hover {
+      color: #d80e47;
+    }
+  }
+  
+  @media screen and (min-width: 768px) { 
+    .top-sticky-menu {
+      display: none;
+    }
+  } 
+  
+  .Jumbotron-1 {
+    min-height: 128px;
+  }
+  
+  .text-back {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: #6c7178;
+    margin-left: 33px;
+    margin-bottom: 39px;
+  }
+  
+  .text-back:hover {
+    text-decoration: none;
+    opacity: 0.8;
+    color: #6c7178;
+  }
+  
+  .main-row {
+    margin-top: 39px;
+  }
+  
+  /*------SIDEMENU------*/
+  
+  .sticky-menu {
+    position: fixed;
+    z-index: 1;
+  }
+  
+  .side-menu {
+    width: 256px;
+    height: 346px;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;     
+  }
+  
+  .side-menu a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    font-size: 21px;
+    font-weight: bold;
+    position: relative;
+    top:21%;
+    left: 20%;
+  }
+  
+  .side-menu a:hover .rect {
+    color: #d80e47;
+    display: block;
+    opacity: 1;
+    transition: 0.8s;
+  }
+  
+  .side-menu a:hover {
+    color: #d80e47;
+  }
+  
+  .rect { 
+    width: 4px;
+    height: 18px;
+    background-color: #d80e47;
+    float:left;
+    margin-right: 10px;
+    position: relative;
+    top: 6.5px;
+    opacity: 0;  
+  }
+  
+  .bottone-consulenza {
+    width: 220.5px;
+    height: 51.6px;
+    border-radius: 14.4px !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14);
+    background-color: #d80e47 !important;
+    color: #ffffff !important;
+    font-family: Montserrat;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    border-style: none !important;
+  }
+  
+  .bottone-consulenza:hover {
+    background-color: #ffffff !important;
+    color: #d80e47 !important;
+    font-family: Montserrat;
+    font-size: 16px !important;
+    font-weight: bold;
+  }
+  
+  /*------TOPMENU ARTIST------*/
+  
+  .img-artist {
+    border-radius: 12px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 0 4px 8px 0 rgba(0, 0, 0, 0.24)
+  }
+  
+  .nome {
+    font-size: 51.8px;
+    font-weight: bold;
+    color: #000000;
+    padding: 0;
+    position: relative;
+    top:-12px;
+    left: -2px;
+  }
+  
+  .cognome {
+    font-size: 51.8px;
+    font-weight: bold;
+    color: #d80e47;
+    padding: 0;
+    position: relative;
+    top: -25px;
+    left: -5px;
+  }
+  
+  .top-artist {
+    width: 220px;
+    height: 36px;
+    background-color: #d80e47;
+    font-family: Montserrat;
+    font-size: 22px !important;
+    font-weight: 300 !important;
+    color: #ffffff;
+    border-radius: 0 !important;
+    position: relative;
+    top: -4px;
+  }
+  
+  /*------BOTTONE PAGINE GRID------*/
+  
+  .bottone-next {
+    width: 150px;
+    height: 32px;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14);
+    background-color: #d80e47 !important;
+    border-style: none !important;
+    display:inline-block !important;
+    position:relative;
+    top: -32px;
+    left: 330px;
+    color: #ffffff !important;
+    font-family: Montserrat;
+    font-size: 10px !important;
+    font-weight: 500 !important;
+  }
+  
+  .bottone-next:hover {
+    width: 150px;
+    height: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14);
+    background-color: #ffffff !important;
+    border-style: none;
+    display:inline-block;
+    position:relative;
+    top: -32px;
+    left: 330px;
+    color: #d80e47 !important;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-weight: 500;
+    border-style: none;
+  }
+  
+  /*------JUMBOTRON CONSULENZA------*/
+  
+  .Jumbotron-artista {
+    background-color: #d80e47 !important;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text-1-jumbotron-artista {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  
+  .text-2-jumbotron-artista {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 300;
+    color: #ffffff;
+  }
+  
+  .bottone-consulenza-2 {
+    width: 150px;
+    height: 38.4px;
+    border-radius: 14.4px !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14);
+    background-color: #ffffff !important;
+    font-family: Montserrat;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    color: #d80e47 !important;
+    white-space: nowrap;
+  }
+  
+  .bottone-consulenza-2:hover {
+    width: 150px;
+    height: 38.4px;
+    border-radius: 14.4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14);
+    background-color: #d80e47 !important;
+    font-family: Montserrat;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+  }
+  
+  /*------MAP------*/
+  
+  .position {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: bold;
+    color: #717171;
+    line-height: 130%;
+  }
+  
+  #map {
+    width: 100%;
+    height: 296px;
+    background-color: grey;
+  }

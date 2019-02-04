@@ -2,9 +2,14 @@ import React, {Component} from 'react';
 import './Header.css';
 import Logo from '../../../images/tattoolama-logo.png';
 import Logo2 from '../../../images/lama-logo.png';
-import Bars from '../../../images/bars-solid.svg';
-import Close from '../../../images/times-solid.svg';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
+library.add(faTimes)
+library.add(faBars)
+
 
 
 
@@ -40,7 +45,7 @@ class Header extends Component {
                             <Link className="nav-link" to='/list_design'>Tattoo Design</Link>
                         </li>
                         <li className="nav-item p-1 pr-5">
-                            <Link className="nav-link" to='/Blog'>Blog</Link>
+                            <Link className="nav-link" to='/tatuatore'>Blog</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to='/Contacts'>Contattaci <span role="img" aria-label="emoji">🦄</span></Link>
@@ -51,7 +56,7 @@ class Header extends Component {
 
                 <nav className="nav-res">
                     <div id="myNav" className="overlay">
-                            <a className="closebtn" onClick={this.closeNav}><img src={Close} alt=""/></a>
+                            <a className="closebtn" onClick={this.closeNav}><FontAwesomeIcon icon="times" /></a>
                             <div className="overlay-content">
                                 <Link to='/list_tatuatori'>Tatuatori</Link>
                                 <Link to='/list_design'>Tattoo Design</Link>
@@ -60,7 +65,7 @@ class Header extends Component {
                             </div>
                     </div>
                     <div className="d-flex justify-content-between">
-                        <div className="botton-res p-3" onClick={this.openNav}><img src={Bars} style={{Color:'white'}} aria-hidden="true" alt=""/></div>
+                        <div className="botton-res p-3" onClick={this.openNav} style={{color:'white'}}><FontAwesomeIcon icon="bars"  aria-hidden="true"/></div>
                         
                             <Link className="navbar-brand-res" to='/'><img className="img-res mx-auto p-1" src={Logo2} alt=""/></Link>
                         
