@@ -87,6 +87,18 @@ app.get('/api/get/tatuatori/last', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   
+    tatuatori.find({}, function(err, tatuatoriList){
+      if(err){ console.log('error..'); } else {
+          res.json(tatuatoriList);
+      }
+    }).limit(10).sort({_id: -1});
+  });
+  
+//VIEW TATUATORI 
+app.get('/getTattoers', (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  
     tatuatori.find({}).limit(10).sort({_id: -1}).then(tatuatori =>{
         res.render("lastTattoers", {
             tatuatori: tatuatori
@@ -94,12 +106,23 @@ app.get('/api/get/tatuatori/last', (req, res) => {
     })
 });
 
-//API - CANCELLAZIONE TATUATORI
-app.delete('/api/tatuatori/last/:id', (req, res) => { 
+//MODIFICA TATUATORE
+app.get('/modificaTatuatore/:id', (req,res) => {
+    tatuatori.findOne({
+        _id: req.params.id
+    }).then(tatuatori => {
+        res.render("modificaTatuatore", {
+            tatuatori: tatuatori
+        });
+    });
+});
+
+//CANCELLAZIONE TATUATORI
+app.delete('/getTattoers/:id', (req, res) => { 
     tatuatori.remove({
         _id: req.params.id
     }).then(tatuatori => {
-        res.redirect('/api/get/tatuatori/last')
+        res.redirect('/getTattoers')
     });
 });
 

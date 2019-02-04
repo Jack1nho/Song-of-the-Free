@@ -1,13 +1,14 @@
 <ul class="tatuatori">
   {{#each tatuatori}}
-    <li>{{name}} {{surname}}; {{ranking_display}}</li>
+    <li>{{name}} {{surname}}</li> 
+    <p>Ranking: {{ranking_display}} </p>
     
-    <form action="/api/get/tatuatori/last/{{id}}?_method=DELETE" method="POST">
-      <input type="hidden" name="_method" value="DELETE">
-      <input type="submit" value="Cancella tatuatore ">
-    </form>
+    <a class="btn btn-primary" href="/modificaTatuatore/{{id}}">Modifica dati</a>
 
-    <button name="modify" href="">Modifica dati</button>
+    <form action="/getTattoers/{{id}}?_method=DELETE" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" class="btn btn-danger" value="Cancella tatuatore ">
+    </form>
 
   {{else}}
   <h4>Non c'è nessun tatuatore in archivio.</h4>
