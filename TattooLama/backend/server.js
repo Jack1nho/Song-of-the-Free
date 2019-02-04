@@ -29,6 +29,12 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 app.set('views', path.resolve(__dirname, 'view'));
 
+//HOMEPAGE 
+// app.get('/'), (req, res) => {
+
+//     res.render("index");
+// }
+
 //SCHEMA TATUATORI
 require("./models/tatuatori.js")
 const tatuatori = mongoose.model("tatuatori")
@@ -52,9 +58,9 @@ app.post('/api/insert/tatuatori', (req, res) => {
         working_email: req.body.email,
         private_email: req.body.private,
         cover: req.body.cover,
-        image: req.body.image,
+        image: path.resolve(__dirname, "src/img") + req.body.image,
         ranking_display: req.body.rank, 
-        url: req.body.url}, function (error, result) {
+        url: "/tatuatori/" + req.body.name + "-" + req.body.surname}, function (error, result) {
             if(error) {
             return result.end(error)
         } else {
@@ -81,21 +87,21 @@ app.get('/api/get/tatuatori/last', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   
-    tatuatori.find({}, function(err, tatuatoriList){
-      if(err){ console.log('error..'); } else {
-          res.json(tatuatoriList);
-      }
-    }).limit(10).sort({_id: -1});
-  });
+    tatuatori.find({}).limit(10).sort({_id: -1}).then(tatuatori =>{
+        res.render("lastTattoers", {
+            tatuatori: tatuatori
+        })
+    })
+});
 
-  //API - CANCELLAZIONE TATUATORI
-  app.get('/api/tatuatori/delete', (req, res) => {
-    // tatuatori.find(req.body.name) 
-    tatuatori.deleteOne(req.body.name);
-    res.send('Cancellazione avvenuta con successo')
-  });
-
-  
+//API - CANCELLAZIONE TATUATORI
+app.delete('/api/tatuatori/last/:id', (req, res) => { 
+    tatuatori.remove({
+        _id: req.params.id
+    }).then(tatuatori => {
+        res.redirect('/api/get/tatuatori/last')
+    });
+});
 
 //SCHEMA TATTOO IMAGES
 require("./models/tattooimages.js")

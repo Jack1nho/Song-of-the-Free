@@ -1,0 +1,16 @@
+<ul class="tatuatori">
+  {{#each tatuatori}}
+    <li>{{name}} {{surname}}; {{ranking_display}}</li>
+    
+    <form action="/api/get/tatuatori/last/{{id}}?_method=DELETE" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Cancella tatuatore ">
+    </form>
+
+    <button name="modify" href="">Modifica dati</button>
+
+  {{else}}
+  <h4>Non c'è nessun tatuatore in archivio.</h4>
+
+  {{/each}}
+</ul>
