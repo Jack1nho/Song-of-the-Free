@@ -67,8 +67,8 @@ app.post('/api/insert/tatuatori', (req, res) => {
         telephone: req.body.tele,
         working_email: req.body.email,
         private_email: req.body.private,
-        cover: req.body.cover,
-        image: "images/tatuatori/" + req.body.image,
+        cover: "images/tatuatori/cover/" + req.body.cover,
+        image: "images/tatuatori/img/" + req.body.image,
         ranking_display: req.body.rank, 
         url: slugify(req.body.name + req.body.surname, { replacement: '-', remove: null, lower: true})}, function (error, result) {
             if(error) {
