@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 
 class GrigliaTattooer extends Component {
     constructor(){
@@ -25,35 +26,35 @@ class GrigliaTattooer extends Component {
                     const key = null;
                     if (key === 2 || 3) {
                         return <li className="d-none d-md-block col-md-3 col-lg" key={i}>
-                                    <a href="" >
+                                    <Link to='/'>
                                         <img className="square" src={item.image} alt=""/>
                                         <div>
                                             <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
                                             <h4 class="textNome">{item.name}</h4>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </li>  
                     }
 
                     if (key === 4) {
                         return <li className="d-none d-lg-block col-lg" key={i}>
-                                    <a href="" >
+                                    <Link to='/'>
                                         <img className="square" src={item.image} alt=""/>
                                         <div>
                                             <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
                                             <h4 class="textNome">{item.name}</h4>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </li>
                     } else {
                     return <li className="col-6 col-sm-6 col-md-3 col-lg" key={i}>
-                                <a href="" >
+                                <Link to='/'>
                                     <img className="square" src={item.image} alt=""/>
                                     <div>
                                         <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
                                         <h4 class="textNome">{item.name}</h4>
                                     </div>
-                                </a>
+                                </Link>
                             </li>  
                 }})} 
                 </ul>   
@@ -63,35 +64,35 @@ class GrigliaTattooer extends Component {
                     const key = null;
                     if (key === 2 || 3) {
                         return <li className="d-none d-md-block col-md-3 col-lg" key={i}>
-                                    <a href="" >
+                                    <Link to='/'>
                                         <img className="square" src={item.image} alt=""/>
                                         <div>
                                             <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
                                             <h4 class="textNome">{item.name}</h4>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </li>  
                     }
 
                     if (key === 4) {
                         return <li className="d-none d-lg-block col-lg" key={i}>
-                                    <a href="" >
+                                    <Link to='/'>
                                         <img className="square" src={item.image} alt=""/>
                                         <div>
                                             <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
                                             <h4 class="textNome">{item.name}</h4>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </li>
                     } else {
                     return <li className="col-6 col-sm-6 col-md-3 col-lg" key={i}>
-                                <a href="" >
+                                <Link to='/'>
                                     <img className="square" src={item.image} alt=""/>
                                     <div>
                                         <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
                                         <h4 class="textNome">{item.name}</h4>
                                     </div>
-                                </a>
+                                </Link>
                             </li>  
                 }})} 
                 </ul>

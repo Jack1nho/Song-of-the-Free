@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './designStyle.css';
 
 class Design extends Component {
     
@@ -7,7 +8,7 @@ class Design extends Component {
             <div className="design my-4">
                     <div className="row">
                         <div className="col-12 col-md text-md-right text-center">
-                                <img src="https://via.placeholder.com/238x362" className="img-design"/>
+                                <img src="https://via.placeholder.com/238x362" className="img-design" alt=""/>
                         </div>
                         <div className="col-12 col-md">
                             <h2 className="text-3 mt-md-auto mt-5">Persian Cat</h2>

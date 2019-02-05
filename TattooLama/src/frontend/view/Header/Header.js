@@ -56,7 +56,7 @@ class Header extends Component {
 
                 <nav className="nav-res">
                     <div id="myNav" className="overlay">
-                            <a className="closebtn" onClick={this.closeNav}><FontAwesomeIcon icon="times" /></a>
+                            <div className="closebtn" onClick={this.closeNav}><FontAwesomeIcon icon="times" /></div>
                             <div className="overlay-content">
                                 <Link to='/list_tatuatori'>Tatuatori</Link>
                                 <Link to='/list_design'>Tattoo Design</Link>

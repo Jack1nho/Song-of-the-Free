@@ -202,12 +202,18 @@ body{
 .Rectangle {
   width: 218.9px;
   height: 161.3px;
-  opacity: 0.24;
   border-radius: 8.6px;
   background-color: #383838;
-  width: 100%;
-  display: flex;
-  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.text-slider {
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+  font-size: 21.6px;
+  color: #ffffff;
+  position: absolute;
+  transform: translate(80%, -240%);
 }
 
 /*------JUMBOTRON 2------*/
@@ -262,6 +268,10 @@ body{
   border-radius: 8.6px;
   width: 100%;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.row-grid {
+  padding-inline-start: 0px;
 }
 
 /*------LAST SECTION------*/

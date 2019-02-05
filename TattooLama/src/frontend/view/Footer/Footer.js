@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './Footer.css';
 import Logo from '../../../images/lama-logo.png';
+import { Link } from 'react-router-dom';
 
 class Footer extends Component {
     
@@ -20,11 +21,11 @@ class Footer extends Component {
                             </div>
                             <div className="col d-none d-md-block">
                                 <h4 className="text-footer-2">RISORSE</h4>  
-                                <a className="text-footer-2" href="">Studi Tatuaggi Milano</a><br></br>
-                                <a className="text-footer-2" href="">Tatuatori Milano</a><br></br>
-                                <a className="text-footer-2" href="">Blog</a><br></br>
-                                <a className="text-footer-2" href="">Mappa del Sito Tattoolama</a><br></br>
-                                <a className="text-footer-2" href="">Privacy &amp; Cookie Policy</a><br></br>
+                                <Link to='/' className="text-footer-2" href="">Studi Tatuaggi Milano</Link><br></br>
+                                <Link to='/' className="text-footer-2" href="">Tatuatori Milano</Link><br></br>
+                                <Link to='/' className="text-footer-2" href="">Blog</Link><br></br>
+                                <Link to='/' className="text-footer-2" href="">Mappa del Sito Tattoolama</Link><br></br>
+                                <Link to='/' className="text-footer-2" href="">Privacy &amp; Cookie Policy</Link><br></br>
                             </div>
                         </div>       
                     </div>

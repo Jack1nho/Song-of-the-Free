@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 
 class GrigliaDesign extends Component {
     constructor(){
@@ -10,7 +11,7 @@ class GrigliaDesign extends Component {
     }
     
     componentDidMount() {
-        fetch('http://localhost:5000/api/get/tattooimages/last')
+        fetch('http://localhost:5000/Linkpi/get/tattooimages/last')
         .then(response => response.json())
         .then(data => this.setState({
             Design: data
@@ -25,38 +26,38 @@ class GrigliaDesign extends Component {
                     const key = null;
                     if (key === 2 || 3) {
                         return <li className="d-none d-md-block col-md-3 col-lg" key={i}>
-                                    <a href="" >
+                                    <Link to='/' >
                                         <img className="square" src={item.image} alt=""/>
                                         <div>
                                             <h4 className="mt-2 mb-0 textNome">{item.name}</h4>
                                             <h4 className="mb-0 textArtista">{item.associated_artist}</h4>
                                             <h4 className="textPrezzo">{item.price}</h4>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </li>  
                     }
 
                     if (key === 4) {
                         return <li className="d-none d-lg-block col-lg" key={i}>
-                                    <a href="" >
+                                    <Link to='/' >
                                         <img className="square" src={item.image} alt=""/>
                                         <div>
                                             <h4 className="mt-2 mb-0 textNome">{item.name}</h4>
                                             <h4 className="mb-0 textArtista">{item.associated_artist}</h4>
                                             <h4 className="textPrezzo">{item.price}</h4>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </li>
                     } else {
                     return <li className="col-6 col-sm-6 col-md-3 col-lg" key={i}>
-                                <a href="" >
+                                <Link to='/' >
                                     <img className="square" src={item.image} alt=""/>
                                     <div>
                                         <h4 className="mt-2 mb-0 textNome">{item.name}</h4>
                                         <h4 className="mb-0 textArtista">{item.associated_artist}</h4>
                                         <h4 className="textPrezzo">{item.price}</h4>
                                     </div>
-                                </a>
+                                </Link>
                             </li>  
                 }})} 
                 </ul>   
@@ -66,38 +67,38 @@ class GrigliaDesign extends Component {
                     const key = null;
                     if (key === 2 || 3) {
                         return <li className="d-none d-md-block col-md-3 col-lg" key={i}>
-                                    <a href="" >
+                                    <Link to='/' >
                                         <img className="square" src={item.image} alt=""/>
                                         <div>
                                             <h4 className="mt-2 mb-0 textNome">{item.name}</h4>
                                             <h4 className="mb-0 textArtista">{item.associated_artist}</h4>
                                             <h4 className="textPrezzo">{item.price}</h4>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </li>  
                     }
 
                     if (key === 4) {
                         return <li className="d-none d-lg-block col-lg" key={i}>
-                                    <a href="" >
+                                    <Link to='/' >
                                         <img className="square" src={item.image} alt=""/>
                                         <div>
                                             <h4 className="mt-2 mb-0 textNome">{item.name}</h4>
                                             <h4 className="mb-0 textArtista">{item.associated_artist}</h4>
                                             <h4 className="textPrezzo">{item.price}</h4>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </li>
                     } else {
                     return <li className="col-6 col-sm-6 col-md-3 col-lg" key={i}>
-                                <a href="" >
+                                <Link to='/' >
                                     <img className="square" src={item.image} alt=""/>
                                     <div>
                                         <h4 className="mt-2 mb-0 textNome">{item.name}</h4>
                                         <h4 className="mb-0 textArtista">{item.associated_artist}</h4>
                                         <h4 className="textPrezzo">{item.price}</h4>
                                     </div>
-                                </a>
+                                </Link>
                             </li>  
                 }})} 
                 </ul>

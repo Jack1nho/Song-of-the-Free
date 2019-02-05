@@ -117,6 +117,7 @@
 .slick-dotted.slick-slider
 {
     margin-bottom: 30px;
+    padding-inline-start: 0px;
 }
 
 .slick-dots

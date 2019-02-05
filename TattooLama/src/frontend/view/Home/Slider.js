@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 
 class Slider extends Component {
     constructor(){
@@ -21,11 +22,12 @@ class Slider extends Component {
         return(
             <ul className="slickHome">
             {this.state.Tattooer.map((item, i) => {
-                return <li key={i}><div><img data-lazy={item.image} className="img-fluid Rectangle" alt=""/></div></li>     
+                return <li key={i}><Link to='/tatuatore/{item.url}'><img src={item.image} className="img-fluid Rectangle" alt=""/><h1 className="text-slider">{item.name}<br></br>{item.surname}</h1></Link></li>     
             })}      
             </ul>
         );
     }
+    
 }
 
 export default Slider;
