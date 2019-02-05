@@ -77,7 +77,8 @@ app.post('/api/insert/tatuatori', (req, res) => {
             console.log('Tatuatore inserito con successo')
             }
         });
-
+    res.redirect('/getTattoers')
+    //location.reload();
 });
 
 //API - MIGLIORI TATUATORI
@@ -156,7 +157,8 @@ app.post('/api/insert/tattooimages', (req, res) => {
         associated_artist: req.body.associated, 
         price: req.body.price, 
         style: req.body.style,
-        url_design: req.body.url_design }, function (error, result) {
+        image: "images/design/" + req.body.image,
+        url_design: slugify(req.body.design_name, { replacement: '-', remove: null, lower: true})}, function (error, result) {
         if(error) {
             return result.end(error)}
         else{

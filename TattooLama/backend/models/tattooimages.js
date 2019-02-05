@@ -6,7 +6,7 @@ const tattooImagesSchema = mongoose.Schema({
         required: true
     },
     associated_artist:{
-        type: Number,
+        type: String,
         required: true
     },
     price:{
@@ -16,6 +16,10 @@ const tattooImagesSchema = mongoose.Schema({
     style:{
         type: String,
         required: true
+    },
+    image:{
+        type: String,
+        required: true,
     },
     url_design:{
         type: String,
