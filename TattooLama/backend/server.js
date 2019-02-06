@@ -180,3 +180,35 @@ app.get('/api/get/tattooimages/last', (req, res) => {
     }).limit(10).sort({_id: -1});
   
   });
+
+//MODIFICA TATTOO DESIGN
+app.get('/modificaDesign/:id', (req,res) => {
+    tattooimages.findOne({
+        _id: req.params.id
+    }).then(tattooimages => {
+        res.render("modificaDesign", {
+            tattooimages: tattooimages
+        });
+    });
+});
+    
+//CANCELLAZIONE TATTOO DESIGN
+app.delete('/getTattooDesign/:id', (req, res) => { 
+    tatuatori.remove({
+        _id: req.params.id
+    }).then(tatuatori => {
+        res.redirect('/getTattooDesign')
+    });
+});
+
+//VIEW DESIGN 
+app.get('/getTattooDesign', (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  
+    tattooimages.find({}).limit(10).sort({_id: -1}).then(tattooimages =>{
+        res.render("getTattooDesign", {
+            tattooimages: tattooimages
+        })
+    })
+});

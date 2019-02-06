@@ -1,0 +1,17 @@
+<ul class="tattooimages">
+  {{#each tattooimages}}
+    <li>{{name_design}} {{associated_artist}}</li> 
+    <p>Prezzo: {{price}} </p>
+    
+    <a class="btn btn-primary" href="/modificaDesign/{{id}}">Modifica dati</a>
+
+    <form action="/getTattooDesign/{{id}}?_method=DELETE" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" class="btn btn-danger" value="Cancella Design ">
+    </form>
+
+  {{else}}
+  <h4>Non c'è nessun design in archivio.</h4>
+
+  {{/each}}
+</ul>
