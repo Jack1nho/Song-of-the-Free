@@ -65,7 +65,7 @@ app.post('/api/insert/tatuatori', (req, res) => {
         cover: "images/tatuatori/cover/" + req.body.cover,
         image: "images/tatuatori/img/" + req.body.image,
         ranking_display: req.body.rank, 
-        url: slugify(req.body.name + req.body.surname, { replacement: '-', remove: null, lower: true})}, function (error, result) {
+        url: slugify(req.body.name + ' ' + req.body.surname, { replacement: '-', separator: '-', remove: null, lower: true})}, function (error, result) {
             if(error) {
             return result.end(error)
         } else {
@@ -139,7 +139,7 @@ app.post('/getTattoers/:id', (req,res) => {
         tatuatori.cover= "images/tatuatori/cover/" + req.body.cover,
         tatuatori.image= "images/tatuatori/img/" + req.body.image,
         tatuatori.ranking_display= req.body.rank, 
-        tatuatori.url= slugify(req.body.name + req.body.surname, { replacement: '-', remove: null, lower: true})
+        tatuatori.url= slugify(req.body.name + ' ' + req.body.surname, { replacement: '-', separator: '-', remove: null, lower: true})
         
         tatuatori.save()
         .then(tatuatori=>{
@@ -148,14 +148,23 @@ app.post('/getTattoers/:id', (req,res) => {
     });
 });
   
-  //CANCELLAZIONE TATUATORE
-  app.delete('/getTattoers/:id', (req, res) => { 
-      tatuatori.remove({
-          _id: req.params.id
-      }).then(tatuatori => {
-          res.redirect('/getTattoers')
-      });
-  });
+//CANCELLAZIONE TATUATORE
+app.delete('/getTattoers/:id', (req, res) => { 
+    tatuatori.remove({
+        _id: req.params.id
+            }).then(tatuatori => {
+        res.redirect('/getTattoers')
+    });
+});
+
+//API URL
+app.get('/tatuatore/:url', (req, res) => {
+    tatuatori.findOne(function(err, tatuatoriList){
+        if(err){ console.log('error..'); } else {
+            res.json(tatuatoriList);
+        }
+    })
+});
   
 
 //SCHEMA TATTOO IMAGES

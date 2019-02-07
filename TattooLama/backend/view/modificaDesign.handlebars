@@ -1,4 +1,5 @@
-    <form method="POST" action="/getTattooDesign/{{tattooimages.id}}?_method=POST" method="POST">
+<div class="d-flex">
+    <form method="POST" action="/getTattooDesign/{{tattooimages.id}}?_method=POST" method="POST" class="list-inline mx-auto justify-content-center">
         <input type="hidden" name="_method" value="POST">
         Nome Design:<br>
         <input type="text" name="design_name" value="{{tattooimages.name_design}}"><br>
@@ -13,3 +14,4 @@
         
         <input type="submit" value="Submit">
     </form>
+</div>

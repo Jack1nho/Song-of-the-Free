@@ -1,4 +1,5 @@
-    <form method="POST" action="/getTattoers/{{tatuatori.id}}?_method=POST" method="POST">
+<div class="d-flex">    
+    <form method="POST" action="/getTattoers/{{tatuatori.id}}?_method=POST" method="POST" class="list-inline mx-auto justify-content-center">
         <input type="hidden" name="_method" value="POST">
         Nome:<br>
         <input type="text" name="name" value="{{tatuatori.name}}"><br>
@@ -25,3 +26,4 @@
 
         <input type="submit" value="Submit">
     </form>
+</div>

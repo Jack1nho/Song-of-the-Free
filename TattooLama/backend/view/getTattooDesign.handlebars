@@ -1,11 +1,12 @@
-<ul class="tattooimages">
+<div class="d-flex">
+<ul class="tattooimages list-inline mx-auto justify-content-center">
   {{#each tattooimages}}
-    <li>{{name_design}} {{associated_artist}}</li> 
-    <p>Prezzo: {{price}} </p>
+    <li class="list-inline-item">{{name_design}} {{associated_artist}}</li> 
+    <p class="list-inline-item">Prezzo: {{price}} </p> <br>
     
-    <a class="btn btn-primary" href="/modificaDesign/{{id}}">Modifica dati</a>
+    <a class="btn btn-primary mb-1" href="/modificaDesign/{{id}}">Modifica dati</a> 
 
-    <form action="/getTattooDesign/{{id}}?_method=DELETE" method="POST">
+    <form action="/getTattooDesign/{{id}}?_method=DELETE" method="POST" class="mb-3">
       <input type="hidden" name="_method" value="DELETE">
       <input type="submit" class="btn btn-danger" value="Cancella Design ">
     </form>
@@ -15,3 +16,4 @@
 
   {{/each}}
 </ul>
+</div>

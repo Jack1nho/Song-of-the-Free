@@ -1,11 +1,12 @@
-<ul class="tatuatori">
+<div class="d-flex">
+<ul class="tatuatori list-inline mx-auto justify-content-center">
   {{#each tatuatori}}
     <li>{{name}} {{surname}}</li> 
     <p>Ranking: {{ranking_display}} </p>
     
-    <a class="btn btn-primary" href="/modificaTatuatore/{{id}}">Modifica dati</a>
+    <a class="btn btn-primary mb-1" href="/modificaTatuatore/{{id}}">Modifica dati</a>
 
-    <form action="/getTattoers/{{id}}?_method=DELETE" method="POST">
+    <form action="/getTattoers/{{id}}?_method=DELETE" method="POST" class="mb-3">
       <input type="hidden" name="_method" value="DELETE">
       <input type="submit" class="btn btn-danger" value="Cancella tatuatore ">
     </form>
@@ -15,3 +16,4 @@
 
   {{/each}}
 </ul>
+</div>
