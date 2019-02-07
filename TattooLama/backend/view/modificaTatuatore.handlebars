@@ -1,4 +1,5 @@
-    <form method="POST" action="/modificaTatuatore">
+    <form method="POST" action="/getTattoers/{{tatuatori.id}}?_method=POST" method="POST">
+        <input type="hidden" name="_method" value="POST">
         Nome:<br>
         <input type="text" name="name" value="{{tatuatori.name}}"><br>
         Cognome:<br>
