@@ -2,27 +2,27 @@
     
     <form method="POST" action="/api/insert/tatuatori" class="list-inline mx-auto justify-content-center"> 
         Nome:<br>
-        <input type="text" name="name" value="" required><br>
+        <input type="text" name="name" value="" class="form-control" required><br>
         Cognome:<br>
-        <input type="text" name="surname" value="" required><br>
+        <input type="text" name="surname" value="" class="form-control" required><br>
         Biografia:<br>
-        <input type="textarea" name="bio" value="" required><br>
+        <textarea type="textarea" name="bio" value="" class="form-control" required></textarea> <br>
         Città:<br>
-        <input type="text" name="city" value="" required><br>
+        <input type="text" name="city" value="" class="form-control" required><br>
         Indirizzo:<br>
-        <input type="text" name="street" value="" required><br>
+        <input type="text" name="street" value="" class="form-control" required><br>
         Telefono:<br>
-        <input type="text" name="tele" value="" required><br>
+        <input type="text" name="tele" value="" class="form-control" required><br>
         Email:<br>
-        <input type="text" name="email" value="" required><br>
+        <input type="email" name="email" value="" aria-describedby="emailHelp" class="form-control" required><br>
         Email privata:<br>
-        <input type="text" name="private" value="" required><br>
+        <input type="email" name="private" value="" aria-describedby="emailHelp" class="form-control" required><br>
         Cover:<br>
-        <input type="text" name="cover" value="" required><br>
+        <input type="text" name="cover" value="" class="form-control" required><br>
         Image:<br>
-        <input type="text" name="image" value="" required><br>
+        <input type="text" name="image" value="" class="form-control" required><br>
         Ranking:<br>
-        <input type="number" name="rank" value="" required><br>
+        <input type="number" name="rank" value="" class="form-control" required><br>
 
         <input type="submit" value="Submit">
     </form>

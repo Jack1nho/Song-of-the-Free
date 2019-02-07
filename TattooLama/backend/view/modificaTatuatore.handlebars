@@ -2,27 +2,27 @@
     <form method="POST" action="/getTattoers/{{tatuatori.id}}?_method=POST" method="POST" class="list-inline mx-auto justify-content-center">
         <input type="hidden" name="_method" value="POST">
         Nome:<br>
-        <input type="text" name="name" value="{{tatuatori.name}}"><br>
+        <input type="text" name="name" class="form-control" value="{{tatuatori.name}}"><br>
         Cognome:<br>
-        <input type="text" name="surname" value="{{tatuatori.surname}}"><br>
+        <input type="text" name="surname" class="form-control" value="{{tatuatori.surname}}"><br>
         Biografia:<br>
-        <input type="textarea" name="bio" value="{{tatuatori.biography}}"><br>
+        <textarea type="textarea" name="bio" class="form-control" value="{{tatuatori.biography}}"></textarea> <br>
         Città:<br>
-        <input type="text" name="city" value="{{tatuatori.city}}"><br>
+        <input type="text" name="city" class="form-control" value="{{tatuatori.city}}"><br>
         Indirizzo:<br>
-        <input type="text" name="street" value="{{tatuatori.address}}"><br>
+        <input type="text" name="street" class="form-control" value="{{tatuatori.address}}"><br>
         Telefono:<br>
-        <input type="text" name="tele" value="{{tatuatori.telephone}}"><br>
+        <input type="text" name="tele" class="form-control" value="{{tatuatori.telephone}}"><br>
         Email:<br>
-        <input type="text" name="email" value="{{tatuatori.working_email}}"><br>
+        <input type="email" name="email" class="form-control" aria-describedby="emailHelp" class="form-control" value="{{tatuatori.working_email}}"><br>
         Email privata:<br>
-        <input type="text" name="private" value="{{tatuatori.private_email}}"><br>
+        <input type="email" name="private" class="form-control" aria-describedby="emailHelp" class="form-control" value="{{tatuatori.private_email}}"><br>
         Cover:<br>
-        <input type="text" name="cover" value="{{tatuatori.cover}}"><br>
+        <input type="text" name="cover" class="form-control" value="{{tatuatori.cover}}"><br>
         Image:<br>
-        <input type="text" name="image" value="{{tatuatori.image}}"><br>
+        <input type="text" name="image" class="form-control" value="{{tatuatori.image}}"><br>
         Ranking:<br>
-        <input type="number" name="rank" value="{{tatuatori.ranking_display}}"><br>
+        <input type="number" name="rank" class="form-control" value="{{tatuatori.ranking_display}}"><br>
 
         <input type="submit" value="Submit">
     </form>
