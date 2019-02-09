@@ -11,6 +11,8 @@
         <input type="text" name="city" class="form-control" value="{{tatuatori.city}}"><br>
         Indirizzo:<br>
         <input type="text" name="street" class="form-control" value="{{tatuatori.address}}"><br>
+        CAP:<br>
+        <input type="number" name="cap" value="{{tatuatori.cap}}" class="form-control" required><br>
         Telefono:<br>
         <input type="text" name="tele" class="form-control" value="{{tatuatori.telephone}}"><br>
         Email:<br>
@@ -21,8 +23,13 @@
         <input type="text" name="cover" class="form-control" value="{{tatuatori.cover}}"><br>
         Image:<br>
         <input type="text" name="image" class="form-control" value="{{tatuatori.image}}"><br>
-        Ranking:<br>
-        <input type="number" name="rank" class="form-control" value="{{tatuatori.ranking_display}}"><br>
+        
+        <label for="sel1">Ranking:</label>
+            <select type="number" value="{{tatuatori.ranking_display}}" name="rank" class="form-control" id="sel1">
+                <option>0</option>
+                <option>1</option>
+            </select>
+        <br>
 
         <input type="submit" value="Submit">
     </form>

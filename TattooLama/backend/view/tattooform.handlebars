@@ -11,6 +11,8 @@
         <input type="text" name="city" value="" class="form-control" required><br>
         Indirizzo:<br>
         <input type="text" name="street" value="" class="form-control" required><br>
+        CAP:<br>
+        <input type="number" name="cap" value="" class="form-control" required><br>
         Telefono:<br>
         <input type="text" name="tele" value="" class="form-control" required><br>
         Email:<br>
@@ -21,8 +23,13 @@
         <input type="text" name="cover" value="" class="form-control" required><br>
         Image:<br>
         <input type="text" name="image" value="" class="form-control" required><br>
-        Ranking:<br>
-        <input type="number" name="rank" value="" class="form-control" required><br>
+        
+        <label for="sel1">Ranking:</label>
+            <select type="number" name="rank" class="form-control" id="sel1">
+                <option>0</option>
+                <option>1</option>
+            </select>
+        <br>
 
         <input type="submit" value="Submit">
     </form>

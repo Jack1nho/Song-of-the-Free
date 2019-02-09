@@ -59,6 +59,7 @@ app.post('/api/insert/tatuatori', (req, res) => {
         biography: req.body.bio, 
         city: req.body.city, 
         address: req.body.street, 
+        cap: req.body.cap,
         telephone: req.body.tele,
         working_email: req.body.email,
         private_email: req.body.private,
@@ -132,7 +133,8 @@ app.post('/getTattoers/:id', (req,res) => {
         tatuatori.surname= req.body.surname, 
         tatuatori.biography= req.body.bio, 
         tatuatori.city= req.body.city, 
-        tatuatori.address= req.body.street, 
+        tatuatori.address= req.body.street,
+        tatuatori.cap= req.body.cap, 
         tatuatori.telephone= req.body.tele,
         tatuatori.working_email= req.body.email,
         tatuatori.private_email= req.body.private,
@@ -157,11 +159,12 @@ app.delete('/getTattoers/:id', (req, res) => {
     });
 });
 
-//API URL
+//API - URL
 app.get('/tatuatore/:url', (req, res) => {
-    tatuatori.findOne(function(err, tatuatoriList){
+    var _url= req.params.url;
+    tatuatori.findOne({url: _url}, function(err, tatuatore){
         if(err){ console.log('error..'); } else {
-            res.json(tatuatoriList);
+            res.json(tatuatore);
         }
     })
 });

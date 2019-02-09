@@ -21,6 +21,10 @@ const tatuatoriSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    cap:{
+        type: Number,
+        required: true 
+    },
     telephone:{
         type: String,
         required: true
