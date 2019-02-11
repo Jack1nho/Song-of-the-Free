@@ -159,7 +159,7 @@ app.delete('/getTattoers/:id', (req, res) => {
     });
 });
 
-//API - URL
+//API - URL TATTOER
 app.get('/tatuatore/:url', (req, res) => {
     var _url= req.params.url;
     tatuatori.findOne({url: _url}, function(err, tatuatore){
@@ -168,7 +168,16 @@ app.get('/tatuatore/:url', (req, res) => {
         }
     })
 });
-  
+
+// API - ALL TATTOO DESIGN
+// app.get('/tatuatore/:url/design', (req, res) => {  
+//     var _url= req.params.url;
+//     tattooimages.findOne({url: _url}, function(err, tatuatore){
+//         if(err){ console.log('error..'); } else {
+//             res.json(tatuatore.design);
+//         }
+//     })
+// });
 
 //SCHEMA TATTOO IMAGES
 require("./models/tattooimages.js")
@@ -177,8 +186,11 @@ const tattooimages = mongoose.model("tattooimages")
 // FORM DI INSERIMENTO - TATTOO IMAGES
 app.get('/api/insert/tattooimages', (req, res) => {
 
-    res.render("designform");
-
+    tatuatori.find({}).sort({_id: -1}).then(tatuatori =>{
+        res.render("designform", {
+            tatuatori: tatuatori
+        })
+    })
 });
 
 app.post('/api/insert/tattooimages', (req, res) => {
@@ -190,28 +202,17 @@ app.post('/api/insert/tattooimages', (req, res) => {
         price: req.body.price, 
         style: req.body.style,
         image: "images/design/" + req.body.image,
+        id_tattoer: req.body.selectpicker,
+        data: Date(""),
         url_design: slugify(req.body.design_name, { replacement: '-', remove: null, lower: true})}, function (error, result) {
         if(error) {
-            return result.end(error)}
+            return (error)}
         else{
             return console.log("Tattoo image inserita con successo")
        }
     });
     res.redirect('/getTattooDesign')
 });
-
-//API - ULTIME TATTOO IMAGES
-app.get('/api/get/tattooimages/last', (req, res) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  
-    tattooimages.find({}, function(err, tattooimagesList){
-      if(err){ console.log('error..'); } else {
-          res.json(tattooimagesList);
-      }
-    }).limit(10).sort({_id: -1});
-  
-  });
 
 //MODIFICA TATTOO DESIGN
 app.get('/modificaDesign/:id', (req,res) => {
@@ -234,8 +235,8 @@ app.post('/getTattooDesign/:id', (req,res) => {
         tattooimages.price= req.body.price, 
         tattooimages.style= req.body.style,
         tattooimages.image= "images/design/" + req.body.image,
+        tattooimages.data= Date(""),
         tattooimages.url_design= slugify(req.body.design_name, { replacement: '-', remove: null, lower: true})
-        
         tattooimages.save()
         .then(tattooimages=>{
             res.redirect('/getTattooDesign');  
@@ -263,3 +264,33 @@ app.get('/getTattooDesign', (req, res) => {
         })
     })
 });
+
+//API - URL DESIGN
+app.get('/design/:url', (req, res) => {
+    var _url= req.params.url;
+    tattooimages.findOne({url_design: _url}, function(err, tattooimages){
+        if(err){ console.log('error..'); } else {
+            res.json(tattooimages);
+        }
+    })
+});
+
+
+
+//SCHEMA DESIGN
+require("./models/design.js")
+const design = mongoose.model("design")
+
+//API - ULTIME TATTOO IMAGES
+app.get('/api/get/tattooimages/last', (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  
+    tattooimages.find({}, function(err, tattooimagesList){
+      if(err){ console.log('error..'); } else {
+          res.json(tattooimagesList);
+      }
+    }).limit(10).sort({data: -1});
+  
+  });
+

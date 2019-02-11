@@ -19,7 +19,15 @@ const tattooImagesSchema = mongoose.Schema({
     },
     image:{
         type: String,
-        required: true,
+        required: true
+    },
+    id_tattoer: {
+        type: String,
+        required: true
+    },
+    data:{
+        type: Date,
+        required: true
     },
     url_design:{
         type: String,
