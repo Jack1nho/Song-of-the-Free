@@ -1,10 +1,10 @@
     @media screen and (max-width: 768px) {
-    .Jumbotron-1 {
+    .Jumbotron-design {
         display: none;
     }
 
     .bottone-richiesta {
-        width: 160px;
+        width: 163px;
         height: 40.3px;
         border-radius: 15.1px !important;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14);
@@ -71,7 +71,7 @@
     }
 }
 
-.Text-2-Jumbotron-1 .Red {
+.Text-2-Jumbotron-11 .Red {
     padding-left: 220px;
 }
 
@@ -110,16 +110,16 @@
 }
 
 .card-header {
-    border-style: none;
-    background-color: #ffffff;
+    border-style: none !important;
+    background-color: #ffffff !important;
 }
 
 .btn-link:focus {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .collapsed {
-    color: #24272c;
+    color: #24272c !important;
 }
 
 .arrow-accordion {

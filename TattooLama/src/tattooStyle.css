@@ -89,7 +89,6 @@ body{
 /*------TOP PAGE JUMBOTRON------*/
 
 .Jumbotron-1 {
-  margin-bottom: 33.3px;
   background-image: url('./images/hero-tattoolama.jpg');
   background-size: cover;
   background-position: center 3%;
@@ -113,7 +112,6 @@ body{
 }
 
 .Jumbotron-list-design {
-  margin-bottom: 33.3px;
   background-color: rgba(0, 0, 0, 0.5);
   background-image: url('./images/hero-tattoo-design.jpg');
   background-position: center 18%;
@@ -124,7 +122,6 @@ body{
 }
 
 .Jumbotron-list-tattooer {
-  margin-bottom: 33.3px;
   background-color: rgba(0, 0, 0, 0.5);
   background-image: url('./images/hero-choosetattoo.jpg');
   background-position: center 25%;
@@ -135,7 +132,6 @@ body{
 }
 
 .Jumbotron-design {
-  margin-bottom: 33.3px;
   background-color: rgba(0, 0, 0, 0.5);
   background-image: url('./images/scegli-il-tuo-design.jpg');
   background-position: center 65%;
@@ -159,8 +155,8 @@ body{
 
 .text-2 {
   font-weight: 700 !important;
-  color: #d80e47;
-  font-size: 14px;
+  color: #d80e47 !important;
+  font-size: 14px !important;
 }
 
 .text-3 {
@@ -184,8 +180,8 @@ body{
 }
 
 .text-2:hover{
-  text-decoration: none;
-  color: #d80e47;
+  text-decoration: none !important;
+  color: #d80e47 !important;
   opacity: 0.8;
 }
 

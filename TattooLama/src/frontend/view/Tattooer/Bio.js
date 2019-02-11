@@ -14,8 +14,8 @@ class Bio extends Component {
                         <img src="https://via.placeholder.com/240x171" className="img-artist" alt=""/>
                     </div>
                     <div className="col-12 col-lg col-name">
-                        <h1 className="nome">GIANMAURIZIO</h1>
-                        <h1 className="cognome">FERCIONI</h1>
+                        <h1 className="nome">{this.props.Tattooer.name}</h1>
+                        <h1 className="cognome">{this.props.Tattooer.surname}</h1>
                         <span className="badge top-artist"><FontAwesomeIcon icon="star"/>&nbsp;&nbsp;&nbsp;TOP ARTIST</span>
                     </div>   
                 </div>

@@ -45,7 +45,7 @@ class Header extends Component {
                             <Link className="nav-link" to='/list_design'>Tattoo Design</Link>
                         </li>
                         <li className="nav-item p-1 pr-5">
-                            <Link className="nav-link" to='/tatuatore'>Blog</Link>
+                            <Link className="nav-link" to='/blog'>Blog</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to='/Contacts'>Contattaci <span role="img" aria-label="emoji">🦄</span></Link>
@@ -60,8 +60,8 @@ class Header extends Component {
                             <div className="overlay-content">
                                 <Link to='/list_tatuatori'>Tatuatori</Link>
                                 <Link to='/list_design'>Tattoo Design</Link>
-                                <Link to='/Blog'>Blog<br></br><br></br></Link>
-                                <Link to='/Contacts'>Contattaci <span role="img" aria-label="emoji">🦄</span></Link>
+                                <Link to='/Blog'>Blog</Link>
+                                <Link className="mt-5" to='/Contacts'>Contattaci <span role="img" aria-label="emoji">🦄</span></Link>
                             </div>
                     </div>
                     <div className="d-flex justify-content-between">

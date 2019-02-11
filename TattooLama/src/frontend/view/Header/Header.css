@@ -51,7 +51,6 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0,0,0);
   background-color: rgba(0,0,0, 0.9);
   overflow-y: hidden;
   transition: 0.5s;
@@ -73,6 +72,7 @@
   color: #f1f1f1;
   display: block;
   transition: 0.3s;
+  width: 275px;
 }
 
 .overlay a:hover, .overlay a:focus {
@@ -85,7 +85,7 @@
   top: 20px;
   right: 45px;
   font-size: 30px;
-  
+  cursor: pointer;
 }
 
 @media screen and (max-height: 450px) {

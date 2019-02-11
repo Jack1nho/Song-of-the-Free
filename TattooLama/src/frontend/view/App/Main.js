@@ -18,6 +18,7 @@ const Main = () => (
       <Route exact path='/list_design' component={ListDesign}/>
       <Route exact path='/list_tatuatori' component={ListTattooer}/>
       <Route exact path='/tatuatore/:url' component={Tattooer}/>
+      <Route exact path='/tatuatore' component={Tattooer}/>
       <Route exact path='/design/:url' component={Design}/>
     </Switch>
   </main>
