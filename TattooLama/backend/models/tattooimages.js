@@ -17,6 +17,14 @@ const tattooImagesSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    altezza:{
+        type: String,
+        required: true
+    },
+    larghezza:{
+        type: String,
+        required: true
+    },
     image:{
         type: String,
         required: true

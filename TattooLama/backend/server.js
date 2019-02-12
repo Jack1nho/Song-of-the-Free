@@ -90,7 +90,7 @@ app.get('/api/get/tatuatori/best', (req, res) => {
   });
   
   //API - ULTIMI TATUATORI
-  app.get('/api/get/tatuatori/last', (req, res) => {
+  app.get('/api/get/tatuatori/all', (req, res) => {
       res.header("Access-Control-Allow-Origin", "*");
       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     
@@ -98,7 +98,7 @@ app.get('/api/get/tatuatori/best', (req, res) => {
         if(err){ console.log('error..'); } else {
             res.json(tatuatoriList);
         }
-      }).limit(10).sort({_id: -1});
+      }).sort({_id: -1});
     });
     
   //VIEW TATUATORI 
@@ -170,14 +170,16 @@ app.get('/tatuatore/:url', (req, res) => {
 });
 
 // API - ALL TATTOO DESIGN
-// app.get('/tatuatore/:url/design', (req, res) => {  
-//     var _url= req.params.url;
-//     tattooimages.findOne({url: _url}, function(err, tatuatore){
-//         if(err){ console.log('error..'); } else {
-//             res.json(tatuatore.design);
-//         }
-//     })
-// });
+app.get('/tatuatore/:id', (req, res) => {  
+    var id_t = req.params.id;
+    tattooimages.find({id_tattoer: ""+id_t+""}, function(err, tattoodesign){
+        if(err){ console.log('error..'); } else {
+           
+            res.json(tattoodesign);
+            console.log(typeof id_t);
+        }
+    })
+});
 
 //SCHEMA TATTOO IMAGES
 require("./models/tattooimages.js")
@@ -201,6 +203,8 @@ app.post('/api/insert/tattooimages', (req, res) => {
         associated_artist: req.body.associated, 
         price: req.body.price, 
         style: req.body.style,
+        altezza: req.body.altezza,
+        larghezza: req.body.larghezza,
         image: "images/design/" + req.body.image,
         id_tattoer: req.body.selectpicker,
         data: Date(""),
@@ -234,7 +238,10 @@ app.post('/getTattooDesign/:id', (req,res) => {
         tattooimages.associated_artist= req.body.associated, 
         tattooimages.price= req.body.price, 
         tattooimages.style= req.body.style,
+        tattooimages.altezza= req.body.altezza,
+        tattooimages.larghezza= req.body.larghezza,
         tattooimages.image= "images/design/" + req.body.image,
+        tattooimages.id_tattoer= req.body.selectpicker,
         tattooimages.data= Date(""),
         tattooimages.url_design= slugify(req.body.design_name, { replacement: '-', remove: null, lower: true})
         tattooimages.save()
@@ -290,7 +297,19 @@ app.get('/api/get/tattooimages/last', (req, res) => {
       if(err){ console.log('error..'); } else {
           res.json(tattooimagesList);
       }
-    }).limit(10).sort({data: -1});
+    }).limit(10).sort({data: 0});
   
   });
 
+//API - ULTIME TATTOO IMAGES
+app.get('/api/get/tattooimages/all', (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  
+    tattooimages.find({}, function(err, tattooimagesList){
+      if(err){ console.log('error..'); } else {
+          res.json(tattooimagesList);
+      }
+    }) 
+  
+  });
