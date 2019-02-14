@@ -74,7 +74,6 @@ app.post('/api/insert/tatuatori', (req, res) => {
             }
         });
     res.redirect('/getTattoers')
-    //location.reload();
 });
 
 //API - MIGLIORI TATUATORI
@@ -160,7 +159,7 @@ app.delete('/getTattoers/:id', (req, res) => {
 });
 
 //API - URL TATTOER
-app.get('/tatuatore/:url', (req, res) => {
+app.get('/api/get/tatuatore/:url', (req, res) => {
     var _url= req.params.url;
     tatuatori.findOne({url: _url}, function(err, tatuatore){
         if(err){ console.log('error..'); } else {
@@ -170,15 +169,15 @@ app.get('/tatuatore/:url', (req, res) => {
 });
 
 // API - ALL TATTOO DESIGN
-app.get('/tatuatore/:id', (req, res) => {  
+app.get('/api/get/design/tatuatore/:id', (req, res) => {
     var id_t = req.params.id;
-    tattooimages.find({id_tattoer: ""+id_t+""}, function(err, tattoodesign){
-        if(err){ console.log('error..'); } else {
-           
-            res.json(tattoodesign);
-            console.log(typeof id_t);
-        }
-    })
+    tattooimages.find({ id_tattoer: "" + id_t + "" },
+        function (err, tattoodesign) {
+            if (err) { console.log('error..'); } else {
+                res.json(tattoodesign);
+                console.log(typeof id_t);
+            }
+        })
 });
 
 //SCHEMA TATTOO IMAGES
