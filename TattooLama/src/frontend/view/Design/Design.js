@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './designStyle.css';
+import axios from 'axios';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
@@ -13,6 +14,28 @@ import Answer from '../Design/Answer';
 library.add(faAngleLeft)
 
 class Design extends Component {
+
+    constructor(){
+        super();
+
+        this.state = {
+            Design: {}
+        }
+    }
+
+    componentDidMount() {
+        const { match: { params } } = this.props;
+        axios.get('/design/' + params.url);
+        const url = this.props.match.params.url;
+
+        fetch(`http://localhost:5000/design/${url}`)
+        .then(response => response.json())
+        .then(data => this.setState({
+            Design: data
+        }))
+
+        alert(this.state.Design.name_design);
+    }
     
     render(){
         return(

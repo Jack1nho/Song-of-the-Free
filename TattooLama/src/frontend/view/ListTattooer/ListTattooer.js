@@ -1,6 +1,6 @@
 import React from 'react';
 import GrigliaTattooer from '../ListTattooer/GrigliaTattooer';
-import load from '../../../images/Loading.gif';
+//import load from '../../../images/Loading.gif';
 
 const ListTattooer = () => (
     <div>
@@ -14,7 +14,7 @@ const ListTattooer = () => (
         <div className="container-wrapper">
             <h1 class="text-1">Tutti i migliori tatuatori</h1>
             <GrigliaTattooer></GrigliaTattooer>
-            <div className="text-center my-4"><img style={{width: '6%'}} src={load} alt=""/></div>
+            {/* <div className="text-center my-4"><img style={{width: '6%'}} src={load} alt=""/></div> */}
         </div>
     </div>
   )

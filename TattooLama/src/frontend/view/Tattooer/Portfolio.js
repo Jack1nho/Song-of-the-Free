@@ -31,8 +31,8 @@ class Portfolio extends Component {
                                     <div className="container-fluid">
                                         <div className="row">
                                             <div className="col-12 col-lg-10">
-                                                <h2 className="text-1-jumbotron-artista">Vuoi una consulenza da {this.props.Tattooer.name} {this.props.Tattooer.surname}?</h2> 
-                                                <h3 className="text-2-jumbotron-artista">Descrivi la tua idea di tattoo e {this.props.Tattooer.name} {this.props.Tattooer.surname} ti risponderà a breve!</h3> 
+                                                <h2 className="text-1-jumbotron-artista">Vuoi una consulenza da {this.props.tattooer.name} {this.props.tattooer.surname}?</h2> 
+                                                <h3 className="text-2-jumbotron-artista">Descrivi la tua idea di tattoo e {this.props.tattooer.name} {this.props.tattooer.surname} ti risponderà a breve!</h3> 
                                             </div>
                                             <div className="col-12 col-lg-2">
                                                 <button type="button" className="btn bottone-consulenza-2 float-lg-right">Richiedi Consulenza</button>

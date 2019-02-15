@@ -1,6 +1,6 @@
 import React from 'react';
 import GrigliaDesign from '../ListDesign/GrigliaDesign';
-import load from '../../../images/Loading.gif';
+//import load from '../../../images/Loading.gif';
 
 const ListDesign = () => (
     <div>
@@ -11,10 +11,10 @@ const ListDesign = () => (
             </div>    
         </div> 
 
-        <div className="container-wrapper">
+        <div className="container-wrapper container">
             <h1 className="text-1">Tutti i tattoo design</h1>
             <GrigliaDesign></GrigliaDesign>
-            <div className="text-center my-4"><img style={{width: '6%'}} src={load} alt=""/></div>
+            {/* <div className="text-center my-4"><img style={{width: '6%'}} src={load} alt=""/></div> */}
         </div>
     </div>
   )

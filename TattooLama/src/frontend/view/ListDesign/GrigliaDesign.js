@@ -11,7 +11,7 @@ class GrigliaDesign extends Component {
     }
     
     componentDidMount() {
-        fetch('http://localhost:5000/Linkpi/get/tattooimages/last')
+        fetch('http://localhost:5000/api/get/tattooimages/all')
         .then(response => response.json())
         .then(data => this.setState({
             Design: data
@@ -21,87 +21,21 @@ class GrigliaDesign extends Component {
     render(){
         return(
             <div>
-                <ul className="row row-grid">
+                <div className="row row-grid my-4">
                 {this.state.Design.map((item, i) => {
-                    const key = null;
-                    if (key === 2 || 3) {
-                        return <li className="d-none d-md-block col-md-3 col-lg" key={i}>
-                                    <Link to='/' >
+                        return <div className="col-6 col-sm-6 col-md-3 col-lg-15" key={i}>
+                                    <Link to={'/design/' + item.url_design} >
                                         <img className="square" src={item.image} alt=""/>
                                         <div>
-                                            <h4 className="mt-2 mb-0 textNome">{item.name}</h4>
+                                            <h4 className="mt-2 mb-0 textNome">{item.name_design}</h4>
                                             <h4 className="mb-0 textArtista">{item.associated_artist}</h4>
-                                            <h4 className="textPrezzo">{item.price}</h4>
+                                            <h4 className="textPrezzo">€ {item.price}</h4>
                                         </div>
                                     </Link>
-                                </li>  
-                    }
-
-                    if (key === 4) {
-                        return <li className="d-none d-lg-block col-lg" key={i}>
-                                    <Link to='/' >
-                                        <img className="square" src={item.image} alt=""/>
-                                        <div>
-                                            <h4 className="mt-2 mb-0 textNome">{item.name}</h4>
-                                            <h4 className="mb-0 textArtista">{item.associated_artist}</h4>
-                                            <h4 className="textPrezzo">{item.price}</h4>
-                                        </div>
-                                    </Link>
-                                </li>
-                    } else {
-                    return <li className="col-6 col-sm-6 col-md-3 col-lg" key={i}>
-                                <Link to='/' >
-                                    <img className="square" src={item.image} alt=""/>
-                                    <div>
-                                        <h4 className="mt-2 mb-0 textNome">{item.name}</h4>
-                                        <h4 className="mb-0 textArtista">{item.associated_artist}</h4>
-                                        <h4 className="textPrezzo">{item.price}</h4>
-                                    </div>
-                                </Link>
-                            </li>  
-                }})} 
-                </ul>   
-
-                <ul className="row row-grid">
-                {this.state.Design.map((item, i) => {
-                    const key = null;
-                    if (key === 2 || 3) {
-                        return <li className="d-none d-md-block col-md-3 col-lg" key={i}>
-                                    <Link to='/' >
-                                        <img className="square" src={item.image} alt=""/>
-                                        <div>
-                                            <h4 className="mt-2 mb-0 textNome">{item.name}</h4>
-                                            <h4 className="mb-0 textArtista">{item.associated_artist}</h4>
-                                            <h4 className="textPrezzo">{item.price}</h4>
-                                        </div>
-                                    </Link>
-                                </li>  
-                    }
-
-                    if (key === 4) {
-                        return <li className="d-none d-lg-block col-lg" key={i}>
-                                    <Link to='/' >
-                                        <img className="square" src={item.image} alt=""/>
-                                        <div>
-                                            <h4 className="mt-2 mb-0 textNome">{item.name}</h4>
-                                            <h4 className="mb-0 textArtista">{item.associated_artist}</h4>
-                                            <h4 className="textPrezzo">{item.price}</h4>
-                                        </div>
-                                    </Link>
-                                </li>
-                    } else {
-                    return <li className="col-6 col-sm-6 col-md-3 col-lg" key={i}>
-                                <Link to='/' >
-                                    <img className="square" src={item.image} alt=""/>
-                                    <div>
-                                        <h4 className="mt-2 mb-0 textNome">{item.name}</h4>
-                                        <h4 className="mb-0 textArtista">{item.associated_artist}</h4>
-                                        <h4 className="textPrezzo">{item.price}</h4>
-                                    </div>
-                                </Link>
-                            </li>  
-                }})} 
-                </ul>
+                                </div>  
+                    }                   
+                )} 
+                </div>   
             </div>
         );
     }

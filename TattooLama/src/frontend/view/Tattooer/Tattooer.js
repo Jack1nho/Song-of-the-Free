@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 import './tattooerStyle.css';
 import { Link } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -25,16 +25,17 @@ class Tattooer extends Component {
 
     componentDidMount() {
         const { match: { params } } = this.props;
-        axios.get('/tatuatore/' + params.url);
-        const url = this.props.match.params.url;
+        //axios.get('/tatuatore/' + params.url);
+        //const url = this.props.match.params.url;
+        alert (params.url);
 
-        fetch(`http://localhost:5000/tatuatore/${url}`)
+        fetch('http://localhost:5000/api/get/tatuatore/' + params.url)
         .then(response => response.json())
         .then(data => this.setState({
             Tattooer: data
         }))
 
-        alert(this.state.Tattooer.surname);
+        alert(this.state.Tattooer.name);
     }
 
     render(){

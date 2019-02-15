@@ -6,12 +6,12 @@ class GrigliaTattooer extends Component {
         super();
 
         this.state = {
-            Design: []
+            Tattooer: []
         }
     }
     
     componentDidMount() {
-        fetch('http://localhost:5000/api/get/tattooimages/last')
+        fetch('http://localhost:5000/api/get/tatuatori/all')
         .then(response => response.json())
         .then(data => this.setState({
             Tattooer: data
@@ -19,83 +19,22 @@ class GrigliaTattooer extends Component {
     }
     
     render(){
-        return(
+        return(      
             <div>
-                <ul className="row row-grid">
-                {this.state.Design.map((item, i) => {
-                    const key = null;
-                    if (key === 2 || 3) {
-                        return <li className="d-none d-md-block col-md-3 col-lg" key={i}>
-                                    <Link to='/'>
+                <div className="row row-grid my-4">
+                {this.state.Tattooer.map((item, i) => {
+                        return <div className="col-6 col-sm-6 col-md-3 col-lg-15" key={i}>
+                                    <Link to={'/tatuatore/' + item.url} >
                                         <img className="square" src={item.image} alt=""/>
                                         <div>
                                             <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
                                             <h4 class="textNome">{item.name}</h4>
                                         </div>
                                     </Link>
-                                </li>  
-                    }
-
-                    if (key === 4) {
-                        return <li className="d-none d-lg-block col-lg" key={i}>
-                                    <Link to='/'>
-                                        <img className="square" src={item.image} alt=""/>
-                                        <div>
-                                            <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
-                                            <h4 class="textNome">{item.name}</h4>
-                                        </div>
-                                    </Link>
-                                </li>
-                    } else {
-                    return <li className="col-6 col-sm-6 col-md-3 col-lg" key={i}>
-                                <Link to='/'>
-                                    <img className="square" src={item.image} alt=""/>
-                                    <div>
-                                        <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
-                                        <h4 class="textNome">{item.name}</h4>
-                                    </div>
-                                </Link>
-                            </li>  
-                }})} 
-                </ul>   
-
-                <ul className="row row-grid">
-                {this.state.Design.map((item, i) => {
-                    const key = null;
-                    if (key === 2 || 3) {
-                        return <li className="d-none d-md-block col-md-3 col-lg" key={i}>
-                                    <Link to='/'>
-                                        <img className="square" src={item.image} alt=""/>
-                                        <div>
-                                            <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
-                                            <h4 class="textNome">{item.name}</h4>
-                                        </div>
-                                    </Link>
-                                </li>  
-                    }
-
-                    if (key === 4) {
-                        return <li className="d-none d-lg-block col-lg" key={i}>
-                                    <Link to='/'>
-                                        <img className="square" src={item.image} alt=""/>
-                                        <div>
-                                            <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
-                                            <h4 class="textNome">{item.name}</h4>
-                                        </div>
-                                    </Link>
-                                </li>
-                    } else {
-                    return <li className="col-6 col-sm-6 col-md-3 col-lg" key={i}>
-                                <Link to='/'>
-                                    <img className="square" src={item.image} alt=""/>
-                                    <div>
-                                        <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
-                                        <h4 class="textNome">{item.name}</h4>
-                                    </div>
-                                </Link>
-                            </li>  
-                }})} 
-                </ul>
+                                </div>  
+                    }                   
+                )} 
+                </div>   
             </div>
         );
     }

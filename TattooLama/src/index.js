@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './tattooStyle.css';
 import App from './frontend/view/App/App';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
+import './tattooStyle.css';
 
 ReactDOM.render((
     <BrowserRouter>

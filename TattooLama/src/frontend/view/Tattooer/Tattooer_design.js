@@ -6,7 +6,7 @@ class TattoerDesign extends Component {
     render(){
         return(
             <div className="tattoo_design" id="tattoo_design">
-                            <h2 className="text-3 my-4">Tattoo design di {this.props.Tattooer.name} {this.props.Tattooer.surname}</h2>
+                            <h2 className="text-3 my-4">Tattoo design di {this.props.tattooer.name} {this.props.tattooer.surname}</h2>
                                 <div className="row row-grid">
                                         <div className="col-6 col-sm-6 col-md-3 col-lg">
                                             <Link to='/'>
