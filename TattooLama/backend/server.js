@@ -160,6 +160,9 @@ app.delete('/getTattoers/:id', (req, res) => {
 
 //API - URL TATTOER
 app.get('/api/get/tatuatore/:url', (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    
     var _url= req.params.url;
     tatuatori.findOne({url: _url}, function(err, tatuatore){
         if(err){ console.log('error..'); } else {
@@ -273,6 +276,8 @@ app.get('/getTattooDesign', (req, res) => {
 
 //API - URL DESIGN
 app.get('/design/:url', (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     var _url= req.params.url;
     tattooimages.findOne({url_design: _url}, function(err, tattooimages){
         if(err){ console.log('error..'); } else {
