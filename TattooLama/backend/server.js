@@ -58,6 +58,7 @@ app.post('/api/insert/tatuatori', (req, res) => {
         surname: req.body.surname, 
         biography: req.body.bio, 
         city: req.body.city, 
+        provincia: req.body.provincia,
         address: req.body.street, 
         cap: req.body.cap,
         telephone: req.body.tele,
@@ -135,6 +136,7 @@ app.post('/getTattoers/:id', (req,res) => {
         tatuatori.surname= req.body.surname, 
         tatuatori.biography= req.body.bio, 
         tatuatori.city= req.body.city, 
+        tatuatori.provincia= req.body.provincia,
         tatuatori.address= req.body.street,
         tatuatori.cap= req.body.cap, 
         tatuatori.telephone= req.body.tele,
@@ -143,6 +145,8 @@ app.post('/getTattoers/:id', (req,res) => {
         tatuatori.cover= "images/tatuatori/cover/" + req.body.cover,
         tatuatori.image= "images/tatuatori/img/" + req.body.image,
         tatuatori.ranking_display= req.body.rank, 
+        tatuatori.title= req.body.title,
+        tatuatori.meta_title= req.body.meta_title,
         tatuatori.url= slugify(req.body.name + ' ' + req.body.surname, { replacement: '-', separator: '-', remove: null, lower: true})
         
         tatuatori.save()
@@ -251,7 +255,8 @@ app.post('/getTattooDesign/:id', (req,res) => {
         tattooimages.image= "images/design/" + req.body.image,
         tattooimages.id_tattoer= req.body.selectpicker,
         tattooimages.data= Date(""),
-        tattooimages.url_design= slugify(req.body.design_name, { replacement: '-', remove: null, lower: true})
+        tattooimages.title= req.body.title,
+        tattooimages.meta_title=req.body.meta_title,
         tattooimages.save()
         .then(tattooimages=>{
             res.redirect('/getTattooDesign');  
