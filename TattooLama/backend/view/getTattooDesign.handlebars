@@ -1,19 +1,31 @@
 <div class="d-flex">
-<ul class="tattooimages list-inline mx-auto justify-content-center">
-  {{#each tattooimages}}
-    <li class="list-inline-item">{{name_design}} {{associated_artist}}</li> 
-    <p class="list-inline-item">Prezzo: {{price}} </p> <br>
-    
-    <a class="btn btn-primary mb-1" href="/modificaDesign/{{id}}">Modifica dati</a> 
+  <ul class="tattooimages list-inline mx-auto justify-content-center">
+    <div class="container-wrapper">
+      <h3 class="text-3 mb-5 text-center mt-4">Tutti i design</h3>
 
-    <form action="/getTattooDesign/{{id}}?_method=DELETE" method="POST" class="mb-3">
-      <input type="hidden" name="_method" value="DELETE">
-      <input type="submit" class="btn btn-danger" value="Cancella Design ">
-    </form>
+      <div class="row row-grid text-center">
+        {{#each tattooimages}}
+        <div class="col-md-3">
+          <h5>{{name_design}} {{associated_artist}}</h5>
+          <p>Prezzo: {{price}} </p>
 
-  {{else}}
-  <h4>Non c'è nessun design in archivio.</h4>
+          <div>
+            <a class="btn btn-primary mb-1" href="/modificaDesign/{{id}}">Modifica dati</a>
 
-  {{/each}}
-</ul>
+            <form action="/getTattooDesign/{{id}}?_method=DELETE" method="POST" class="mb-3">
+              <input type="hidden" name="_method" value="DELETE">
+              <input type="submit" class="btn btn-danger" value="Cancella Design ">
+            </form>
+          </div>
+
+        </div>
+        {{else}}
+        <h4>Non c'è nessun design in archivio.</h4>
+
+        {{/each}}
+
+
+      </div>
+    </div>
+  </ul>
 </div>

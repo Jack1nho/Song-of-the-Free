@@ -8,7 +8,17 @@
         Biografia:<br>
         <textarea type="textarea" name="bio" value="" class="form-control" required></textarea> <br>
         Città:<br>
-        <input type="text" name="city" value="" class="form-control" required><br>
+        <select type="text" name="city" class="form-control" value="" required>
+            <option selected> Scegli una città</option> 
+            <option>Milano</option>
+            <option>Torino</option>
+            <option>Roma</option>
+            <option>Bergamo</option>
+            <option>Brescia</option>
+            <option>Como</option>
+            <option>Cremona</option>
+            <option>Lecco</option>
+        </select><br>
         Indirizzo:<br>
         <input type="text" name="street" value="" class="form-control" required><br>
         CAP:<br>
@@ -23,13 +33,18 @@
         <input type="text" name="cover" value="" class="form-control" required><br>
         Image:<br>
         <input type="text" name="image" value="" class="form-control" required><br>
-        
+        Tattoo Studio:<br>
+        <input type="text" name="tattoo_studio" value="" class="form-control" required><br>
         <label for="sel1">Ranking:</label>
             <select type="number" name="rank" class="form-control" id="sel1">
                 <option>0</option>
                 <option>1</option>
             </select>
         <br>
+        Meta Title:
+        <input type="text" name="title" class="form-control"> <br>
+        Meta Description:
+        <textarea type="textarea" name="meta_title" class="form-control"></textarea><br>
 
         <input type="submit" value="Submit">
     </form>

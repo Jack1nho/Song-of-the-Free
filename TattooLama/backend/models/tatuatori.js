@@ -45,9 +45,21 @@ const tatuatoriSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    tattoo_studio:{
+        type: String,
+        required: true
+    },
     ranking_display:{
         type: Number,
         required: true 
+    },
+    title:{
+        type: String,
+        required: true
+    },
+    meta_title:{
+        type: String,
+        required: true
     },
     url:{
         type: String,

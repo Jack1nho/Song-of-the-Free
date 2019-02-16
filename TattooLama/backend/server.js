@@ -65,7 +65,10 @@ app.post('/api/insert/tatuatori', (req, res) => {
         private_email: req.body.private,
         cover: "images/tatuatori/cover/" + req.body.cover,
         image: "images/tatuatori/img/" + req.body.image,
+        tattoo_studio: req.body.tattoo_studio,
         ranking_display: req.body.rank, 
+        title: req.body.title,
+        meta_title: req.body.meta_title,
         url: slugify(req.body.name + ' ' + req.body.surname, { replacement: '-', separator: '-', remove: null, lower: true})}, function (error, result) {
             if(error) {
             return result.end(error)
@@ -210,7 +213,10 @@ app.post('/api/insert/tattooimages', (req, res) => {
         image: "images/design/" + req.body.image,
         id_tattoer: req.body.selectpicker,
         data: Date(""),
-        url_design: slugify(req.body.design_name, { replacement: '-', remove: null, lower: true})}, function (error, result) {
+        title: req.body.title,
+        meta_title: req.body.meta_title
+        
+        }, function (error, result) {
         if(error) {
             return (error)}
         else{

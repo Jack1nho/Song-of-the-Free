@@ -8,11 +8,22 @@
         Biografia:<br>
         <textarea type="textarea" name="bio" class="form-control" value="{{tatuatori.biography}}"></textarea> <br>
         Città:<br>
-        <input type="text" name="city" class="form-control" value="{{tatuatori.city}}"><br>
+        <select type="text" name="city" class="form-control" value="{{tatuatori.city}}">
+            <option selected> Scegli una città</option> 
+            <option>Milano</option>
+            <option>Torino</option>
+            <option>Roma</option>
+            <option>Bergamo</option>
+            <option>Brescia</option>
+            <option>Como</option>
+            <option>Cremona</option>
+            <option>Lecco</option>
+        </select>
+        <br>
         Indirizzo:<br>
         <input type="text" name="street" class="form-control" value="{{tatuatori.address}}"><br>
         CAP:<br>
-        <input type="number" name="cap" value="{{tatuatori.cap}}" class="form-control" required><br>
+        <input type="number" name="cap" value="{{tatuatori.cap}}" class="form-control"><br>
         Telefono:<br>
         <input type="text" name="tele" class="form-control" value="{{tatuatori.telephone}}"><br>
         Email:<br>
@@ -30,7 +41,10 @@
                 <option>1</option>
             </select>
         <br>
-
+        Meta Title:
+        <input type="text" name="title" class="form-control" value="{{tatuatori.title}}"> <br>
+        Meta Description:
+        <textarea type="textarea" name="meta_title" class="form-control" value="{{tatuatori.meta_title}}"></textarea><br>
         <input type="submit" value="Submit">
     </form>
 </div>
