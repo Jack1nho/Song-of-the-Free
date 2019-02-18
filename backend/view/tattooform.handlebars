@@ -1,0 +1,58 @@
+<div class="d-flex">
+    
+    <form method="POST" action="/api/insert/tatuatori" class="list-inline mx-auto justify-content-center"> 
+        Nome:<br>
+        <input type="text" name="name" value="" class="form-control" required><br>
+        Cognome:<br>
+        <input type="text" name="surname" value="" class="form-control" required><br>
+        Biografia:<br>
+        <textarea type="textarea" name="bio" value="" class="form-control" required></textarea> <br>
+        Città:<br>
+        <select type="text" name="city" class="form-control" value="" required>
+            <option selected> Scegli una città</option> 
+            <option>Milano</option>
+            <option>Torino</option>
+            <option>Roma</option>
+            <option>Bergamo</option>
+            <option>Brescia</option>
+            <option>Como</option>
+            <option>Cremona</option>
+            <option>Lecco</option>
+        </select><br>
+        Provincia: <br>
+        <input type="text" name="provincia" class="form-control" required> <br>
+        Indirizzo:<br>
+        <input type="text" name="street" value="" class="form-control" required><br>
+        CAP:<br>
+        <input type="number" name="cap" value="" class="form-control" required><br>
+        Telefono:<br>
+        <input type="text" name="tele" value="" class="form-control" required><br>
+        Email:<br>
+        <input type="email" name="email" value="" aria-describedby="emailHelp" class="form-control" required><br>
+        Email privata:<br>
+        <input type="email" name="private" value="" aria-describedby="emailHelp" class="form-control" required><br>
+        Cover:<br>
+        <input type="text" name="cover" value="" class="form-control" required><br>
+        Image:<br>
+        <input type="text" name="image" value="" class="form-control" required><br>
+        Portfolio:<br>
+        <input type="text" name="portfolio" value="" class="form-control" required><br>
+        Tattoo Studio:<br>
+        <input type="text" name="tattoo_studio" value="" class="form-control" required><br>
+        <label for="sel1">Ranking:</label>
+            <select type="number" name="rank" class="form-control" id="sel1">
+                <option>0</option>
+                <option>1</option>
+            </select>
+        <br>
+        Meta Title:
+        <input type="text" name="title" class="form-control"> <br>
+        Meta Description:
+        <textarea type="textarea" name="meta_title" class="form-control"></textarea><br>
+        Hide: <br>
+        <label class="radio-inline"><input type="radio" name="hide" value="false" checked>False</label>
+        <label class="radio-inline"><input type="radio" name="hide" value="true">True</label>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</div>

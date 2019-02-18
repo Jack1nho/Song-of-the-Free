@@ -1,0 +1,59 @@
+<div class="d-flex">    
+    <form method="POST" action="/getTattoers/{{tatuatori.id}}?_method=POST" class="list-inline mx-auto justify-content-center">
+        <input type="hidden" name="_method" value="POST">
+        Nome:<br>
+        <input type="text" name="name" class="form-control" value="{{tatuatori.name}}"><br>
+        Cognome:<br>
+        <input type="text" name="surname" class="form-control" value="{{tatuatori.surname}}"><br>
+        Biografia:<br>
+        <textarea type="textarea" name="bio" class="form-control" value="{{tatuatori.biography}}"></textarea> <br>
+        Città:<br>
+        <select type="text" name="city" class="form-control" value="{{tatuatori.city}}">
+            <option selected> Scegli una città</option> 
+            <option>Milano</option>
+            <option>Torino</option>
+            <option>Roma</option>
+            <option>Bergamo</option>
+            <option>Brescia</option>
+            <option>Como</option>
+            <option>Cremona</option>
+            <option>Lecco</option>
+        </select>
+        <br>
+        Provincia: <br>
+        <input type="text" name="provincia" class="form-control" value="{{tatuatori.provincia}}"> <br>
+        Indirizzo:<br>
+        <input type="text" name="street" class="form-control" value="{{tatuatori.address}}"><br>
+        CAP:<br>
+        <input type="number" name="cap" value="{{tatuatori.cap}}" class="form-control"><br>
+        Telefono:<br>
+        <input type="text" name="tele" class="form-control" value="{{tatuatori.telephone}}"><br>
+        Email:<br>
+        <input type="email" name="email" class="form-control" aria-describedby="emailHelp" class="form-control" value="{{tatuatori.working_email}}"><br>
+        Email privata:<br>
+        <input type="email" name="private" class="form-control" aria-describedby="emailHelp" class="form-control" value="{{tatuatori.private_email}}"><br>
+        Cover:<br>
+        <input type="text" name="cover" class="form-control" value="{{tatuatori.cover}}"><br>
+        Image:<br>
+        <input type="text" name="image" class="form-control" value="{{tatuatori.image}}"><br>
+        Portfolio:<br>
+        <input type="text" name="portfolio" value="" class="form-control" value="{{tatuatori.portfolio}}"><br>
+        Tattoo Studio:<br>
+        <input type="text" name="tattoo_studio" value="" class="form-control" value="{{tatuatori.tattoo_studio}}"><br>
+        <label for="sel1">Ranking:</label>
+            <select type="number" value="{{tatuatori.ranking_display}}" name="rank" class="form-control" id="sel1">
+                <option>0</option>
+                <option>1</option>
+            </select>
+        <br>
+        Meta Title:
+        <input type="text" name="title" class="form-control" value="{{tatuatori.title}}"> <br>
+        Meta Description:
+        <textarea type="textarea" name="meta_title" class="form-control" value="{{tatuatori.meta_title}}"></textarea><br>
+        Hide: <br>
+        <label class="radio-inline"><input type="radio" name="hide" value="false" checked>False</label>
+        <label class="radio-inline"><input type="radio" name="hide" value="true">True</label>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
