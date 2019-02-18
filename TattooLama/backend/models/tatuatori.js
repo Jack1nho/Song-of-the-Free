@@ -49,6 +49,10 @@ const tatuatoriSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    portfolio:{
+        type: String,
+        required: true,
+    },
     tattoo_studio:{
         type: String,
         required: true

@@ -1,11 +1,14 @@
-<div class="d-flex">
-  <ul class="tatuatori list-inline mx-auto justify-content-center">
-    <div class="container-wrapper">
+ 
+  
+    <div class="container-wrapper container">
+      
       <h3 class="text-3 mb-5 text-center mt-4">Tutti i tattoers</h3>
 
       <div class="row row-grid">
         {{#each tatuatori}}
-        <div class="col-md-3">
+        <div class="col-3 mb-3" >
+           
+          <button  class="btn btn-outline-secondary" role="button" onclick="window.location.href='/tattoer/profile/{{id}}'">
           <h5>{{name}} {{surname}}</h5>
           <p>Ranking: {{ranking_display}} </p>
           <p>Hide: {{hide}} </p>
@@ -17,7 +20,8 @@
               <input type="submit" class="btn btn-danger" value="Cancella tatuatore ">
             </form>
           </div>
-
+          </button>
+           
         </div>
         {{else}}
         <h4>Non c'è nessun tatuatore in archivio.</h4>
@@ -27,5 +31,5 @@
 
       </div>
     </div>
-  </ul>
-</div>
+  
+ 

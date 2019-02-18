@@ -129,6 +129,20 @@ app.get('/api/get/tatuatori/best', (req, res) => {
       });
   });
 
+//MOSTRA SINGOLO TATUATORE
+app.get('/tattoer/profile/:id', (req,res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
+    tatuatori.findOne({
+        _id: req.params.id
+    }).then(tatuatori => { 
+        res.render("profile", {
+            tatuatori: tatuatori
+        });
+    });
+});
+
 //AGGIORNA TATUATORE
 app.post('/getTattoers/:id', (req,res) => {
     tatuatori.findOne({
