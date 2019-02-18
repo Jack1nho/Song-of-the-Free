@@ -36,7 +36,10 @@
         <input type="text" name="cover" class="form-control" value="{{tatuatori.cover}}"><br>
         Image:<br>
         <input type="text" name="image" class="form-control" value="{{tatuatori.image}}"><br>
-        
+        Portfolio:<br>
+        <input type="text" name="portfolio" value="" class="form-control" value="{{tatuatori.portfolio}}"><br>
+        Tattoo Studio:<br>
+        <input type="text" name="tattoo_studio" value="" class="form-control" value="{{tatuatori.tattoo_studio}}"><br>
         <label for="sel1">Ranking:</label>
             <select type="number" value="{{tatuatori.ranking_display}}" name="rank" class="form-control" id="sel1">
                 <option>0</option>
@@ -47,6 +50,10 @@
         <input type="text" name="title" class="form-control" value="{{tatuatori.title}}"> <br>
         Meta Description:
         <textarea type="textarea" name="meta_title" class="form-control" value="{{tatuatori.meta_title}}"></textarea><br>
+        Hide: <br>
+        <label class="radio-inline"><input type="radio" name="hide" value="false" checked>False</label>
+        <label class="radio-inline"><input type="radio" name="hide" value="true">True</label>
+        <br>
         <input type="submit" value="Submit">
     </form>
 </div>

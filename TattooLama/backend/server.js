@@ -66,10 +66,12 @@ app.post('/api/insert/tatuatori', (req, res) => {
         private_email: req.body.private,
         cover: "images/tatuatori/cover/" + req.body.cover,
         image: "images/tatuatori/img/" + req.body.image,
+        portfolio: "images/tatuatori/portfolio/" + req.body.portfolio,
         tattoo_studio: req.body.tattoo_studio,
         ranking_display: req.body.rank, 
         title: req.body.title,
         meta_title: req.body.meta_title,
+        hide: req.body.hide,
         url: slugify(req.body.name + ' ' + req.body.surname, { replacement: '-', separator: '-', remove: null, lower: true})}, function (error, result) {
             if(error) {
             return result.end(error)
@@ -85,7 +87,7 @@ app.get('/api/get/tatuatori/best', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   
-    tatuatori.find({ranking_display: 1}, function(err, tatuatoriList){
+    tatuatori.find({ranking_display: 1, hide: false}, function(err, tatuatoriList){
       if(err){ console.log('error..'); } else {
           res.json(tatuatoriList);
       }
@@ -97,7 +99,7 @@ app.get('/api/get/tatuatori/best', (req, res) => {
       res.header("Access-Control-Allow-Origin", "*");
       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     
-      tatuatori.find({}, function(err, tatuatoriList){
+      tatuatori.find({hide: false}, function(err, tatuatoriList){
         if(err){ console.log('error..'); } else {
             res.json(tatuatoriList);
         }
@@ -144,9 +146,12 @@ app.post('/getTattoers/:id', (req,res) => {
         tatuatori.private_email= req.body.private,
         tatuatori.cover= "images/tatuatori/cover/" + req.body.cover,
         tatuatori.image= "images/tatuatori/img/" + req.body.image,
+        tatuatori.portfolio= "images/tatuatori/portfolio/" + req.body.portfolio,
+        tatuatori.tattoo_studio= req.body.tattoo_studio,
         tatuatori.ranking_display= req.body.rank, 
         tatuatori.title= req.body.title,
         tatuatori.meta_title= req.body.meta_title,
+        tatuatori.hide= req.body.hide,
         tatuatori.url= slugify(req.body.name + ' ' + req.body.surname, { replacement: '-', separator: '-', remove: null, lower: true})
         
         tatuatori.save()

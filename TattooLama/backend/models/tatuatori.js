@@ -65,6 +65,10 @@ const tatuatoriSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    hide:{
+        type: Boolean,
+        required: true
+    },
     url:{
         type: String,
         required: true
