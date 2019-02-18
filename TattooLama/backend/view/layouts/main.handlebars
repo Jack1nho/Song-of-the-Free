@@ -1,64 +1,73 @@
 <!doctype html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TattooLama</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    {{!-- <link rel="stylesheet" type="text/css" src="/view/css/nav.css"> --}}
-  </head>
+  <title>TattooLama</title>
 
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">TattooLama</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="navbarNavDropdown" class="navbar-collapse collapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Tatuatori
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Tattoo Design
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                    </div>
-                </li>
-             </ul>
-        </div>
-    </nav>
-  </header>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+</head>
 
-  <body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand ml-5" href="/index">TattooLama Back-End</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse mr-5" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+        <li class="d-flex nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tatuatori
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/getTattoers">Tutti i tatuatori</a>
+            <a class="dropdown-item" href="/api/insert/tatuatori">Inserisci un tatuatore</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="d-flex nav-item dropdown mr-5">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Design
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+            <a class="dropdown-item" href="/getTattooDesign">Tutti i design</a>
+            <a class="dropdown-item" href="/api/insert/tattooimages">Inserisci un design</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="http://localhost:3000/">Front-End <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
-    <main role="main">
-      <div class="card">
-        <h2 class="text-center mt-5 card-title">DashBoard</h2>
-        <div class="text-center mt-3 card-body">
-          <a href="/api/insert/tatuatori">Inserisci un nuovo tatuatore</a>
-          <a href="/getTattoers">Visualizza i tatuatori</a>
-          <a href="/api/insert/tattooimages">Inserisci un nuovo design</a>
-          <a href="/getTattooDesign">Visualizza i design</a>
-        </div>
-      </div> <br>
-      {{{body}}}
+<body>
 
-    </main>
+  <main role="main">
+    <div class="card">
+      <h2 class="text-center mt-5 card-title">DashBoard</h2>
+      <div class="text-center mt-3 card-body">
+        <a type="button" class="btn btn-primary" href="/api/insert/tatuatori">Inserisci un nuovo tatuatore</a>
+        <a type="button" class="btn btn-primary" href="/getTattoers">Visualizza i tatuatori</a>
+        <a type="button" class="btn btn-primary" href="/api/insert/tattooimages">Inserisci un nuovo design</a>
+        <a type="button" class="btn btn-primary" href="/getTattooDesign">Visualizza i design</a>
+      </div>
+    </div> <br>
+    {{{body}}}
 
-  </body>
+  </main>
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 
 </html>
