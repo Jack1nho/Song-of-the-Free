@@ -24,12 +24,10 @@ class GrigliaTattooer extends Component {
                 <div className="row row-grid my-4">
                 {this.state.Tattooer.map((item, i) => {
                         return <div className="col-6 col-sm-6 col-md-3 col-lg-15" key={i}>
-                                    <Link to={'/tatuatore/' + item.url} >
+                                    <Link className="grid" to={'/tatuatore/' + item.url} >
                                         <img className="square" src={item.image} alt=""/>
-                                        <div>
-                                            <h4 class="mt-2 mb-0 textArtista">{item.artist}</h4>
-                                            <h4 class="textNome">{item.name}</h4>
-                                        </div>
+                                            <h4 className="mt-2 mb-0 textArtista">{item.artist}</h4>
+                                            <h4 className="textNome">{item.name}</h4>
                                     </Link>
                                 </div>  
                     }                   

@@ -58,6 +58,16 @@
 
 /*------- BODY-------*/
 
+::-moz-selection { 
+  background: #d80e47;
+  color: white;
+}
+
+::selection {
+  background: #d80e47;
+  color: white;
+}
+
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -155,7 +165,7 @@ body{
 
 .text-2 {
   font-weight: 700 !important;
-  color: #d80e47 !important;
+  color: #d80e47;
   font-size: 14px !important;
 }
 
@@ -209,7 +219,7 @@ body{
   font-size: 21.6px;
   color: #ffffff;
   position: absolute;
-  transform: translate(80%, -240%);
+  top: 65px;
 }
 
 /*------JUMBOTRON 2------*/
@@ -260,6 +270,11 @@ body{
   padding-left: 5.5px;
 }
 
+.grid:hover {
+  text-decoration: none !important;
+  opacity: 0.7;
+}
+
 .square {
   border-radius: 8.6px;
   width: 100%;
@@ -269,6 +284,7 @@ body{
 .row-grid {
   padding-inline-start: 0px;
 }
+
 
 @media screen and (max-width: 1200px) {
 

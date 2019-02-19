@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './designStyle.css';
-import axios from 'axios';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
@@ -19,42 +18,46 @@ class Design extends Component {
         super();
 
         this.state = {
-            Design: {}
+            Design: [],
+            Tattooer: []
         }
     }
 
     componentDidMount() {
         const { match: { params } } = this.props;
-        axios.get('/design/' + params.url);
-        const url = this.props.match.params.url;
 
-        fetch(`http://localhost:5000/design/${url}`)
+        fetch('http://localhost:5000/api/get/design/' + params.url)
         .then(response => response.json())
         .then(data => this.setState({
             Design: data
         }))
 
-        alert(this.state.Design.name_design);
+        fetch('http://localhost:5000/api/get/tatuatore/design/' + this.state.Design._id)
+        .then(response => response.json())
+        .then(data => this.setState({
+            Tattooer: data
+        }))
+        alert (this.props.Design._id);
     }
     
     render(){
         return(
             <div>
-                <div class="jumbotron jumbotron-fluid Jumbotron-design">
-                    <div class="container">
-                        <h1 class="Text-2-Jumbotron-1">SCEGLI IL TUO</h1>
-                        <h1 class="Text-2-Jumbotron-1"><span class="Red">TATTO DESIGN</span></h1>
+                <div className="jumbotron jumbotron-fluid Jumbotron-design">
+                    <div className="container">
+                        <h1 className="Text-2-Jumbotron-1">SCEGLI IL TUO</h1>
+                        <h1 className="Text-2-Jumbotron-1" style={{ marginLeft: '20%' }}><span className="Red">TATTO DESIGN</span></h1>
                     </div>
                 </div>
 
-                <Link to='/list_design' class="text-back" href="list_design.html"><span class="Red"><FontAwesomeIcon icon="angle-left"/></span>&nbsp;&nbsp;Guarda tutti i tatuaggi</Link>
+                <Link to='/list_design' className="text-back" href="list_design.html"><span className="Red"><FontAwesomeIcon icon="angle-left"/></span>&nbsp;&nbsp;Guarda tutti i tatuaggi</Link>
                 <div className="container-wrapper">
-                    <DesignInfo></DesignInfo>
+                    <DesignInfo design={this.state.Design} tattooer={this.props.Tattooer}></DesignInfo>
                     <hr className="my-5 d-none d-md-block"></hr>
-                    <DesignTattooer></DesignTattooer>
-                    <TattooerDesign></TattooerDesign>
-                    <LastDesign></LastDesign>
-                    <Answer></Answer>
+                    <DesignTattooer design={this.state.Design} tattooer={this.props.Tattooer}></DesignTattooer>
+                    <TattooerDesign design={this.state.Design} tattooer={this.props.Tattooer}></TattooerDesign>
+                    <LastDesign design={this.state.Design} tattooer={this.props.Tattooer}></LastDesign>
+                    <Answer design={this.state.Design} tattooer={this.props.Tattooer}></Answer>
                 </div>
             </div>
             );

@@ -56,7 +56,7 @@ class Header extends Component {
 
                 <nav className="nav-res">
                     <div id="myNav" className="overlay">
-                            <div className="closebtn" onClick={this.closeNav}><FontAwesomeIcon icon="times" /></div>
+                            <FontAwesomeIcon className="closebtn" onClick={this.closeNav} icon="times" />
                             <div className="overlay-content">
                                 <Link to='/list_tatuatori'>Tatuatori</Link>
                                 <Link to='/list_design'>Tattoo Design</Link>
@@ -65,7 +65,7 @@ class Header extends Component {
                             </div>
                     </div>
                     <div className="d-flex justify-content-between">
-                        <div className="botton-res p-3" onClick={this.openNav} style={{color:'white'}}><FontAwesomeIcon icon="bars"  aria-hidden="true"/></div>
+                        <div className="botton-res p-3" onClick={this.openNav} style={{color:'white'}}><FontAwesomeIcon icon="bars" aria-hidden="true"/></div>
                         
                             <Link className="navbar-brand-res" to='/'><img className="img-res mx-auto p-1" src={Logo2} alt=""/></Link>
                         

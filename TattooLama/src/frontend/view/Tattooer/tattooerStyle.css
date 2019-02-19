@@ -80,10 +80,7 @@
   
   /*------SIDEMENU------*/
   
-  .sticky-menu {
-    position: fixed;
-    z-index: 1;
-  }
+  
   
   .side-menu {
     width: 256px;
@@ -152,7 +149,9 @@
   
   .img-artist {
     border-radius: 12px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 0 4px 8px 0 rgba(0, 0, 0, 0.24)
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 0 4px 8px 0 rgba(0, 0, 0, 0.24);
+    width: 240px;
+    height: 171px;
   }
   
   .nome {
@@ -162,7 +161,6 @@
     padding: 0;
     position: relative;
     top:-12px;
-    left: -2px;
     text-transform: uppercase;
   }
   
@@ -173,7 +171,6 @@
     padding: 0;
     position: relative;
     top: -25px;
-    left: -5px;
     text-transform: uppercase;
   }
   

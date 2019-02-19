@@ -66,7 +66,7 @@ class Home extends Component {
                 </div>
                       
                 <div className="container-fluid big-text text-center">
-                    <h4 className="normal-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+                    <h4 className="normal-text">Quante volte ti è capitato di voler cercare il <strong>tatuatore</strong> perfetto per il <strong>tatuaggio maori o giapponese</strong> e non sapevi a chi rivolgerti? Anche l'artista fidato del tuo migliore amico può avere difficoltà a disegnare qualcosa adatto al tuo stile. Il <strong>tatuaggio</strong> è una cosa seria e merita l'artista più bravo. TattooLama è l'unica piattaforma che ti permette di <strong>trovare i migliori tattoo shop e tatuatori della tua città</strong>, mostrandoti i loro lavori più significativi. Che tu stia cercando un <strong>tatuaggio maori, giapponese, scritte o old school noi ti aiuteremo a trovarlo</strong>. TattooLama ti permette di potere contattare gli artisti della tua città per sapere il prezzo per fare il tuo prossimo tatuaggio.</h4>
                 </div>
               </div>
       </div>

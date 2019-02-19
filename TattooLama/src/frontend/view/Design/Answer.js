@@ -34,7 +34,7 @@ class Answer extends Component {
                               <div className="card-header" id="headingTwo">
                                 <h5 className="mb-0">
                                   <button className="btn btn-link collapsed text-2 p-0" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Question 2
+                                    Question 2
                                   </button>
                                   <FontAwesomeIcon icon="angle-right" className="fas fa-angle-right float-right text-2 mt-1 collapsed arrow-accordion" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseOne" />   
                                 </h5>

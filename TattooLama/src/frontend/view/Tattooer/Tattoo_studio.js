@@ -6,7 +6,7 @@ class TattooStudio extends Component {
         return(
             <div className="tattoo_studio" id="tattoo_studio">
                     <h2 className="text-3 my-2">Tattoo Studio di {this.props.tattooer.name} {this.props.tattooer.surname}</h2>
-                    <h3 className="position">Milano<br></br> Via Mercato, 16 <br></br>20121, Milano MI</h3>
+                    <h3 className="position">{this.props.tattooer.city}<br></br> {this.props.tattooer.address} <br></br>{this.props.tattooer.cap}, {this.props.tattooer.city} {this.props.tattooer.provincia}</h3>
 
                     <div className="my-5" id="map"></div>
             </div>

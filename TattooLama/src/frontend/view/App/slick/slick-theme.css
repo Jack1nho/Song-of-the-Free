@@ -1,4 +1,11 @@
 @charset 'UTF-8';
+
+@media screen and (max-width: 768px) {
+    .slick-dots {
+        display: none !important; 
+    }
+}
+
 /* Slider */
 .slick-loading .slick-list
 {

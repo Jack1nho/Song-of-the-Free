@@ -1,6 +1,5 @@
   $(document).ready(function(){
-  
-
+    setTimeout(function(){ 
     $('.slickHome').slick({
       dots: true,
       infinite: true,
@@ -44,6 +43,8 @@
       slidesToShow: 4,
       slidesToScroll: 4
     });
+
+  }, 100);
           
   });
 
