@@ -204,9 +204,19 @@ app.get('/api/get/design/tatuatore/:id', (req, res) => {
         function (err, tattoodesign) {
             if (err) { console.log('error..'); } else {
                 res.json(tattoodesign);
-                console.log(typeof id_t);
             }
         })
+});
+
+// API - DA DESIGN A TATUATORE
+app.get('/api/get/tatuatore/design/:id', (req, res) => {
+    var id_t = req.params.id;
+    tatuatori.find({ _id: "" + id_t + "" },
+        function (err, tatuatori) {
+            if (err) { console.log('error..'); } else {
+                res.json(tatuatori);
+            }
+        });
 });
 
 //SCHEMA TATTOO IMAGES
@@ -233,7 +243,7 @@ app.post('/api/insert/tattooimages', (req, res) => {
         style: req.body.style,
         altezza: req.body.altezza,
         larghezza: req.body.larghezza,
-        image: "images/design/" + req.body.image,
+        image: "images/design/img/" + req.body.image,
         id_tattoer: req.body.selectpicker,
         data: Date(""),
         title: req.body.title,
@@ -250,6 +260,7 @@ app.post('/api/insert/tattooimages', (req, res) => {
 
 //MODIFICA TATTOO DESIGN
 app.get('/modificaDesign/:id', (req,res) => {
+    
     tattooimages.findOne({
         _id: req.params.id
     }).then(tattooimages => {
@@ -344,6 +355,6 @@ app.get('/api/get/tattooimages/all', (req, res) => {
       if(err){ console.log('error..'); } else {
           res.json(tattooimagesList);
       }
-    }) 
+    }).sort({data: 0});
   
   });

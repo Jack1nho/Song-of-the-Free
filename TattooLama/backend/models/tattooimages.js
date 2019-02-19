@@ -44,6 +44,10 @@ const tattooImagesSchema = mongoose.Schema({
     meta_title:{
         type: String,
         required: true
+    },
+    url_design:{
+        type: String,
+        required: true
     }
 })
 
