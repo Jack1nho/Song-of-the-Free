@@ -237,9 +237,8 @@ app.post('/api/insert/tattooimages', (req, res) => {
         id_tattoer: req.body.selectpicker,
         data: Date(""),
         title: req.body.title,
-        meta_title: req.body.meta_title
-        
-        }, function (error, result) {
+        meta_title: req.body.meta_title,
+        url_design: slugify(req.body.design_name, { replacement: '-', separator: '-', remove: null, lower: true})}, function (error, result) {
         if(error) {
             return (error)}
         else{
@@ -271,11 +270,12 @@ app.post('/getTattooDesign/:id', (req,res) => {
         tattooimages.style= req.body.style,
         tattooimages.altezza= req.body.altezza,
         tattooimages.larghezza= req.body.larghezza,
-        tattooimages.image= "images/design/" + req.body.image,
+        tattooimages.image= req.body.image,
         tattooimages.id_tattoer= req.body.selectpicker,
         tattooimages.data= Date(""),
         tattooimages.title= req.body.title,
         tattooimages.meta_title=req.body.meta_title,
+        tattooimages.url_design= slugify(req.body.design_name, { replacement: '-', separator: '-', remove: null, lower: true})
         tattooimages.save()
         .then(tattooimages=>{
             res.redirect('/getTattooDesign');  
@@ -305,7 +305,7 @@ app.get('/getTattooDesign', (req, res) => {
 });
 
 //API - URL DESIGN
-app.get('/design/:url', (req, res) => {
+app.get('/api/get/design/:url', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     var _url= req.params.url;
