@@ -9,6 +9,9 @@ const exphbs = require("express-handlebars");
 const override = require("method-override");
 const slugify = require('slugify');
 
+app.use(express.static('public'));
+app.get('public', (req, res) => res.sendFile(path.resolve('public', 'index.html')));
+
 app.listen(port, () => console.log(`Listening on port ${port}`));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
