@@ -9,9 +9,6 @@ const exphbs = require("express-handlebars");
 const override = require("method-override");
 const slugify = require('slugify');
 
-app.use(express.static('public'));
-app.get('public', (req, res) => res.sendFile(path.resolve('public', 'index.html')));
-
 app.listen(port, () => console.log(`Listening on port ${port}`));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -46,6 +43,16 @@ app.use(override('_method'));
 //SCHEMA TATUATORI
 require("./models/tatuatori.js")
 const tatuatori = mongoose.model("tatuatori")
+
+//SCHEMA TATTOO IMAGES
+require("./models/tattooimages.js")
+const tattooimages = mongoose.model("tattooimages")
+
+//SCHEMA DESIGN
+require("./models/design.js")
+const design = mongoose.model("design")
+
+// CRUD TATOOERS  //
 
 //FORM DI INSERIMENTO - TATUATORI
 app.get('/api/insert/tatuatori', (req, res) => {
@@ -85,6 +92,86 @@ app.post('/api/insert/tatuatori', (req, res) => {
     res.redirect('/getTattoers')
 });
 
+  //VIEW TATUATORI 
+  app.get('/getTattoers', (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  
+    tatuatori.find({}).limit(10).sort({_id: -1}).then(tatuatori =>{
+        res.render("lastTattoers", {
+            tatuatori: tatuatori
+        })
+    })
+});
+
+//MODIFICA TATUATORE
+app.get('/modificaTatuatore/:id', (req,res) => {
+    tatuatori.findOne({
+        _id: req.params.id
+    }).then(tatuatori => {
+        res.render("modificaTatuatore", {
+            tatuatori: tatuatori
+        });
+    });
+});
+
+//MOSTRA SINGOLO TATUATORE
+app.get('/tattoer/profile/:id', (req,res) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
+  tatuatori.findOne({
+      _id: req.params.id
+  }).then(tatuatori => { 
+      res.render("profile", {
+          tatuatori: tatuatori
+      });
+  });
+});
+
+//AGGIORNA TATUATORE
+app.post('/getTattoers/:id', (req,res) => {
+  tatuatori.findOne({
+      _id: req.params.id
+  }).then(tatuatori => {
+      tatuatori.name= req.body.name, 
+      tatuatori.surname= req.body.surname, 
+      tatuatori.biography= req.body.bio, 
+      tatuatori.city= req.body.city, 
+      tatuatori.provincia= req.body.provincia,
+      tatuatori.address= req.body.street,
+      tatuatori.cap= req.body.cap, 
+      tatuatori.telephone= req.body.tele,
+      tatuatori.working_email= req.body.email,
+      tatuatori.private_email= req.body.private,
+      tatuatori.cover= req.body.cover,
+      tatuatori.image= req.body.image,
+      tatuatori.portfolio= req.body.portfolio,
+      tatuatori.tattoo_studio= req.body.tattoo_studio,
+      tatuatori.ranking_display= req.body.rank, 
+      tatuatori.title= req.body.title,
+      tatuatori.meta_title= req.body.meta_title,
+      tatuatori.hide= req.body.hide,
+      tatuatori.url= slugify(req.body.name + ' ' + req.body.surname, { replacement: '-', separator: '-', remove: null, lower: true})
+      
+      tatuatori.save()
+      .then(tatuatori=>{
+          res.redirect('/getTattoers');  
+      });           
+  });
+});
+
+//CANCELLAZIONE TATUATORE
+app.delete('/getTattoers/:id', (req, res) => { 
+  tatuatori.remove({
+      _id: req.params.id
+          }).then(tatuatori => {
+      res.redirect('/getTattoers')
+  });
+});
+
+// API FRONTEND  //
+
 //API - MIGLIORI TATUATORI
 app.get('/api/get/tatuatori/best', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -108,84 +195,6 @@ app.get('/api/get/tatuatori/best', (req, res) => {
         }
       }).sort({_id: -1});
     });
-    
-  //VIEW TATUATORI 
-  app.get('/getTattoers', (req, res) => {
-      res.header("Access-Control-Allow-Origin", "*");
-      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    
-      tatuatori.find({}).limit(10).sort({_id: -1}).then(tatuatori =>{
-          res.render("lastTattoers", {
-              tatuatori: tatuatori
-          })
-      })
-  });
-  
-  //MODIFICA TATUATORE
-  app.get('/modificaTatuatore/:id', (req,res) => {
-      tatuatori.findOne({
-          _id: req.params.id
-      }).then(tatuatori => {
-          res.render("modificaTatuatore", {
-              tatuatori: tatuatori
-          });
-      });
-  });
-
-//MOSTRA SINGOLO TATUATORE
-app.get('/tattoer/profile/:id', (req,res) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-
-    tatuatori.findOne({
-        _id: req.params.id
-    }).then(tatuatori => { 
-        res.render("profile", {
-            tatuatori: tatuatori
-        });
-    });
-});
-
-//AGGIORNA TATUATORE
-app.post('/getTattoers/:id', (req,res) => {
-    tatuatori.findOne({
-        _id: req.params.id
-    }).then(tatuatori => {
-        tatuatori.name= req.body.name, 
-        tatuatori.surname= req.body.surname, 
-        tatuatori.biography= req.body.bio, 
-        tatuatori.city= req.body.city, 
-        tatuatori.provincia= req.body.provincia,
-        tatuatori.address= req.body.street,
-        tatuatori.cap= req.body.cap, 
-        tatuatori.telephone= req.body.tele,
-        tatuatori.working_email= req.body.email,
-        tatuatori.private_email= req.body.private,
-        tatuatori.cover= req.body.cover,
-        tatuatori.image= req.body.image,
-        tatuatori.portfolio= req.body.portfolio,
-        tatuatori.tattoo_studio= req.body.tattoo_studio,
-        tatuatori.ranking_display= req.body.rank, 
-        tatuatori.title= req.body.title,
-        tatuatori.meta_title= req.body.meta_title,
-        tatuatori.hide= req.body.hide,
-        tatuatori.url= slugify(req.body.name + ' ' + req.body.surname, { replacement: '-', separator: '-', remove: null, lower: true})
-        
-        tatuatori.save()
-        .then(tatuatori=>{
-            res.redirect('/getTattoers');  
-        });           
-    });
-});
-  
-//CANCELLAZIONE TATUATORE
-app.delete('/getTattoers/:id', (req, res) => { 
-    tatuatori.remove({
-        _id: req.params.id
-            }).then(tatuatori => {
-        res.redirect('/getTattoers')
-    });
-});
 
 //API - URL TATTOER
 app.get('/api/get/tatuatore/:url', (req, res) => {
@@ -211,20 +220,7 @@ app.get('/api/get/design/tatuatore/:id', (req, res) => {
         })
 });
 
-// API - DA DESIGN A TATUATORE
-app.get('/api/get/tatuatore/design/:id', (req, res) => {
-    var id_t = req.params.id;
-    tatuatori.find({ _id: "" + id_t + "" },
-        function (err, tatuatori) {
-            if (err) { console.log('error..'); } else {
-                res.json(tatuatori);
-            }
-        });
-});
-
-//SCHEMA TATTOO IMAGES
-require("./models/tattooimages.js")
-const tattooimages = mongoose.model("tattooimages")
+// CRUD DESIGN //
 
 // FORM DI INSERIMENTO - TATTOO IMAGES
 app.get('/api/insert/tattooimages', (req, res) => {
@@ -263,6 +259,12 @@ app.post('/api/insert/tattooimages', (req, res) => {
 
 //MODIFICA TATTOO DESIGN
 app.get('/modificaDesign/:id', (req,res) => {
+    
+        // tatuatori.find({}).sort({_id: -1}).then(tatuatori =>{
+        //     res.render("modificaDesign", {
+        //         tatuatori: tatuatori
+        //     })
+        // })
     
     tattooimages.findOne({
         _id: req.params.id
@@ -318,6 +320,8 @@ app.get('/getTattooDesign', (req, res) => {
     })
 });
 
+// API - DESIGN //
+
 //API - URL DESIGN
 app.get('/api/get/design/:url', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -330,12 +334,6 @@ app.get('/api/get/design/:url', (req, res) => {
     })
 });
 
-
-
-//SCHEMA DESIGN
-require("./models/design.js")
-const design = mongoose.model("design")
-
 //API - ULTIME TATTOO IMAGES
 app.get('/api/get/tattooimages/last', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -346,7 +344,6 @@ app.get('/api/get/tattooimages/last', (req, res) => {
           res.json(tattooimagesList);
       }
     }).limit(10).sort({data: 0});
-  
   });
 
 //API - ULTIME TATTOO IMAGES
@@ -361,3 +358,23 @@ app.get('/api/get/tattooimages/all', (req, res) => {
     }).sort({data: 0});
   
   });
+
+// API - DA DESIGN A TATUATORE
+
+app.get('/api/get/tatuatore/design/:id', (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    var id_t = req.params.id;
+    tattooimages.findOne({ _id: "" + id_t + "" },
+        function (err, tattoodesign) {
+            if (err) { console.log('error..'); } else {
+                idTatuatore = tattoodesign.id_tattoer;
+                tatuatori.find({_id: "" + idTatuatore + ""},
+                    function (err, tattoer) {
+                        if (err) { console.log('error..'); } else {
+                            res.json(tattoer);
+                        }
+                    })
+            }
+        })
+});
