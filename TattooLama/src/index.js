@@ -5,6 +5,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import './tattooStyle.css';
+import './modalStyle.css';
 
 ReactDOM.render((
     <BrowserRouter>

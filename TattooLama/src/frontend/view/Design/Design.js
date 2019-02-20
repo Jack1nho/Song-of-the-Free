@@ -9,6 +9,9 @@ import DesignTattooer from '../Design/Design_tattoer';
 import TattooerDesign from '../Design/Tattooer_design';
 import LastDesign from '../Design/Last_design';
 import Answer from '../Design/Answer';
+import ModalEmail from '../Modal/ModalEmail';
+import ModalWhatsapp from '../Modal/ModalWhatsApp';
+import ModalThanks from '../Modal/ModalThanks';
 
 library.add(faAngleLeft)
 
@@ -31,13 +34,6 @@ class Design extends Component {
         .then(data => this.setState({
             Design: data
         }))
-
-        fetch('http://localhost:5000/api/get/tatuatore/design/' + this.state.Design._id)
-        .then(response => response.json())
-        .then(data => this.setState({
-            Tattooer: data
-        }))
-        alert (this.props.Design._id);
     }
     
     render(){
@@ -58,6 +54,7 @@ class Design extends Component {
                     <TattooerDesign design={this.state.Design} tattooer={this.props.Tattooer}></TattooerDesign>
                     <LastDesign design={this.state.Design} tattooer={this.props.Tattooer}></LastDesign>
                     <Answer design={this.state.Design} tattooer={this.props.Tattooer}></Answer>
+                    <ModalEmail></ModalEmail>
                 </div>
             </div>
             );

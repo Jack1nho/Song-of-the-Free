@@ -8,6 +8,9 @@ import Bio from '../Tattooer/Bio';
 import Design from '../Tattooer/Tattooer_design';
 import Portfolio from '../Tattooer/Portfolio';
 import Studio from '../Tattooer/Tattoo_studio';
+import ModalEmail from '../Modal/ModalEmail';
+import ModalWhatsapp from '../Modal/ModalWhatsApp';
+import ModalThanks from '../Modal/ModalThanks';
 
 
 library.add(faAngleLeft)
@@ -49,7 +52,7 @@ class Tattooer extends Component {
                                     <a href="#portfolio"><span className="rect"></span>Portfolio</a><br></br>
                                     <a href="#tattoo_studio"><span className="rect"></span>Tattoo Studio</a><br></br>
                                 </nav>
-                                <button type="button" className="bottone-consulenza btn m-3">Richiedi Consulenza</button>
+                                <button type="button" className="bottone-consulenza btn m-3" id="bottone-richiesta" data-toggle="modal" data-target="#myModalEmail">Richiedi Consulenza</button>
                             </div>
                         </div>
 
@@ -58,6 +61,7 @@ class Tattooer extends Component {
                         <Design tattooer={this.state.Tattooer}></Design>
                         <Portfolio tattooer={this.state.Tattooer}></Portfolio>
                         <Studio tattooer={this.state.Tattooer}></Studio>
+                        <ModalEmail></ModalEmail>
                         </div>
                     </div>
                 </div>

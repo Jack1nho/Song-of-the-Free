@@ -52,7 +52,7 @@
   
   @media screen and (min-width: 768px) { 
     .top-sticky-menu {
-      display: none;
+      display: none !important;
     }
   } 
   
@@ -80,7 +80,9 @@
   
   /*------SIDEMENU------*/
   
-  
+  .sticky-menu {
+    position: fixed;
+  }
   
   .side-menu {
     width: 256px;

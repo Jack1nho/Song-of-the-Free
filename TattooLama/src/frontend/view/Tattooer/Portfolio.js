@@ -78,7 +78,7 @@ class Portfolio extends Component {
                                                 <h3 className="text-2-jumbotron-artista">Descrivi la tua idea di tattoo e {this.props.tattooer.name} {this.props.tattooer.surname} ti risponderà a breve!</h3> 
                                             </div>
                                             <div className="col-12 col-lg-2">
-                                                <button type="button" className="btn bottone-consulenza-2 float-lg-right">Richiedi Consulenza</button>
+                                                <button type="button" className="btn bottone-consulenza-2 float-lg-right" id="bottone-richiesta" data-toggle="modal" data-target="#myModalEmail">Richiedi Consulenza</button>
                                             </div>
                                         </div>
                                     </div>
