@@ -197,6 +197,7 @@ app.post('/api/insert/tattooimages', (req, res) => {
         data: Date(""),
         title: req.body.title,
         meta_title: req.body.meta_title,
+        alt_tag: req.body.alt_tag,
         url_design: slugify(req.body.design_name, { replacement: '-', separator: '-', remove: null, lower: true})}, function (error, result) {
         if(error) {
             return (error)}
@@ -249,6 +250,7 @@ app.post('/getTattooDesign/:id', (req,res) => {
         tattooimages.data= Date(""),
         tattooimages.title= req.body.title,
         tattooimages.meta_title=req.body.meta_title,
+        tattooimages.alt_tag=req.body.alt_tag,
         tattooimages.url_design= slugify(req.body.design_name, { replacement: '-', separator: '-', remove: null, lower: true})
         tattooimages.save()
         .then(tattooimages=>{

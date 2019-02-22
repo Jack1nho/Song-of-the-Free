@@ -45,6 +45,10 @@ const tattooImagesSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    alt_tag:{   
+        type: String,
+        required: true
+    },
     url_design:{
         type: String,
         required: true
