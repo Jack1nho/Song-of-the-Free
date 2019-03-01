@@ -3,6 +3,7 @@ import './designStyle.css';
 
 class DesignInfo extends Component {
     
+    
     render(){
         return(
             <div className="design my-4">
@@ -14,10 +15,10 @@ class DesignInfo extends Component {
                             <h2 className="text-3 mt-md-auto mt-5">{this.props.design.name_design}</h2>
                                 <div className="row">
                                     <div className="col-6 col-md-12">
-                                    <h3 className="description float-md-none float-left"><strong>Tattoo Artist:<br></br></strong> Nome Cognome</h3>
+                                    <h3 className="description float-md-none float-left"><strong>Tattoo Artist:<br></br></strong> {this.props.tattooer.name} {this.props.tattooer.surname}</h3>
                                 </div>
                                 <div className="col-6 col-md-12">
-                                    <h3 className="description"><strong>Città dello studio:<br></br></strong> Milano</h3>
+                                    <h3 className="description"><strong>Città dello studio:<br></br></strong> {this.props.tattooer.city}</h3>
                                     <h3 className="description d-none d-md-block"><strong>Dimensione:</strong> {this.props.design.altezza}x{this.props.design.larghezza} cm</h3>
                                 </div>
                             </div>

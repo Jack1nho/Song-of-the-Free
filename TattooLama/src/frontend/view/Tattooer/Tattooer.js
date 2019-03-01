@@ -9,8 +9,8 @@ import Design from '../Tattooer/Tattooer_design';
 import Portfolio from '../Tattooer/Portfolio';
 import Studio from '../Tattooer/Tattoo_studio';
 import ModalEmail from '../Modal/ModalEmail';
-import ModalWhatsapp from '../Modal/ModalWhatsApp';
-import ModalThanks from '../Modal/ModalThanks';
+//import ModalWhatsapp from '../Modal/ModalWhatsApp';
+//import ModalThanks from '../Modal/ModalThanks';
 
 
 library.add(faAngleLeft)
@@ -28,11 +28,15 @@ class Tattooer extends Component {
     componentDidMount() {
         const { match: { params } } = this.props;
 
-        fetch('http://localhost:5000/api/get/tatuatore/' + params.url)
-        .then(response => response.json())
-        .then(data => this.setState({
-            Tattooer: data
-        }))
+        const request = async () => {
+            const response = await fetch('http://localhost:5000/api/get/tatuatore/' + params.url);
+            const json = await response.json();          
+            await this.setState({
+                Tattooer: json
+            }) 
+            console.log(this.state.Tattooer)
+        }
+        request();
     }
 
     render(){

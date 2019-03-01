@@ -58,10 +58,10 @@ class Header extends Component {
                     <div id="myNav" className="overlay">
                             <FontAwesomeIcon className="closebtn" onClick={this.closeNav} icon="times" />
                             <div className="overlay-content">
-                                <Link to='/list_tatuatori'>Tatuatori</Link>
-                                <Link to='/list_design'>Tattoo Design</Link>
-                                <Link to='/Blog'>Blog</Link>
-                                <Link className="mt-5" to='/Contacts'>Contattaci <span role="img" aria-label="emoji">🦄</span></Link>
+                                <Link to='/list_tatuatori' onClick={this.closeNav}>Tatuatori</Link>
+                                <Link to='/list_design' onClick={this.closeNav}>Tattoo Design</Link>
+                                <Link to='/Blog' onClick={this.closeNav}>Blog</Link>
+                                <Link className="mt-5" to='/Contacts' onClick={this.closeNav}>Contattaci <span role="img" aria-label="emoji">🦄</span></Link>
                             </div>
                     </div>
                     <div className="d-flex justify-content-between">

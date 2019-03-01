@@ -44,7 +44,7 @@ class LastDesign extends Component {
     render(){
         return(
             <div className="last-design">
-                    <div className="text-3 mb-3">Ultimi design di: <span className="grey">Gianmaruizio Fercioni</span></div>
+                    <div className="text-3 mb-3">Ultimi design di: <span className="grey">{this.props.tattooer.name} {this.props.tattooer.surname}</span></div>
 
                     <Lightbox
                         currentImage={this.state.currentImage}
