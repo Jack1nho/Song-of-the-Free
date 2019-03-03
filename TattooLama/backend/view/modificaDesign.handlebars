@@ -4,9 +4,7 @@
         Nome Design:<br>
         <input type="text" name="design_name" class="form-control" value="{{tattooimages.name_design}}"><br>
         Artista Associato:<br>
-        {{!-- {{#if tattooimages.id_tattoer tatuatori._id}} --}}
-        <input type="text" name="associated" class="form-control" value="{{tattooimages.associated_artist}}"><br>
-        {{!-- {{/if}} --}}
+        <input type="text" name="associated" class="form-control" value="{{tatuatoris.name}} {{tatuatoris.surname}}"><br>
         Prezzo:<br>
         <input type="number" name="price" class="form-control" value="{{tattooimages.price}}"><br>
         Stile:<br>

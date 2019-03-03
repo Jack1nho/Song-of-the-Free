@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const Handlebars = require('handlebars')
+const Handlebars = require('handlebars');
 const app = express();
 const port = process.env.PORT || 5000;
 const path = require('path');
@@ -97,7 +97,7 @@ app.post('/api/insert/tatuatori', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   
-    tatuatori.find({}).limit(10).sort({_id: -1}).then(tatuatori =>{
+    tatuatori.find({}).sort({_id: -1}).then(tatuatori =>{
         res.render("lastTattoers", {
             tatuatori: tatuatori
         })
@@ -211,22 +211,22 @@ app.post('/api/insert/tattooimages', (req, res) => {
 //MODIFICA TATTOO DESIGN
 app.get('/modificaDesign/:id', (req,res) => {
 
-    // Handlebars.registerHelper('if', function(tattooimages, tatuatori, options) {
-    //     if(tattooimages.id_tattoer === tatuatori._id) {
-    //       return options.fn(tatuatori.name);
-    //     }
-    //     return options.inverse(this);
-    //   });
-
-    tattooimages.findOne({ _id: req.params.id},
+    var idTatuatore = req.params.id;
+    tattooimages.findOne({ _id: "" + idTatuatore + "" },
         function (err, tattoodesign) {
             if (err) { console.log('error..'); } else {
+                idTatuatore = tattoodesign.id_tattoer;
                 tatuatori.find({},
                     function (err, tattoer) {
                         if (err) { console.log('error..'); } else {
-                            res.render("modificaDesign", {
-                                tatuatori: tattoer,
-                                tattooimages: tattoodesign
+                            tatuatori.findOne({ _id: "" + idTatuatore + "" }, function (err, tat) {
+                                if (err) { console.log('error..'); } else {
+                                    res.render("modificaDesign", {
+                                        tatuatori: tattoer,
+                                        tatuatoris: tat,
+                                        tattooimages: tattoodesign
+                                    })
+                                }
                             })
                         }
                     })
@@ -273,7 +273,7 @@ app.get('/getTattooDesign', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   
-    tattooimages.find({}).limit(10).sort({_id: -1}).then(tattooimages =>{
+    tattooimages.find({}).sort({_id: -1}).then(tattooimages =>{
         res.render("getTattooDesign", {
             tattooimages: tattooimages
         })
@@ -323,6 +323,9 @@ app.get('/api/get/tatuatore/:url', (req, res) => {
 
 // API - ALL TATTOO DESIGN
 app.get('/api/get/design/tatuatore/:id', (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    
     var id_t = req.params.id;
     tattooimages.find({ id_tattoer: "" + id_t + "" },
         function (err, tattoodesign) {
@@ -381,7 +384,7 @@ app.get('/api/get/tatuatore/design/:id', (req, res) => {
         function (err, tattoodesign) {
             if (err) { console.log('error..'); } else {
                 idTatuatore = tattoodesign.id_tattoer;
-                tatuatori.find({_id: "" + idTatuatore + ""},
+                tatuatori.findOne({_id: "" + idTatuatore + ""},
                     function (err, tattoer) {
                         if (err) { console.log('error..'); } else {
                             res.json(tattoer);
