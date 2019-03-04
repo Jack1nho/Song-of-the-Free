@@ -2,9 +2,12 @@ import React, {Component} from 'react';
 import './designStyle.css';
 
 class DesignInfo extends Component {
-    
-    
+
     render(){
+
+        const style = this.props.design.style;
+        console.log(style)
+
         return(
             <div className="design my-4">
                     <div className="row">

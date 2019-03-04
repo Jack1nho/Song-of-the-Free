@@ -22,7 +22,8 @@ class Design extends Component {
 
         this.state = {
             Design: [],
-            Tattooer: []
+            Tattooer: [],
+            Design_Personal: []
         }
     }
 
@@ -42,7 +43,12 @@ class Design extends Component {
                 Tattooer: json2
             })
 
-            console.log(this.state.Tattooer)
+            const response3 = await fetch('http://localhost:5000/api/get/design/tatuatore/'+ this.state.Tattooer._id);
+            const json3 = await response3.json();          
+            await this.setState({
+                Design_Personal: json3
+            })
+
         }
         request();    
     }
@@ -62,7 +68,7 @@ class Design extends Component {
                     <DesignInfo design={this.state.Design} tattooer={this.state.Tattooer}></DesignInfo>
                     <hr className="my-5 d-none d-md-block"></hr>
                     <DesignTattooer design={this.state.Design} tattooer={this.state.Tattooer}></DesignTattooer>
-                    <TattooerDesign design={this.state.Design} tattooer={this.state.Tattooer}></TattooerDesign>
+                    <TattooerDesign design={this.state.Design} tattooer={this.state.Tattooer} design_personal={this.state.Design_Personal}></TattooerDesign>
                     <LastDesign design={this.state.Design} tattooer={this.state.Tattooer}></LastDesign>
                     <Answer design={this.state.Design} tattooer={this.state.Tattooer}></Answer>
                     <ModalEmail></ModalEmail>

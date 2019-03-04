@@ -45,7 +45,7 @@ class Portfolio extends Component {
         return(
             
             <div className="portfolio" id="portfolio">
-                                <h2 className="text-3 my-4">Ultimi tattoo di Gianmaurizio Fercioni</h2>
+                                <h2 className="text-3 my-4">Ultimi tattoo di {this.props.tattooer.name} {this.props.tattooer.surname}</h2>
                                 
                                 <Lightbox
                                     currentImage={this.state.currentImage}

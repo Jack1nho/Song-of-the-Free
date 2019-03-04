@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
+.modal-open{
+  padding-right: 0px !important;
+}
+
 @media screen and (max-width: 768px) {
   .container-wrapper {
     padding-left: 1rem;

@@ -21,7 +21,8 @@ class Tattooer extends Component {
         super();
 
         this.state = {
-            Tattooer: []
+            Tattooer: [],
+            Design: []
         }
     }
 
@@ -33,9 +34,15 @@ class Tattooer extends Component {
             const json = await response.json();          
             await this.setState({
                 Tattooer: json
-            }) 
-            console.log(this.state.Tattooer)
+            })
+        
+            const response2 = await fetch('http://localhost:5000/api/get/design/tatuatore/'+ this.state.Tattooer._id);
+            const json2 = await response2.json();          
+            await this.setState({
+                Design: json2
+            })
         }
+
         request();
     }
 
@@ -62,7 +69,7 @@ class Tattooer extends Component {
 
                         <div className="col col-lg-9 pl-md-5">
                         <Bio tattooer={this.state.Tattooer}></Bio>
-                        <Design tattooer={this.state.Tattooer}></Design>
+                        <Design tattooer={this.state.Tattooer} design={this.state.Design}></Design>
                         <Portfolio tattooer={this.state.Tattooer}></Portfolio>
                         <Studio tattooer={this.state.Tattooer}></Studio>
                         <ModalEmail></ModalEmail>
