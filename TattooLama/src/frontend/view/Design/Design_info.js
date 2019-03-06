@@ -5,8 +5,7 @@ class DesignInfo extends Component {
 
     render(){
 
-        const style = this.props.design.style;
-        console.log(style)
+        const style = ""+this.props.design.style;
 
         return(
             <div className="design my-4">
@@ -26,10 +25,9 @@ class DesignInfo extends Component {
                                 </div>
                             </div>
                             <h3 className="description mt-4"><strong>Stili:</strong></h3>
-                            <h3 className="description float-md-none float-left"><span className="Red">#</span>{this.props.design.style}&nbsp;</h3>
-                            <h3 className="description float-md-none float-left"><span className="Red">#</span>blackwork&nbsp;</h3>
-                            <h3 className="description float-md-none float-left"><span className="Red">#</span>animal&nbsp;</h3>
-                            <h3 className="description float-md-none float-left"><span className="Red">#</span>newschool</h3>
+                            {(style || []).split(", ").map(function(place, i) {
+                                return <h3 key={i} className="description float-md-none float-left"><span className="Red">#</span>{place}&nbsp;</h3>
+                            })}
                             
                             <div className="row div-prezzo mt-5">
                                 <div className="col-6 col-md-12"><h2 className="text-3 prezzo mt-2 ml-md-auto"><span className="grey">Prezzo: </span>€ {this.props.design.price}</h2></div>

@@ -11,7 +11,7 @@ class GrigliaTattooer extends Component {
     }
     
     componentDidMount() {
-        fetch('http://localhost:5000/api/get/tatuatori/all')
+        fetch('https://tattoolama.herokuapp.com/api/get/tatuatori/all')
         .then(response => response.json())
         .then(data => this.setState({
             Tattooer: data

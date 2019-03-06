@@ -11,7 +11,7 @@ class GrigliaHome extends Component {
     }
     
     componentDidMount() {
-        fetch('http://localhost:5000/api/get/tattooimages/last')
+        fetch('https://tattoolama.herokuapp.com/api/get/tattooimages/last')
         .then(response => response.json())
         .then(data => this.setState({
             Design: data

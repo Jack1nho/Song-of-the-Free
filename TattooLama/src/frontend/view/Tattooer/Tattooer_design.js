@@ -19,8 +19,8 @@ class TattoerDesign extends Component {
                 {
                     breakpoint: 1024,
                     settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToShow: 8,
+                    slidesToScroll: 8,
                     infinite: true,
                     dots: true
                     }
@@ -60,9 +60,9 @@ class TattoerDesign extends Component {
                                                 </div>  
                                         }                   
                                     )}
-                                    </SliderSlick>  
+                                </SliderSlick>  
                                 </div> 
-                              
+                            
                             <div className="my-4 impagination">
                                 <hr></hr>
                                     <button className="btn bottone-next btn-sm mx-2" type="button">Pagine precedente</button>

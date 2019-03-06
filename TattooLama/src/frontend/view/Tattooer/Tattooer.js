@@ -30,13 +30,13 @@ class Tattooer extends Component {
         const { match: { params } } = this.props;
 
         const request = async () => {
-            const response = await fetch('http://localhost:5000/api/get/tatuatore/' + params.url);
+            const response = await fetch('https://tattoolama.herokuapp.com/api/get/tatuatore/' + params.url);
             const json = await response.json();          
             await this.setState({
                 Tattooer: json
             })
         
-            const response2 = await fetch('http://localhost:5000/api/get/design/tatuatore/'+ this.state.Tattooer._id);
+            const response2 = await fetch('https://tattoolama.herokuapp.com/api/get/design/tatuatore/'+ this.state.Tattooer._id);
             const json2 = await response2.json();          
             await this.setState({
                 Design: json2

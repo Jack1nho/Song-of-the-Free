@@ -12,7 +12,7 @@ class Slider extends Component {
     }
     
     componentDidMount() {
-        fetch('http://localhost:5000/api/get/tatuatori/best')
+        fetch('https://tattoolama.herokuapp.com/api/get/tatuatori/best')
         .then(response => response.json())
         .then(data => this.setState({
             Tattooer: data

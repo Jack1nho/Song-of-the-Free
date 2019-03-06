@@ -13,6 +13,7 @@
     "currently": "0.0.8",
     "express-favicon": "^2.0.1",
     "express-handlebars": "^3.0.0",
+    "history": "^4.7.2",
     "jquery": "^3.3.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.4.1",
