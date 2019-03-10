@@ -59,11 +59,11 @@ class Design extends Component {
                 <div className="jumbotron jumbotron-fluid Jumbotron-design">
                     <div className="container">
                         <h1 className="Text-2-Jumbotron-1">SCEGLI IL TUO</h1>
-                        <h1 className="Text-2-Jumbotron-1" style={{ marginLeft: '20%' }}><span className="Red">TATTO DESIGN</span></h1>
+                        <h1 className="Text-2-Jumbotron-1" style={{ marginLeft: '20%' }}><span className="Red">TATTOO DESIGN</span></h1>
                     </div>
                 </div>
                 
-                <Link to='/list_design' className="text-back" href="list_design.html"><span className="Red"><FontAwesomeIcon icon="angle-left"/></span>&nbsp;&nbsp;Guarda tutti i tatuaggi</Link>
+                <Link to='/design' className="text-back" href="list_design.html"><span className="Red"><FontAwesomeIcon icon="angle-left"/></span>&nbsp;&nbsp;Guarda tutti i tatuaggi</Link>
                 <div className="container-wrapper">
                     <DesignInfo design={this.state.Design} tattooer={this.state.Tattooer}></DesignInfo>
                     <hr className="my-5 d-none d-md-block"></hr>

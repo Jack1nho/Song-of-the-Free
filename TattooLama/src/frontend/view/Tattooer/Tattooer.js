@@ -51,7 +51,7 @@ class Tattooer extends Component {
         <div>
             <div className="jumbotron jumbotron-fluid Jumbotron-1"></div> 
 
-            <Link className="text-back" to='/list_tatuatori'><span className="Red"><FontAwesomeIcon icon="angle-left"/></span>&nbsp;&nbsp;Guarda tutti i tatuatori</Link>
+            <Link className="text-back" to='/tatuatori'><span className="Red"><FontAwesomeIcon icon="angle-left"/></span>&nbsp;&nbsp;Guarda tutti i tatuatori</Link>
 
                 <div className="container-wrapper">
                     <div className="row main-row">

@@ -19,7 +19,7 @@ class Home extends Component {
               <div className="container-wrapper">
                 <h1 className="text-1 mt-md-0 mt-4">Migliori tatuatori di Milano</h1>
                   <Slider></Slider>
-                <div className="text-center text-md-left mt-3"><Link className="text-2" to='/list_tatuatori'>Vedi tutti i migliori tatuatori ></Link></div>
+                <div className="text-center text-md-left mt-3"><Link className="text-2" to='/tatuatori'>Vedi tutti i migliori tatuatori ></Link></div>
               </div>
 
               <div className="container-wrapper-2">
@@ -31,7 +31,7 @@ class Home extends Component {
               <div className="container-wrapper">
                 <h3 className="text-3 mb-3">Tutti i tattoo design</h3>
                 <GrigliaHome></GrigliaHome>
-                <div className="text-center text-md-left mt-3"><Link className="text-2" to='/list_design'>Vedi tutti i tatuaggi ></Link></div>
+                <div className="text-center text-md-left mt-3"><Link className="text-2" to='/design'>Vedi tutti i tatuaggi ></Link></div>
             
                 <div className="row last-section">
                     <div className="col-sm-12 col-md-6 col-lg-6">
@@ -47,7 +47,7 @@ class Home extends Component {
                                     <h3 className="list-number"><span className="number">2.&nbsp;</span><strong>Visualizza</strong> i migliori design disponibili</h3>
                                     <h3 className="list-number"><span className="number">3.&nbsp;</span><strong>Prenota</strong> il tattoo and get inked!</h3>
                                 </div>
-                                <div className="text-center text-md-left"><Link className="text-2" to='/list_tatuatori'>Vedi tutti i tatuatori ></Link></div>
+                                <div className="text-center text-md-left"><Link className="text-2" to='/tatuatori'>Vedi tutti i tatuatori ></Link></div>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@ class Home extends Component {
                                 <h3 className="list-number"><span className="number">2.&nbsp;</span><strong>Visualizza</strong> i migliori design <span className="d-none d-md-block">disponibili</span></h3>
                                 <h3 className="list-number"><span className="number">3.&nbsp;</span><strong>Prenota</strong> il tattoo and get inked!</h3>
                             </div>
-                            <div className="text-center text-md-left"><a className="text-2" href="list_tattooer.html">Vedi tutti i tatuatori ></a></div>
+                            <div className="text-center text-md-left"><Link className="text-2" to='/tatuatori'>Vedi tutti i tatuatori ></Link></div>
                     </div>
                 </div>
                       
