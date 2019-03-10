@@ -6,8 +6,7 @@ import '../App/slick/slick-theme.css';
 import '../App/slick/slick.css';
 
 class App extends Component {
-  
-  
+
   render() {
     return (
       <div className="wrapper">

@@ -429,3 +429,11 @@ body{
   padding: 0px 10px;
   display: block;
 }
+
+@media screen and (max-width: 768px){
+  .tattoo_design .slick-slider .slick-dots {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    bottom: -40px;
+  }
+}

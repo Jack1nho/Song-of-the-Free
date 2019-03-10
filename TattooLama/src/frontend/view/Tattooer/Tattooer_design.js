@@ -10,10 +10,10 @@ class TattoerDesign extends Component {
         this.previous = this.previous.bind(this);
     }
     next() {
-    this.slider.slickNext();
+        this.slider.slickNext();
     }
     previous() {
-    this.slider.slickPrev();
+        this.slider.slickPrev();
     }
 
     
@@ -22,7 +22,7 @@ class TattoerDesign extends Component {
         var settings = {
             dots: false,
             infinite: true,
-            lazyLoad: 'ondemand',
+            //lazyLoad: 'ondemand',
             slidesPerRow: 4,
             rows: 2,
             accessibility: true,
