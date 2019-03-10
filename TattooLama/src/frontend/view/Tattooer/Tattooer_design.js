@@ -4,39 +4,52 @@ import SliderSlick from "react-slick";
 
 class TattoerDesign extends Component {
 
+    constructor(props) {
+        super(props);
+        this.next = this.next.bind(this);
+        this.previous = this.previous.bind(this);
+    }
+    next() {
+    this.slider.slickNext();
+    }
+    previous() {
+    this.slider.slickPrev();
+    }
+
     
     render(){
 
         var settings = {
-            dots: true,
+            dots: false,
             infinite: true,
             lazyLoad: 'ondemand',
-            slidesToShow: 8,
-            slidesToScroll: 8,
+            slidesPerRow: 4,
+            rows: 2,
             accessibility: true,
             touchMove: true,
             responsive: [
                 {
                     breakpoint: 1024,
                     settings: {
-                    slidesToShow: 8,
-                    slidesToScroll: 8,
-                    infinite: true,
-                    dots: true
+                    slidesPerRow: 4,
+                    rows: 2,
+                    dots: false
                     }
                 },
                 {
                     breakpoint: 768,
                     settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesPerRow: 2,
+                    rows: 2,
+                    dots: true
                     }
                 },
                 {
                     breakpoint: 480,
                     settings: {
-                    slidesToShow: 1.03,
-                    slidesToScroll: 1
+                    slidesPerRow: 2,
+                    rows: 2,
+                    dots: true
                     }
                 }
                 // You can unslick at a given breakpoint now by adding:
@@ -49,7 +62,7 @@ class TattoerDesign extends Component {
                             <h2 className="text-3 my-4">Tattoo design di {this.props.tattooer.name} {this.props.tattooer.surname}</h2>
                             
                                 <div className="row row-grid">
-                                <SliderSlick {...settings}>
+                                <SliderSlick ref={c => (this.slider = c)} {...settings}>
                                     {this.props.design.map((item, i) => {
                                         return <div className="col-6 col-sm-6 col-md-3 col-lg-3" key={i}>
                                                     <Link className="grid" to={'/design/' + item.url_design} >
@@ -65,8 +78,8 @@ class TattoerDesign extends Component {
                             
                             <div className="my-4 impagination">
                                 <hr></hr>
-                                    <button className="btn bottone-next btn-sm mx-2" type="button">Pagine precedente</button>
-                                    <button className="btn bottone-next btn-sm mx-2" type="button">Prossima pagina</button>
+                                    <button className="btn bottone-next btn-sm mx-2" type="button" onClick={this.previous}>Pagine precedente</button>
+                                    <button className="btn bottone-next btn-sm mx-2" type="button" onClick={this.next}>Prossima pagina</button>
                             </div>
                         </div>
         );

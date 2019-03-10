@@ -418,3 +418,14 @@ body{
     float: left;
   }
 }
+
+/* SLICK TATTOOER */
+
+.tattoo_design .slick-slider {
+  width: 100%;
+}
+
+.tattoo_design .slick-slider .slick-slide div .grid {
+  padding: 0px 10px;
+  display: block;
+}
