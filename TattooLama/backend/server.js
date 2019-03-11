@@ -9,6 +9,10 @@ const exphbs = require("express-handlebars");
 const override = require("method-override");
 const slugify = require('slugify');
 const httpProxy = require('http-proxy');
+const multer = require('multer');
+const fileUpload = require('express-fileupload');
+
+app.use(fileUpload());
 
 app.use(express.static(path.join(__dirname, '../build')));
 
@@ -63,6 +67,14 @@ app.get('/api/insert/tatuatori', (req, res) => {
 
 app.post('/api/insert/tatuatori', (req, res) => {
 
+let portfolioUpload = req.files.portfolio;
+let nomeFile = req.files.portfolio.name;
+portfolioUpload.mv('images/tatuatori/portfolio/' + nomeFile), function(err) {
+    if (err)
+      return res.status(500).send(err);
+
+    res.send('File uploaded!')},  
+
     tatuatori.create({ 
         name: req.body.name, 
         surname: req.body.surname, 
@@ -76,7 +88,7 @@ app.post('/api/insert/tatuatori', (req, res) => {
         private_email: req.body.private,
         cover: "images/tatuatori/cover/" + req.body.cover,
         image: "images/tatuatori/img/" + req.body.image,
-        portfolio: "images/tatuatori/portfolio/" + req.body.portfolio,
+        portfolio: nomeFile,
         tattoo_studio: req.body.tattoo_studio,
         ranking_display: req.body.rank, 
         title: req.body.title,

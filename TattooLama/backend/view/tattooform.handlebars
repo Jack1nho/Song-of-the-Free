@@ -1,6 +1,6 @@
 <div class="d-flex">
     
-    <form method="POST" action="/api/insert/tatuatori" class="list-inline mx-auto justify-content-center"> 
+    <form method="POST" action="/api/insert/tatuatori" encType="multipart/form-data" class="list-inline mx-auto justify-content-center"> 
         Nome:<br>
         <input type="text" name="name" value="" class="form-control" required><br>
         Cognome:<br>
@@ -36,7 +36,7 @@
         Image:<br>
         <input type="text" name="image" value="" class="form-control" required><br>
         Portfolio:<br>
-        <input type="text" name="portfolio" value="" class="form-control" required><br>
+        <input type="file" name="portfolio" value="" class="form-control" required><br>
         Tattoo Studio:<br>
         <input type="text" name="tattoo_studio" value="" class="form-control" required><br>
         <label for="sel1">Ranking:</label>
