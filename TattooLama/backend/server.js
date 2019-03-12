@@ -69,7 +69,7 @@ app.post('/api/insert/tatuatori', (req, res) => {
 
 let portfolioUpload = req.files.portfolio;
 let nomeFile = req.files.portfolio.name;
-portfolioUpload.mv('images/tatuatori/portfolio/' + nomeFile), function(err) {
+portfolioUpload.mv('public/images/Tatuatori/portfolio/' + nomeFile), function(err) {
     if (err)
       return res.status(500).send(err);
 
