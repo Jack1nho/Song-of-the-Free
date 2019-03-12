@@ -6,7 +6,7 @@
     {{#each tatuatori}}
     <div class="col-3 mb-3">
 
-      <button class="btn btn-outline-secondary" role="button" onclick="window.location.href='/tattoer/profile/{{id}}'">
+      <div class="btn btn-outline-secondary" role="button">
         <h5>{{name}} {{surname}}</h5>
         {{!-- <p>Tatuaggi: {{}} </p> --}}
         <p>Ranking: {{ranking_display}} </p>
@@ -14,12 +14,12 @@
 
         <div>
           <a class="btn btn-primary mb-1" href="/modificaTatuatore/{{id}}">Modifica dati</a>
-          <form action="/getTattoers/{{id}}?_method=DELETE" method="POST" class="mb-3">
+          <form id="deleteForm" data-id="{{id}}" method="POST" class="mb-3">
             <input type="hidden" name="_method" value="DELETE">
-            <input type="submit" class="btn btn-danger" onClick="confSubmit(this.form);" value="Cancella tatuatore ">
+            <input class="btn btn-danger" onClick="confSubmit(this.form);" value="Cancella tatuatore" style="cursor: pointer;">
           </form>
         </div>
-      </button>
+      </div>
 
     </div>
     {{else}}
@@ -32,13 +32,13 @@
 </div>
 
 <script>
-  function confSubmit(form) {
+  function confSubmit(form, e) {
     if (confirm("Vuoi cancellare questo elemento?")) {
+      $('#deleteForm').attr('action', '/getTattoers/' + $('#deleteForm').data("id") + '?_method=DELETE');
       form.submit();
-    }
-
-    else {
-      alert("You decided to not submit the form!");
+    }else {
+      $('#deleteForm').attr('action', '');
+      alert("Se non lo devi cancellare perché hai cliccato cazzo?");
     }
   }
 </script>
