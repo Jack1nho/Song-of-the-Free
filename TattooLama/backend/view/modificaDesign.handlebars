@@ -1,6 +1,14 @@
 <div class="d-flex">
     <form action="/getTattooDesign/{{tattooimages.id}}?_method=POST" method="POST" class="list-inline mx-auto justify-content-center">
         <input type="hidden" name="_method" value="POST">
+        
+        <select class="selectpicker form-control" value="{{tattooimages.id_tattoer}}" data-style="btn-info" name="selectpicker">
+            <option selected> Scegli un tatuatore</option> 
+            {{#each tatuatori}}
+            <option name="table1" value="{{id}}">{{name}} {{surname}}</option>        
+            {{/each}}
+        </select>    <br>  
+
         Nome Design:<br>
         <input type="text" name="design_name" class="form-control" value="{{tattooimages.name_design}}"><br>
         Artista Associato:<br>
@@ -21,12 +29,7 @@
         <textarea type="textarea" name="meta_title" class="form-control" value="{{tattooimages.meta_title}}"></textarea><br>
         Alt Tag:
         <input type="text" name="alt_tag" class="form-control" value="{{tattooimages.alt_tag}}"><br>
-        <select class="selectpicker form-control" value="{{tattooimages.id_tattoer}}" data-style="btn-info" name="selectpicker">
-            <option selected> Scegli un tatuatore</option> 
-            {{#each tatuatori}}
-            <option name="table1" value="{{id}}">{{name}} {{surname}}</option>        
-            {{/each}}
-        </select>    <br>  
+        
         <input type="submit" class="btn btn-primary" value="Submit">
     </form>
 </div>

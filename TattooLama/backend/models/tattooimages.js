@@ -33,6 +33,10 @@ const tattooImagesSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    // hide:{
+    //     type: Boolean,
+    //     required: true
+    // },
     data:{
         type: Date,
         required: true
