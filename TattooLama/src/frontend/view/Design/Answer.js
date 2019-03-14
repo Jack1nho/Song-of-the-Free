@@ -16,7 +16,7 @@ class Answer extends Component {
                               <div className="card-header" id="headingOne">
                                 <h5 className="mb-0">
                                   <button className="btn btn-link collapsed text-2 p-0" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    Question 1
+                                    Il prezzo del design cosa include?
                                   </button>
                                   <FontAwesomeIcon icon="angle-right" className="fas fa-angle-right float-right text-2 mt-1 collapsed arrow-accordion" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" />  
                                 </h5>
@@ -24,8 +24,8 @@ class Answer extends Component {
                           
                               <div id="collapseOne" className="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                 <div className="card-body">
-                                        <h2 className="normal-text">Ha aperto a Milano il suo tattoo studio (aprendo al pubblico  anche  la sua collezione storica e antropologica) 
-                                            uno dei primi  in Italia  e tuttora uno dei più qualificati; il  suo "Queequeg Tattoo Studio & Museo" in zona Brera. </h2>
+                                        <h2 className="normal-text">Il prezzo del design include il design stesso e l'esecuzione dall'artista che l'ha disegnato.
+                                         Il prezzo comprende anche piccole modifiche fatto al disegno (es. aggiunta o omissione di un elemento, cambio colore).  </h2>
                                 </div>
                               </div>
                             </div>
@@ -34,14 +34,16 @@ class Answer extends Component {
                               <div className="card-header" id="headingTwo">
                                 <h5 className="mb-0">
                                   <button className="btn btn-link collapsed text-2 p-0" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Question 2
+                                    Posso farmi fare il disegno da un altro tatuatore?
                                   </button>
                                   <FontAwesomeIcon icon="angle-right" className="fas fa-angle-right float-right text-2 mt-1 collapsed arrow-accordion" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseOne" />   
                                 </h5>
                               </div>
                               <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                 <div className="card-body">
-                                    <h2 className="normal-text">Lorem ipsum..</h2>
+                                    <h2 className="normal-text">No, non puoi. I disegni di Tattoolama possono essere fatti esclusivamente dagli artisti che l'hanno disegnato. 
+                                    Dovresti diffidare di tutti i tatuatori che si propongono di copiare tatuaggi altrui. 
+                                    Un tatuaggio è un'opera d'arte e deve essere esclusivamente della persona che se l'è tatuata.</h2>
                                 </div>
                               </div>
                             </div>
@@ -50,14 +52,15 @@ class Answer extends Component {
                               <div className="card-header" id="headingThree">
                                 <h5 className="mb-0">
                                   <button className="btn btn-link collapsed text-2 p-0" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Question 3
+                                    Come posso sapere se il tatuatore sia abbastanza bravo da poter eseguire il disegno?
                                   </button>
                                   <FontAwesomeIcon icon="angle-right" className="fas fa-angle-right float-right text-2 mt-1 collapsed arrow-accordion" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseOne" />   
                                 </h5>
                               </div>
                               <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                 <div className="card-body">
-                                    <h2 className="normal-text">Lorem ipsum..</h2>
+                                    <h2 className="normal-text">Prima di inserire un tatuatore nella piattaforma noi di Tattoolama facciamo dei controlli basati su: qualità dei disegni, recensioni, tatuaggi eseguiti. 
+                                    Se i tatuatori rispettano tutti i requisiti allora possono far parte del nostro network.</h2>
                                 </div>
                               </div>
                             </div>

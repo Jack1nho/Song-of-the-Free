@@ -47,9 +47,15 @@ class Tattooer extends Component {
     }
 
     render(){
+
+        const img = this.state.Tattooer.cover;
+        const styleTattooer ={
+            backgroundImage: "url(../images/tatuatori/cover/" + img + ")"
+        }
+
         return( 
         <div>
-            <div className="jumbotron jumbotron-fluid Jumbotron-1"></div> 
+            <div className="jumbotron jumbotron-fluid Jumbotron-tattooer" style={styleTattooer}></div> 
 
             <Link className="text-back" to='/tatuatori'><span className="Red"><FontAwesomeIcon icon="angle-left"/></span>&nbsp;&nbsp;Guarda tutti i tatuatori</Link>
 
@@ -72,7 +78,7 @@ class Tattooer extends Component {
                         <Design tattooer={this.state.Tattooer} design={this.state.Design}></Design>
                         <Portfolio tattooer={this.state.Tattooer}></Portfolio>
                         <Studio tattooer={this.state.Tattooer}></Studio>
-                        <ModalEmail></ModalEmail>
+                        <ModalEmail design={this.state.Design}></ModalEmail>
                         </div>
                     </div>
                 </div>

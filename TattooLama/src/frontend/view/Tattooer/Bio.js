@@ -12,7 +12,7 @@ class Bio extends Component {
             <div>
                 <div className="row row-artist">
                     <div className="col-12 col-lg-5">
-                        <img className="img-artist" src={'../'+this.props.tattooer.image} alt=""/>
+                        <img className="img-artist" src={'../images/tatuatori/img/'+this.props.tattooer.image} alt=""/>
                     </div>
                     <div className="col-12 col-lg-7 col-name">
                         <h1 className="nome p-0">{this.props.tattooer.name}</h1>

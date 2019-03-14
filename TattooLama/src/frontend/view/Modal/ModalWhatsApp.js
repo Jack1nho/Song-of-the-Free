@@ -12,10 +12,8 @@ class ModalWhatsApp extends Component {
                         <div className="modal-whatsapp">
                             <h1 className="text-3">Prenota il tattoo</h1>
                             <hr></hr>
-                            <h2 className="little-text text-left">Invia una richiesta di prenotazione al tatuatore indicando il mese in cui vorresti essere 
-                                tatuato e la zona del corpo in cui vorresti tatuarti. L’artista, senza impegno, ti proporrà la data e l’orario 
-                                per l’appuntamento.</h2>
-                                <form className="my-4">
+                            <h2 className="little-text text-left">Invia una richiesta di prenotazione al tatuatore. L’artista, senza impegno, ti proporrà la data e l’orario per l’appuntamento.</h2>
+                                <form className="my-1">
                                     <div className="form-row">
                                         <div className="form-group col-6">
                                             <label className="label" for="inputData">Seleziona la data</label>

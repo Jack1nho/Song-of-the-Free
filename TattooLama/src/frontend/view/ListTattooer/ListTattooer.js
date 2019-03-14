@@ -11,7 +11,7 @@ const ListTattooer = () => (
         </div> 
 
         <div className="container-wrapper">
-            <h1 className="text-1">Tutti i migliori tatuatori</h1>
+            <h2 className="text-1">Tutti i migliori tatuatori</h2>
             <GrigliaTattooer></GrigliaTattooer>
         </div>
     </div>

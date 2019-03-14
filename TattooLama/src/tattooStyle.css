@@ -81,6 +81,7 @@ body{
   background-color: #ffffff;
   font-family: 'Montserrat', sans-serif !important;
   overflow-x: hidden;
+  padding-right: 0 !important;
 }
 
 .wrapper {
@@ -155,6 +156,15 @@ body{
   align-items: center;
 }
 
+.Jumbotron-tattooer {
+  background-size: cover;
+  background-position: center center;
+  -webkit-background-size: cover;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+
 .Red {
   color: #d80e47;
 }
@@ -216,6 +226,7 @@ body{
   background-color: #383838;
   position: relative;
   text-align: center;
+  object-fit: cover;
 }
 
 .text-slider {
@@ -284,6 +295,10 @@ body{
   width: 100%;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  height: 168px;
+  object-fit: cover;
+  
+    
 }
 
 .row-grid {
@@ -352,6 +367,10 @@ body{
 .list {
   padding-left: 19px;
   margin-bottom: 41px;
+}
+
+.last-img {
+  object-fit: cover;
 }
 
 /*------DESCRIPTION TEXT------*/
@@ -425,10 +444,6 @@ body{
   width: 100%;
 }
 
-.tattoo_design .slick-slider .slick-slide div .grid {
-  padding: 0px 10px;
-  display: block;
-}
 
 @media screen and (max-width: 768px){
   .tattoo_design .slick-slider .slick-dots {

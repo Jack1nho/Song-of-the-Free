@@ -17,7 +17,7 @@ class Home extends Component {
             </div>
 
               <div className="container-wrapper">
-                <h1 className="text-1 mt-md-0 mt-4">Migliori tatuatori di Milano</h1>
+                <h2 className="text-1 mt-md-0 mt-4">Migliori tatuatori di Milano</h2>
                   <Slider></Slider>
                 <div className="text-center text-md-left mt-3"><Link className="text-2" to='/tatuatori'>Vedi tutti i migliori tatuatori ></Link></div>
               </div>
@@ -29,9 +29,9 @@ class Home extends Component {
               </div>
 
               <div className="container-wrapper">
-                <h3 className="text-3 mb-3">Tutti i tattoo design</h3>
+                <h2 className="text-3 mb-3">Tutti i tattoo design</h2>
                 <GrigliaHome></GrigliaHome>
-                <div className="text-center text-md-left mt-3"><Link className="text-2" to='/design'>Vedi tutti i tatuaggi ></Link></div>
+                <div className="text-center text-md-left mt-3"><Link className="text-2" to='/tatuaggi'>Vedi tutti i tatuaggi ></Link></div>
             
                 <div className="row last-section">
                     <div className="col-sm-12 col-md-6 col-lg-6">

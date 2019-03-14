@@ -43,14 +43,16 @@ class Slider extends Component {
                     breakpoint: 768,
                     settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToScroll: 2,
+                    dots: false
                     }
                 },
                 {
                     breakpoint: 480,
                     settings: {
                     slidesToShow: 1.03,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: false
                     }
                 }
                 // You can unslick at a given breakpoint now by adding:
@@ -62,7 +64,7 @@ class Slider extends Component {
         return(
             <SliderSlick {...settings}>
             {this.state.Tattooer.map((item, i) => {
-                return <li key={i}><Link to={'/tatuatore/' + item.url}><img src={item.image} className="img-fluid Rectangle" alt=""/><h1 className="text-slider ml-4">{item.name}<br></br><span className="ml-5">{item.surname}</span></h1></Link></li>     
+                return <li key={i}><Link to={'/tatuatore/' + item.url}><img src={'images/tatuatori/img/' + item.image} className="img-fluid Rectangle" alt=""/><h1 className="text-slider ml-4">{item.name}<br></br><span className="ml-5">{item.surname}</span></h1></Link></li>     
             })}      
             </SliderSlick>
         );

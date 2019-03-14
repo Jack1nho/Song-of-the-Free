@@ -63,7 +63,7 @@ class Design extends Component {
                     </div>
                 </div>
                 
-                <Link to='/design' className="text-back" href="list_design.html"><span className="Red"><FontAwesomeIcon icon="angle-left"/></span>&nbsp;&nbsp;Guarda tutti i tatuaggi</Link>
+                <Link to='/tatuaggi' className="text-back" href="list_design.html"><span className="Red"><FontAwesomeIcon icon="angle-left"/></span>&nbsp;&nbsp;Guarda tutti i tatuaggi</Link>
                 <div className="container-wrapper">
                     <DesignInfo design={this.state.Design} tattooer={this.state.Tattooer}></DesignInfo>
                     <hr className="my-5 d-none d-md-block"></hr>
@@ -71,7 +71,7 @@ class Design extends Component {
                     <TattooerDesign design={this.state.Design} tattooer={this.state.Tattooer} design_personal={this.state.Design_Personal}></TattooerDesign>
                     <LastDesign design={this.state.Design} tattooer={this.state.Tattooer}></LastDesign>
                     <Answer design={this.state.Design} tattooer={this.state.Tattooer}></Answer>
-                    <ModalEmail></ModalEmail>
+                    <ModalEmail design={this.state.Design}></ModalEmail>
                 </div>
             </div>
             );

@@ -1,0 +1,39 @@
+<div class="d-flex">
+
+    <form method="POST" action="/api/insert/tattooimages" encType="multipart/form-data" class="list-inline mx-auto justify-content-center">
+
+        <select class="selectpicker form-control" data-style="btn-info" name="selectpicker">
+            <option selected> Scegli un tatuatore</option>
+            {{#each tatuatori}}
+            <option name="table1" value="{{id}}">{{name}} {{surname}} - HIDE: {{hide}}</option>
+            {{/each}}
+        </select> <br>    
+        Nome Design:<br>
+        <input type="text" name="design_name" class="form-control" value="" ><br>
+        Artista Associato:<br>
+        <input type="text" name="associated" type="" class="form-control" value="" ><br>
+        Prezzo:<br>
+        <input type="number" name="price" class="form-control" value="" ><br>
+        Stile:<br>
+        <input type="text" name="style" class="form-control" value="" ><br>
+        Altezza:<br>
+        <input type="text" name="altezza" class="form-control" value="" ><br>
+        Larghezza:<br>
+        <input type="text" name="larghezza" class="form-control" value="" ><br>
+        Image:<br>
+        <input type="file" name="image" class="form-control" value="" ><br>
+        Meta Title:
+        <input type="text" name="title" class="form-control" > <br>
+        Meta Description:
+        <textarea type="textarea" name="meta_title" class="form-control" ></textarea><br>
+        Alt Tag:
+        <input type="textarea" name="alt_tag" class="form-control" ><br>
+
+        Hide: <br>
+        <label class="radio-inline"><input type="radio" name="hide" value="false" checked>False</label>
+        <label class="radio-inline"><input type="radio" name="hide" value="true">True</label>
+        <br>
+ 
+        <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
+</div>

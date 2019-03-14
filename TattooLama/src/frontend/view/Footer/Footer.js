@@ -32,7 +32,7 @@ class Footer extends Component {
                 </div>
                 <div className="footer-2 container-fluid">
                     <div className="container">
-                        <h1 className="Copyright m-0">Copyright TattooLama © 2018. Tutti i Diritti Riservati</h1>
+                        <h1 className="Copyright m-0">Copyright TattooLama © 2019. Tutti i Diritti Riservati</h1>
                     </div>
                 </div>
             </div>

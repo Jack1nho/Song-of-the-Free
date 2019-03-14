@@ -40,8 +40,9 @@ class Portfolio extends Component {
 			currentImage: this.state.currentImage + 1,
 		});
     }
-
+    
     render(){
+        console.log(this.props.tattooer.portfolio)
         return(
             
             <div className="portfolio" id="portfolio">
@@ -49,7 +50,7 @@ class Portfolio extends Component {
                                 
                                 <Lightbox
                                     currentImage={this.state.currentImage}
-                                    images={[{src: "https://via.placeholder.com/168x168.jpg/eae9e5"}, {src: "https://via.placeholder.com/168x168.jpg/eae9e9"}, {src: "https://via.placeholder.com/168x168.jpg/d7dbe0"}, {src: "https://via.placeholder.com/168x168.jpg/383838"}]}
+                                    images={[{src: '../images/tatuatori/portfolio/'+this.props.tattooer.portfolio}, {src: '../images/tatuatori/portfolio/'+this.props.tattooer.portfolio1}, {src: '../images/tatuatori/portfolio/'+this.props.tattooer.portfolio2}, {src: '../images/tatuatori/portfolio/'+this.props.tattooer.portfolio3}]}
                                     isOpen={this.state.lightboxIsOpen}
                                     onClickNext={this.gotoNext}
                                     onClickPrev={this.gotoPrevious}
@@ -58,16 +59,16 @@ class Portfolio extends Component {
 
                                 <div className="row row-grid">
                                         <div className="col-6 col-lg pb-3">
-                                            <img className="square" src="https://via.placeholder.com/168x168.jpg/eae9e5" onClick={(e) => this.openLightbox(0, e)} alt=""/>
+                                            <img className="square" src={'../images/tatuatori/portfolio/'+this.props.tattooer.portfolio} onClick={(e) => this.openLightbox(0, e)} alt=""/>
                                         </div>
                                         <div className="col-6 col-lg pb-sm-3">
-                                            <img className="square" src="https://via.placeholder.com/168x168.jpg/eae9e9" onClick={(e) => this.openLightbox(1, e)} alt=""/>
+                                            <img className="square" src={'../images/tatuatori/portfolio/'+this.props.tattooer.portfolio1} onClick={(e) => this.openLightbox(1, e)} alt=""/>
                                         </div>
                                         <div className="col-6 col-lg">
-                                            <img className="square" src="https://via.placeholder.com/168x168.jpg/d7dbe0" onClick={(e) => this.openLightbox(2, e)} alt=""/>
+                                            <img className="square" src={'../images/tatuatori/portfolio/'+this.props.tattooer.portfolio2} onClick={(e) => this.openLightbox(2, e)} alt=""/>
                                         </div>
                                         <div className="col-6 col-lg">
-                                            <img className="square" src="https://via.placeholder.com/168x168.jpg/383838" onClick={(e) => this.openLightbox(3, e)} alt=""/>
+                                            <img className="square" src={'../images/tatuatori/portfolio/'+this.props.tattooer.portfolio3} onClick={(e) => this.openLightbox(3, e)} alt=""/>
                                         </div>
                                 </div>
                                 <div className="jumbotron jumbotron-fluid Jumbotron-artista my-5">

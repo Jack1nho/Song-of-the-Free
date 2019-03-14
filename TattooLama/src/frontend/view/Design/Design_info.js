@@ -11,7 +11,7 @@ class DesignInfo extends Component {
             <div className="design my-4">
                     <div className="row">
                         <div className="col-12 col-md text-md-right text-center">
-                                <img src={'../' + this.props.design.image} className="img-design" alt=""/>
+                                <img src={'../images/design/img/' + this.props.design.image} className="img-design" alt=""/>
                         </div>
                         <div className="col-12 col-md">
                             <h2 className="text-3 mt-md-auto mt-5">{this.props.design.name_design}</h2>
@@ -29,8 +29,8 @@ class DesignInfo extends Component {
                                 return <h3 key={i} className="description float-md-none float-left"><span className="Red">#</span>{place}&nbsp;</h3>
                             })}
                             
-                            <div className="row div-prezzo mt-5">
-                                <div className="col-6 col-md-12"><h2 className="text-3 prezzo mt-2 ml-md-auto"><span className="grey">Prezzo: </span>€ {this.props.design.price}</h2></div>
+                            <div className="row div-prezzo">
+                                <div className="col-6 col-md-12 prezzo"><h2 className="text-3 mt-2 ml-md-auto"><span className="grey">Prezzo: </span>€ {this.props.design.price}</h2></div>
                                 <div className="col-6 col-md-12"><button type="button" className="btn bottone-richiesta mt-0" id="bottone-richiesta" data-toggle="modal" data-target="#myModalEmail">Invia richiesta</button></div>
                             </div>
                         </div>

@@ -5,17 +5,17 @@
     .nav-res {
       visibility: visible;
       background-color: #2f3339;
-      min-height: 46px;
+      height: 45px;
     }
   
     .img-res {
-      width: 180px;
+      width: 120px;
       margin:0;
       padding:0;   
     }
   
     .botton-res {   
-      font-size: 30px;
+      font-size: 20px;
       cursor: pointer;
     }
 }
@@ -48,7 +48,7 @@
   height: 0%;
   width: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 2000;
   top: 0;
   left: 0;
   background-color: rgba(0,0,0, 0.9);
@@ -83,7 +83,7 @@
 .overlay .closebtn {
   position: absolute;
   top: 20px;
-  color: #FFF;
+  color: #f1f1f1;
   right: 45px;
   font-size: 30px;
   cursor: pointer;

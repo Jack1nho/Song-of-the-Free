@@ -8,10 +8,8 @@ setTimeout(function(){
     //SLICK DESIGN IN TATTOER PAGE
     $(".tattoo_design .slick-slider .slick-dots li").each(function (index){ if(index == 0){ $(this).find("button").trigger("click") } });
 
-    //SCROLL SIDEMENU
     var AltezzaElement = $(".sidebar").outerHeight();
     var AltezzaBox = $("#sticky-menu").outerHeight();
-
     $(window).scroll(function () {
         
         if ($(window).scrollTop() > (AltezzaElement - AltezzaBox)) {
@@ -23,5 +21,8 @@ setTimeout(function(){
             $("#sticky-menu").css("top", "0px");
         }   
     });
-
+    
 }, 500);
+
+
+

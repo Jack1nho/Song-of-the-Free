@@ -1,0 +1,44 @@
+<div class="container-wrapper container">
+
+  <h3 class="text-3 mb-5 text-center mt-4">Tutti i tattoers</h3>
+
+  <div class="row row-grid">
+    {{#each tatuatori}}
+    <div class="col-3 mb-3">
+
+      <div class="btn btn-outline-secondary" role="button">
+        <h5>{{name}} {{surname}}</h5>
+        {{!-- <p>Tatuaggi: {{}} </p> --}}
+        <p>Ranking: {{ranking_display}} </p>
+        <p>Hide: {{hide}} </p>
+
+        <div>
+          <a class="btn btn-primary mb-1" href="/modificaTatuatore/{{id}}">Modifica dati</a>
+          <form id="deleteForm" data-id="{{id}}" method="POST" class="mb-3">
+            <input type="hidden" name="_method" value="DELETE">
+            <input class="btn btn-danger" onClick="confSubmit(this.form);" value="Cancella tatuatore" style="cursor: pointer;">
+          </form>
+        </div>
+      </div>
+
+    </div>
+    {{else}}
+    <h4>Non c'è nessun tatuatore in archivio.</h4>
+
+    {{/each}}
+
+
+  </div>
+</div>
+
+<script>
+  function confSubmit(form, e) {
+    if (confirm("Vuoi cancellare questo elemento?")) {
+      $('#deleteForm').attr('action', '/getTattoers/' + $('#deleteForm').data("id") + '?_method=DELETE');
+      form.submit();
+    }else {
+      $('#deleteForm').attr('action', '');
+      alert("Se non lo devi cancellare perché hai cliccato cazzo?");
+    }
+  }
+</script>

@@ -12,10 +12,8 @@ class ModalEmail extends Component {
                         <div className="modal-whatsapp">
                             <h1 className="text-3">Prenota il tattoo</h1>
                             <hr></hr>
-                            <h2 className="little-text text-left">Invia una richiesta di prenotazione al tatuatore indicando il mese in cui vorresti essere 
-                                tatuato e la zona del corpo in cui vorresti tatuarti. L’artista, senza impegno, ti proporrà la data e l’orario 
-                                per l’appuntamento.</h2>
-                                <form className="my-4">
+                            <h2 className="little-text text-left">Invia una richiesta di prenotazione al tatuatore. L’artista, senza impegno, ti proporrà la data e l’orario per l’appuntamento.</h2>
+                                <form className="my-1">
 
                                     <div className="form-group">
                                         <label className="label" htmlFor="inputNome">Nome:</label>
@@ -62,7 +60,7 @@ class ModalEmail extends Component {
                                 </form>
                         </div>
                         <div className="row div-prezzo d-md-none">
-                            <div className="col-6 m-0"><h2 className="text-3 prezzo"><span className="grey">Prezzo: </span>€ 450,00</h2></div>
+                            <div className="col-6 m-0"><h2 className="text-3 prezzo"><span className="grey">Prezzo: </span>€ {this.props.design.price}</h2></div>
                             <div className="col-6"><button type="button" className="btn bottone-richiesta" id="bottone-richiesta">Invia richiesta</button></div>
                         </div>
                     </div>

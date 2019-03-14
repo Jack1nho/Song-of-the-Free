@@ -11,7 +11,7 @@ const ListDesign = () => (
         </div> 
 
         <div className="container-wrapper container">
-            <h1 className="text-1">Tutti i tattoo design</h1>
+            <h2 className="text-1">Tutti i tattoo design</h2>
             <GrigliaDesign></GrigliaDesign>
         </div>
     </div>

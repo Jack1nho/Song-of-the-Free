@@ -39,15 +39,15 @@ class Header extends Component {
                     <div className="collapse navbar-collapse">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item active p-1">
-                            <Link className="nav-link" to='/list_tatuatori'>Tatuatori <span className="sr-only">(current)</span></Link>
+                            <Link className="nav-link" to='/tatuatori'>Tatuatori <span className="sr-only">(current)</span></Link>
                         </li>
                         <li className="nav-item p-1">
-                            <Link className="nav-link" to='/list_design'>Tattoo Design</Link>
+                            <Link className="nav-link" to='/tatuaggi'>Tattoo Design</Link>
                         </li>
                         <li className="nav-item p-1 pr-5">
                             <Link className="nav-link" to='/blog'>Blog</Link>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item p-1">
                             <Link className="nav-link" to='/Contacts'>Contattaci <span role="img" aria-label="emoji">🦄</span></Link>
                         </li>
                     </ul>
@@ -58,14 +58,14 @@ class Header extends Component {
                     <div id="myNav" className="overlay">
                             <FontAwesomeIcon className="closebtn" onClick={this.closeNav} icon="times" />
                             <div className="overlay-content">
-                                <Link to='/list_tatuatori' onClick={this.closeNav}>Tatuatori</Link>
-                                <Link to='/list_design' onClick={this.closeNav}>Tattoo Design</Link>
+                                <Link to='/tatuatori' onClick={this.closeNav}>Tatuatori</Link>
+                                <Link to='/tatuaggi' onClick={this.closeNav}>Tattoo Design</Link>
                                 <Link to='/Blog' onClick={this.closeNav}>Blog</Link>
                                 <Link className="mt-5" to='/Contacts' onClick={this.closeNav}>Contattaci <span role="img" aria-label="emoji">🦄</span></Link>
                             </div>
                     </div>
                     <div className="d-flex justify-content-between">
-                        <div className="botton-res p-3" onClick={this.openNav} style={{color:'white'}}><FontAwesomeIcon icon="bars" aria-hidden="true"/></div>
+                        <div className="botton-res my-2 mx-3" onClick={this.openNav} style={{color:'white'}}><FontAwesomeIcon icon="bars" aria-hidden="true"/></div>
                         
                             <Link className="navbar-brand-res" to='/'><img className="img-res mx-auto p-1" src={Logo2} alt=""/></Link>
                         
