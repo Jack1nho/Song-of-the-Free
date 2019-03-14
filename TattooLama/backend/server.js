@@ -60,45 +60,99 @@ const tattooimages = mongoose.model("tattooimages")
 
 //FORM DI INSERIMENTO - TATUATORI
 app.get('/api/insert/tatuatori', (req, res) => {
-    
+
     res.render("tattooform");
 
 });
 
 app.post('/api/insert/tatuatori', (req, res) => {
 
-let portfolioUpload = req.files.portfolio;
-let nomeFile = req.files.portfolio.name;
-portfolioUpload.mv('public/images/Tatuatori/portfolio/' + nomeFile), function(err) {
-    if (err)
-      return res.status(500).send(err);
+    let imageUpload = req.files.image;
+    let nomeFileImage = req.files.image.name;
+    imageUpload.mv('public/images/tatuatori/img/' + nomeFileImage), function (err) {
+        if (err)
+            return res.status(500).send(err);
 
-    res.send('File uploaded!')},  
+        res.send('File uploaded!')
+    };
+    let coverUpload = req.files.cover;
+    let nomeFileCover = req.files.cover.name;
+    coverUpload.mv('public/images/tatuatori/cover/' + nomeFileCover), function (err) {
+        if (err)
+            return res.status(500).send(err);
 
-    tatuatori.create({ 
-        name: req.body.name, 
-        surname: req.body.surname, 
-        biography: req.body.bio, 
-        city: req.body.city, 
-        provincia: req.body.provincia,
-        address: req.body.street, 
-        cap: req.body.cap,
-        telephone: req.body.tele,
-        working_email: req.body.email,
-        private_email: req.body.private,
-        cover: "images/tatuatori/cover/" + req.body.cover,
-        image: "images/tatuatori/img/" + req.body.image,
-        portfolio: nomeFile,
-        tattoo_studio: req.body.tattoo_studio,
-        ranking_display: req.body.rank, 
-        title: req.body.title,
-        meta_title: req.body.meta_title,
-        hide: req.body.hide,
-        url: slugify(req.body.name + ' ' + req.body.surname, { replacement: '-', separator: '-', remove: null, lower: true})}, function (error, result) {
-            if(error) {
-            return result.end(error)
-        } else {
-            console.log('Tatuatore inserito con successo')
+        res.send('File uploaded!')
+    };
+    let portfolioUpload = req.files.portfolio;
+    let nomeFile = req.files.portfolio.name;
+    portfolioUpload.mv('public/images/tatuatori/portfolio/' + nomeFile), function (err) {
+        if (err)
+            return res.status(500).send(err);
+
+        res.send('File uploaded!')
+    };
+    let portfolio1Upload = req.files.portfolio1;
+    let nomeFile1 = req.files.portfolio1.name;
+    portfolio1Upload.mv('public/images/tatuatori/portfolio/' + nomeFile1), function (err) {
+        if (err)
+            return res.status(500).send(err);
+
+        res.send('File uploaded!')
+    };
+    let portfolio2Upload = req.files.portfolio2;
+    let nomeFile2 = req.files.portfolio2.name;
+    portfolio2Upload.mv('public/images/tatuatori/portfolio/' + nomeFile2), function (err) {
+        if (err)
+            return res.status(500).send(err);
+
+        res.send('File uploaded!')
+    };
+    let portfolio3Upload = req.files.portfolio3;
+    let nomeFile3 = req.files.portfolio3.name;
+    portfolio3Upload.mv('public/images/tatuatori/portfolio/' + nomeFile3), function (err) {
+        if (err)
+            return res.status(500).send(err);
+
+        res.send('File uploaded!')
+    };
+    let portfolio4Upload = req.files.portfolio4;
+    let nomeFile4 = req.files.portfolio4.name;
+    portfolio4Upload.mv('public/images/tatuatori/portfolio/' + nomeFile4), function (err) {
+        if (err)
+            return res.status(500).send(err);
+
+        res.send('File uploaded!')
+    },
+
+        tatuatori.create({
+            name: req.body.name,
+            surname: req.body.surname,
+            biography: req.body.bio,
+            city: req.body.city,
+            provincia: req.body.provincia,
+            address: req.body.street,
+            cap: req.body.cap,
+            telephone: req.body.tele,
+            working_email: req.body.email,
+            private_email: req.body.private,
+            cover: nomeFileCover,
+            image: nomeFileImage,
+            portfolio: nomeFile,
+            portfolio1: nomeFile1,
+            portfolio2: nomeFile2,
+            portfolio3: nomeFile3,
+            portfolio4: nomeFile4,
+            tattoo_studio: req.body.tattoo_studio,
+            ranking_display: req.body.rank,
+            title: req.body.title,
+            meta_title: req.body.meta_title,
+            hide: req.body.hide,
+            url: slugify(req.body.name + ' ' + req.body.surname, { replacement: '-', separator: '-', remove: null, lower: true })
+        }, function (error, result) {
+            if (error) {
+                return result.end(error)
+            } else {
+                console.log('Tatuatore inserito con successo')
             }
         });
     res.redirect('/getTattoers')
@@ -143,6 +197,64 @@ app.get('/tattoer/profile/:id', (req,res) => {
 
 //AGGIORNA TATUATORE
 app.post('/getTattoers/:id', (req,res) => {
+
+    let imageUpload = req.files.image;
+    let nomeFileImage = req.files.image.name;
+    imageUpload.mv('public/images/tatuatori/img/' + nomeFileImage), function (err) {
+        if (err)
+            return res.status(500).send(err);
+
+        res.send('File uploaded!')
+    };
+    let coverUpload = req.files.cover;
+    let nomeFileCover = req.files.cover.name;
+    coverUpload.mv('public/images/tatuatori/cover/' + nomeFileCover), function (err) {
+        if (err)
+            return res.status(500).send(err);
+
+        res.send('File uploaded!')
+    };
+    let portfolioUpload = req.files.portfolio;
+    let nomeFile = req.files.portfolio.name;
+    portfolioUpload.mv('public/images/tatuatori/portfolio/' + nomeFile), function (err) {
+        if (err)
+            return res.status(500).send(err);
+
+        res.send('File uploaded!')
+    };
+    let portfolio1Upload = req.files.portfolio1;
+    let nomeFile1 = req.files.portfolio1.name;
+    portfolio1Upload.mv('public/images/tatuatori/portfolio/' + nomeFile1), function (err) {
+        if (err)
+            return res.status(500).send(err);
+
+        res.send('File uploaded!')
+    };
+    let portfolio2Upload = req.files.portfolio2;
+    let nomeFile2 = req.files.portfolio2.name;
+    portfolio2Upload.mv('public/images/tatuatori/portfolio/' + nomeFile2), function (err) {
+        if (err)
+            return res.status(500).send(err);
+
+        res.send('File uploaded!')
+    };
+    let portfolio3Upload = req.files.portfolio3;
+    let nomeFile3 = req.files.portfolio3.name;
+    portfolio3Upload.mv('public/images/tatuatori/portfolio/' + nomeFile3), function (err) {
+        if (err)
+            return res.status(500).send(err);
+
+        res.send('File uploaded!')
+    };
+    let portfolio4Upload = req.files.portfolio4;
+    let nomeFile4 = req.files.portfolio4.name;
+    portfolio4Upload.mv('public/images/tatuatori/portfolio/' + nomeFile4), function (err) {
+        if (err)
+            return res.status(500).send(err);
+
+        res.send('File uploaded!')
+    },
+
   tatuatori.findOne({
       _id: req.params.id
   }).then(tatuatori => {
@@ -156,9 +268,13 @@ app.post('/getTattoers/:id', (req,res) => {
       tatuatori.telephone= req.body.tele,
       tatuatori.working_email= req.body.email,
       tatuatori.private_email= req.body.private,
-      tatuatori.cover= req.body.cover,
-      tatuatori.image= req.body.image,
-      tatuatori.portfolio= req.body.portfolio,
+      tatuatori.cover= nomeFileCover,
+      tatuatori.image= nomeFileImage,
+      tatuatori.portfolio= nomeFile,
+      tatuatori.portfolio1= nomeFile1,
+      tatuatori.portfolio2= nomeFile2,
+      tatuatori.portfolio3= nomeFile3,
+      tatuatori.portfolio4= nomeFile4,
       tatuatori.tattoo_studio= req.body.tattoo_studio,
       tatuatori.ranking_display= req.body.rank, 
       tatuatori.title= req.body.title,
@@ -196,6 +312,15 @@ app.get('/api/insert/tattooimages', (req, res) => {
 
 app.post('/api/insert/tattooimages', (req, res) => {
 
+    let designUpload = req.files.image;
+    let nomeFileDesign = req.files.image.name;
+    designUpload.mv('public/images/Design/img/' + nomeFileDesign), function (err) {
+        if (err)
+            return res.status(500).send(err);
+
+        res.send('File uploaded!')
+    },
+
     tattooimages.create({
         
         name_design: req.body.design_name,
@@ -204,8 +329,9 @@ app.post('/api/insert/tattooimages', (req, res) => {
         style: req.body.style,
         altezza: req.body.altezza,
         larghezza: req.body.larghezza,
-        image: "images/design/img/" + req.body.image,
+        image: nomeFileDesign,
         id_tattoer: req.body.selectpicker,
+        hide: req.body.hide,
         data: Date(""),
         title: req.body.title,
         meta_title: req.body.meta_title,
@@ -248,6 +374,16 @@ app.get('/modificaDesign/:id', (req,res) => {
 
 //AGGIORNA TATTOO DESIGN
 app.post('/getTattooDesign/:id', (req,res) => {
+
+    let designUpload = req.files.image;
+    let nomeFileDesign = req.files.image.name;
+    designUpload.mv('public/images/design/img/' + nomeFileDesign), function (err) {
+        if (err)
+            return res.status(500).send(err);
+
+        res.send('File uploaded!')
+    },
+
     tattooimages.findOne({
         _id: req.params.id
     }).then(tattooimages => {
@@ -257,8 +393,9 @@ app.post('/getTattooDesign/:id', (req,res) => {
         tattooimages.style= req.body.style,
         tattooimages.altezza= req.body.altezza,
         tattooimages.larghezza= req.body.larghezza,
-        tattooimages.image= req.body.image,
+        tattooimages.image= nomeFileDesign,
         tattooimages.id_tattoer= req.body.selectpicker,
+        tattooimages.hide= req.body.hide,
         tattooimages.data= Date(""),
         tattooimages.title= req.body.title,
         tattooimages.meta_title=req.body.meta_title,
@@ -366,19 +503,19 @@ app.get('/api/get/tattooimages/last', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   
-    tattooimages.find({}, function(err, tattooimagesList){
+    tattooimages.find({hide: false}, function(err, tattooimagesList){
       if(err){ console.log('error..'); } else {
           res.json(tattooimagesList);
       }
     }).limit(10).sort({data: 0});
   });
 
-//API - ULTIME TATTOO IMAGES
+//API - TUTTE LE TATTOO IMAGES
 app.get('/api/get/tattooimages/all', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   
-    tattooimages.find({}, function(err, tattooimagesList){
+    tattooimages.find({hide: false}, function(err, tattooimagesList){
       if(err){ console.log('error..'); } else {
           res.json(tattooimagesList);
       }

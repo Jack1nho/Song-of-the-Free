@@ -3,79 +3,95 @@ const mongoose = require("mongoose")
 const tatuatoriSchema = mongoose.Schema({
     name:{
         type: String,
-        required: true
+        required: false
     },
     surname:{
         type: String,
-        required: true
+        required: false
     },
     biography:{
         type: String,
-        required: true
+        required: false
     },
     city:{
         type: String,
-        required: true
+        required: false
     },
     address:{
         type: String,
-        required: true
+        required: false
     },
     cap:{
         type: Number,
-        required: true 
+        required: false 
     },
     provincia:{
         type: String,
-        required: true
+        required: false
     },
     telephone:{
         type: String,
-        required: true
+        required: false
     },
     working_email:{
         type: String,
-        required: true
+        required: false
     },
     private_email:{
         type: String,
-        required: true
+        required: false
     },
     cover:{
         type: String,
-        required: true,
+        required: false,
     },
     image:{
         type: String,
-        required: true,
+        required: false,
     },
     portfolio:{
         type: String,
-        required: true,
+        required: false,
+    },
+    portfolio1:{
+        type: String,
+        required: false,
+    },
+    portfolio2:{
+        type: String,
+        required: false,
+    },
+    portfolio3:{
+        type: String,
+        required: false,
+    },
+    portfolio4:{
+        type: String,
+        required: false,
     },
     tattoo_studio:{
         type: String,
-        required: true
+        required: false
     },
     ranking_display:{
         type: Number,
-        required: true 
+        required: false 
     },
     title:{
         type: String,
-        required: true
+        required: false
     },
     meta_title:{
         type: String,
-        required: true
+        required: false
     },
     hide:{
         type: Boolean,
-        required: true
+        required: false
     },
     url:{
         type: String,
-        required: true
+        required: false
     }
 })
 

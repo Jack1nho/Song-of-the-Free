@@ -1,11 +1,11 @@
 <div class="d-flex">
-    <form action="/getTattooDesign/{{tattooimages.id}}?_method=POST" method="POST" class="list-inline mx-auto justify-content-center">
+    <form action="/getTattooDesign/{{tattooimages.id}}?_method=POST" encType="multipart/form-data" method="POST" class="list-inline mx-auto justify-content-center">
         <input type="hidden" name="_method" value="POST">
         
         <select class="selectpicker form-control" value="{{tattooimages.id_tattoer}}" data-style="btn-info" name="selectpicker">
             <option selected> Scegli un tatuatore</option> 
             {{#each tatuatori}}
-            <option name="table1" value="{{id}}">{{name}} {{surname}}</option>        
+            <option name="table1" value="{{id}}">{{name}} {{surname}} - HIDE: {{hide}}</option>        
             {{/each}}
         </select>    <br>  
 
@@ -22,13 +22,18 @@
         Larghezza:<br>
         <input type="text" name="larghezza" class="form-control" value="{{tattooimages.larghezza}}"><br>
         Image:<br>
-        <input type="text" name="image" class="form-control" value="{{tattooimages.image}}"><br>
+        <input type="file" name="image" class="form-control" value="{{tattooimages.image}}"><br>
         Meta Title:
         <input type="text" name="title" class="form-control" value="{{tattooimages.title}}"> <br>
         Meta Description:
-        <textarea type="textarea" name="meta_title" class="form-control" value="{{tattooimages.meta_title}}"></textarea><br>
+        <textarea type="text" rows="5" cols="50" name="meta_title" class="form-control">{{tattooimages.meta_title}}</textarea><br>
         Alt Tag:
         <input type="text" name="alt_tag" class="form-control" value="{{tattooimages.alt_tag}}"><br>
+
+        Hide: <br>
+        <label class="radio-inline"><input type="radio" name="hide" value="false" checked>False</label>
+        <label class="radio-inline"><input type="radio" name="hide" value="true">True</label>
+        <br>
         
         <input type="submit" class="btn btn-primary" value="Submit">
     </form>

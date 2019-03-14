@@ -2,13 +2,13 @@
     
     <form method="POST" action="/api/insert/tatuatori" encType="multipart/form-data" class="list-inline mx-auto justify-content-center"> 
         Nome:<br>
-        <input type="text" name="name" value="" class="form-control" required><br>
+        <input type="text" name="name" value="" class="form-control" ><br>
         Cognome:<br>
-        <input type="text" name="surname" value="" class="form-control" required><br>
+        <input type="text" name="surname" value="" class="form-control" ><br>
         Biografia:<br>
-        <textarea type="textarea" name="bio" value="" class="form-control" required></textarea> <br>
+        <textarea rows="5" cols="50" name="bio" value="" class="form-control text" ></textarea> <br>
         Città:<br>
-        <select type="text" name="city" class="form-control" value="" required>
+        <select type="text" name="city" class="form-control" value="" >
             <option selected> Scegli una città</option> 
             <option>Milano</option>
             <option>Torino</option>
@@ -20,25 +20,29 @@
             <option>Lecco</option>
         </select><br>
         Provincia: <br>
-        <input type="text" name="provincia" class="form-control" required> <br>
+        <input type="text" name="provincia" class="form-control" > <br>
         Indirizzo:<br>
-        <input type="text" name="street" value="" class="form-control" required><br>
+        <input type="text" name="street" value="" class="form-control" ><br>
         CAP:<br>
-        <input type="number" name="cap" value="" class="form-control" required><br>
+        <input type="number" name="cap" value="" class="form-control" ><br>
         Telefono:<br>
-        <input type="text" name="tele" value="" class="form-control" required><br>
+        <input type="text" name="tele" value="" class="form-control" ><br>
         Email:<br>
-        <input type="email" name="email" value="" aria-describedby="emailHelp" class="form-control" required><br>
+        <input type="email" name="email" value="" aria-describedby="emailHelp" class="form-control" ><br>
         Email privata:<br>
-        <input type="email" name="private" value="" aria-describedby="emailHelp" class="form-control" required><br>
+        <input type="email" name="private" value="" aria-describedby="emailHelp" class="form-control" ><br>
         Cover:<br>
-        <input type="text" name="cover" value="" class="form-control" required><br>
+        <input type="file" name="cover" value="" class="form-control" ><br>
         Image:<br>
-        <input type="text" name="image" value="" class="form-control" required><br>
+        <input type="file" name="image" value="" class="form-control" ><br>
         Portfolio:<br>
-        <input type="file" name="portfolio" value="" class="form-control" required><br>
+        <input type="file" name="portfolio" value="" class="form-control" ><br>
+        <input type="file" name="portfolio1" value="" class="form-control" ><br>
+        <input type="file" name="portfolio2" value="" class="form-control" ><br>
+        <input type="file" name="portfolio3" value="" class="form-control" ><br>
+        <input type="file" name="portfolio4" value="" class="form-control" ><br>
         Tattoo Studio:<br>
-        <input type="text" name="tattoo_studio" value="" class="form-control" required><br>
+        <input type="text" name="tattoo_studio" value="" class="form-control" ><br>
         <label for="sel1">Ranking:</label>
             <select type="number" name="rank" class="form-control" id="sel1">
                 <option>0</option>
@@ -48,11 +52,11 @@
         Meta Title:
         <input type="text" name="title" class="form-control"> <br>
         Meta Description:
-        <textarea type="textarea" name="meta_title" class="form-control"></textarea><br>
+        <textarea rows="5" cols="50" type="textarea" name="meta_title" class="form-control"></textarea><br>
         Hide: <br>
         <label class="radio-inline"><input type="radio" name="hide" value="false" checked>False</label>
         <label class="radio-inline"><input type="radio" name="hide" value="true">True</label>
         <br>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" class="btn btn-primary">
     </form>
 </div>
