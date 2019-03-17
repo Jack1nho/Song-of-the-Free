@@ -231,7 +231,7 @@ body{
 
 @media screen and (max-width: 767px){
   .Rectangle {
-    height: 250px;
+    height: 270px;
   }
 }
 
@@ -463,4 +463,12 @@ body{
     margin-top: 30px;
     bottom: -40px;
   }
+}
+
+.slickDesign{
+  width: 100%;
+}
+
+.slickDesign{
+  width: 100%;
 }
