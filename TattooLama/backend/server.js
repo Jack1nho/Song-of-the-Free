@@ -253,40 +253,147 @@ app.post('/getTattoers/:id', (req,res) => {
             return res.status(500).send(err);
 
         res.send('File uploaded!')
-    },
+    }
 
-  tatuatori.findOne({
-      _id: req.params.id
-  }).then(tatuatori => {
-      tatuatori.name= req.body.name, 
-      tatuatori.surname= req.body.surname, 
-      tatuatori.biography= req.body.bio, 
-      tatuatori.city= req.body.city, 
-      tatuatori.provincia= req.body.provincia,
-      tatuatori.address= req.body.street,
-      tatuatori.cap= req.body.cap, 
-      tatuatori.telephone= req.body.tele,
-      tatuatori.working_email= req.body.email,
-      tatuatori.private_email= req.body.private,
-      tatuatori.cover= nomeFileCover,
-      tatuatori.image= nomeFileImage,
-      tatuatori.portfolio= nomeFile,
-      tatuatori.portfolio1= nomeFile1,
-      tatuatori.portfolio2= nomeFile2,
-      tatuatori.portfolio3= nomeFile3,
-      tatuatori.portfolio4= nomeFile4,
-      tatuatori.tattoo_studio= req.body.tattoo_studio,
-      tatuatori.ranking_display= req.body.rank, 
-      tatuatori.title= req.body.title,
-      tatuatori.meta_title= req.body.meta_title,
-      tatuatori.hide= req.body.hide,
-      tatuatori.url= slugify(req.body.name + ' ' + req.body.surname, { replacement: '-', separator: '-', remove: null, lower: true})
-      
-      tatuatori.save()
-      .then(tatuatori=>{
-          res.redirect('/getTattoers');  
-      });           
-  });
+    //AGGIORNO COVER SE E CAMBIATA
+    if(nomeFileImage == "" || nomeFileImage == null || nomeFileImage == undefined){
+
+    }else{
+        tatuatori.findOne({
+            _id: req.params.id
+        }).then(tatuatori => {
+            tatuatori.cover= nomeFileCover
+            tatuatori.save()
+            .then(tatuatori=>{
+                //res.redirect('/getTattoers');  
+            });           
+        });
+    }
+
+    //AGGIORNO IMMAGINE SE E CAMBIATA
+    if(nomeFileCover == "" || nomeFileCover == null || nomeFileCover == undefined){
+
+    }else{
+        tatuatori.findOne({
+            _id: req.params.id
+        }).then(tatuatori => {
+            tatuatori.image= nomeFileImage
+            tatuatori.save()
+            .then(tatuatori=>{
+                //res.redirect('/getTattoers');  
+            });           
+        });
+    }
+
+    //AGGIORNO PORTFOLIO1 SE E CAMBIATA
+    if(nomeFile == "" || nomeFile == null || nomeFile == undefined){
+
+    }else{
+        tatuatori.findOne({
+            _id: req.params.id
+        }).then(tatuatori => {
+            tatuatori.portfolio= nomeFile
+            tatuatori.save()
+            .then(tatuatori=>{
+                //res.redirect('/getTattoers');  
+            });           
+        });
+    }
+
+    //AGGIORNO PORTFOLIO2 SE E CAMBIATA
+    if(nomeFile1 == "" || nomeFile1 == null || nomeFile1 == undefined){
+
+    }else{
+        tatuatori.findOne({
+            _id: req.params.id
+        }).then(tatuatori => {
+            tatuatori.portfolio1 = nomeFile1
+            tatuatori.save()
+            .then(tatuatori=>{
+                //res.redirect('/getTattoers');  
+            });           
+        });
+    }
+
+    //AGGIORNO PORTFOLIO3 SE E CAMBIATA
+    if(nomeFile2 == "" || nomeFile2 == null || nomeFile2 == undefined){
+
+    }else{
+        tatuatori.findOne({
+            _id: req.params.id
+        }).then(tatuatori => {
+            tatuatori.portfolio2 = nomeFile2
+            tatuatori.save()
+            .then(tatuatori=>{
+                //res.redirect('/getTattoers');  
+            });           
+        });
+    }
+
+    //AGGIORNO PORTFOLIO3 SE E CAMBIATA
+    if(nomeFile3 == "" || nomeFile3 == null || nomeFile3 == undefined){
+
+    }else{
+        tatuatori.findOne({
+            _id: req.params.id
+        }).then(tatuatori => {
+            tatuatori.portfolio3 = nomeFile3
+            tatuatori.save()
+            .then(tatuatori=>{
+                //res.redirect('/getTattoers');  
+            });           
+        });
+    }
+
+    //AGGIORNO PORTFOLIO4 SE E CAMBIATA
+    if(nomeFile4 == "" || nomeFile4 == null || nomeFile4 == undefined){
+
+    }else{
+        tatuatori.findOne({
+            _id: req.params.id
+        }).then(tatuatori => {
+            tatuatori.portfolio4 = nomeFile4
+            tatuatori.save()
+            .then(tatuatori=>{
+                //res.redirect('/getTattoers');  
+            });           
+        });
+    }
+
+    //AGGIORNO DATI
+    tatuatori.findOne({
+        _id: req.params.id
+    }).then(tatuatori => {
+        tatuatori.name= req.body.name, 
+        tatuatori.surname= req.body.surname, 
+        tatuatori.biography= req.body.bio, 
+        tatuatori.city= req.body.city, 
+        tatuatori.provincia= req.body.provincia,
+        tatuatori.address= req.body.street,
+        tatuatori.cap= req.body.cap, 
+        tatuatori.telephone= req.body.tele,
+        tatuatori.working_email= req.body.email,
+        tatuatori.private_email= req.body.private,
+        //tatuatori.cover= nomeFileCover
+        //tatuatori.image= nomeFileImage,
+        //tatuatori.portfolio= nomeFile,
+        //tatuatori.portfolio1= nomeFile1,
+        //tatuatori.portfolio2= nomeFile2,
+        //tatuatori.portfolio3= nomeFile3,
+        //tatuatori.portfolio4= nomeFile4,
+        tatuatori.tattoo_studio= req.body.tattoo_studio,
+        tatuatori.ranking_display= req.body.rank, 
+        tatuatori.title= req.body.title,
+        tatuatori.meta_title= req.body.meta_title,
+        tatuatori.hide= req.body.hide,
+        tatuatori.url= slugify(req.body.name + ' ' + req.body.surname, { replacement: '-', separator: '-', remove: null, lower: true})
+        
+        tatuatori.save()
+        .then(tatuatori=>{
+            res.redirect('/getTattoers');  
+        });           
+    });
+
 });
 
 //CANCELLAZIONE TATUATORE

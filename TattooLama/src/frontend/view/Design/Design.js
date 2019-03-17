@@ -27,8 +27,36 @@ class Design extends Component {
         }
     }
 
-    componentDidMount() {
+    componentWillMount() {
+        console.log(2);
         const { match: { params } } = this.props;
+        
+        const request = async () => {
+            const response = await fetch('https://tattoolama.herokuapp.com/api/get/design/' + params.url);
+            const json = await response.json();          
+            await this.setState({
+                Design: json
+            })
+
+            const response2 = await fetch('https://tattoolama.herokuapp.com/api/get/tatuatore/design/' + this.state.Design._id);
+            const json2 = await response2.json();          
+            await this.setState({
+                Tattooer: json2
+            })
+
+            const response3 = await fetch('https://tattoolama.herokuapp.com/api/get/design/tatuatore/'+ this.state.Tattooer._id);
+            const json3 = await response3.json();          
+            await this.setState({
+                Design_Personal: json3
+            })
+
+        }
+        request();    
+    }
+
+    componentWillReceiveProps(nextProps) {
+        console.log(1);
+        const { match: { params } } = nextProps;
         
         const request = async () => {
             const response = await fetch('https://tattoolama.herokuapp.com/api/get/design/' + params.url);
