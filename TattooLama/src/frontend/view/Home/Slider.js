@@ -62,7 +62,7 @@ class Slider extends Component {
             };
 
         return(
-            <SliderSlick {...settings}>
+            <SliderSlick {...settings} className="sliderInHome">
             {this.state.Tattooer.map((item, i) => {
                 return <li key={i}><Link to={'/tatuatore/' + item.url}><img src={'images/tatuatori/img/' + item.image} className="img-fluid Rectangle" alt=""/><h1 className="text-slider ml-4">{item.name}<br></br><span className="ml-5">{item.surname}</span></h1></Link></li>     
             })}      

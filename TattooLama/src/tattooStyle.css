@@ -229,6 +229,20 @@ body{
   object-fit: cover;
 }
 
+@media screen and (max-width: 767px){
+  .Rectangle {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .sliderInHome{
+    width: calc(100% + 15px);
+    margin-left: -0px;
+    margin-right: -15px;
+  }
+}
+
 .text-slider {
   text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   font-size: 21.6px;
@@ -439,11 +453,9 @@ body{
 }
 
 /* SLICK TATTOOER */
-
 .tattoo_design .slick-slider {
   width: 100%;
 }
-
 
 @media screen and (max-width: 768px){
   .tattoo_design .slick-slider .slick-dots {

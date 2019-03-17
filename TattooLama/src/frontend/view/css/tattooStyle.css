@@ -203,7 +203,7 @@ body{
   width: 218.9px;
   height: 161.3px;
   opacity: 0.24;
-  border-radius: 8.6px;
+  border-radius: 4px;
   background-color: #383838;
   width: 100%;
   display: flex;
@@ -310,6 +310,9 @@ body{
 }
 
 /* SLICK HOME */
+.slick-slider .slick-slide{
+  padding: 5px;
+}
 
 @media screen and (max-width: 480px){
   .slickHome{
