@@ -1,6 +1,11 @@
 import React from "react"
 import { compose, withProps } from "recompose"
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+// import { library } from '@fortawesome/fontawesome-svg-core'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faMapMarker } from '@fortawesome/free-solid-svg-icons'
+
+// library.add(faMapMarker)
 
 const MyStyle = [
     {
@@ -183,6 +188,8 @@ const MyStyle = [
     }
   ];
 
+
+const icon = {url:'../../../images/map-marker-solid.svg', scaledSize: { width: 32, height: 32 }}
 const MyMapComponent = compose(
   withProps({
     googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyC7fQsShIIuUqsEE3c23mfPJ4iO03XaWhk&v=3.exp&libraries=geometry,drawing,places",
@@ -198,7 +205,7 @@ const MyMapComponent = compose(
     defaultZoom={13}
     defaultCenter={{ lat: 45.4642700, lng: 9.1895100 }}
   >
-    <Marker position={{ lat: 45.4642700, lng: 9.1895100 }} onClick={props.onMarkerClick} />
+    <Marker position={{ lat: 45.4642700, lng: 9.1895100 }} onClick={props.onMarkerClick} icon={icon} />
   </GoogleMap>
 )
 

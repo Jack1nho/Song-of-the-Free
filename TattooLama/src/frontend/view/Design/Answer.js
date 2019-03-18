@@ -15,7 +15,7 @@ class Answer extends Component {
                             <div className="card">
                               <div className="card-header" id="headingOne">
                                 <h5 className="mb-0">
-                                  <button className="btn btn-link collapsed text-2 p-0" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                  <button className="answer btn btn-link collapsed text-2 p-0 pr-4" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                     Il prezzo del design cosa include?
                                   </button>
                                   <FontAwesomeIcon icon="angle-right" className="fas fa-angle-right float-right text-2 mt-1 collapsed arrow-accordion" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" />  
@@ -33,7 +33,7 @@ class Answer extends Component {
                             <div className="card mt-2">
                               <div className="card-header" id="headingTwo">
                                 <h5 className="mb-0">
-                                  <button className="btn btn-link collapsed text-2 p-0" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                  <button className="answer btn btn-link collapsed text-2 p-0 pr-4" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     Posso farmi fare il disegno da un altro tatuatore?
                                   </button>
                                   <FontAwesomeIcon icon="angle-right" className="fas fa-angle-right float-right text-2 mt-1 collapsed arrow-accordion" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseOne" />   
@@ -51,7 +51,7 @@ class Answer extends Component {
                             <div className="card mt-2 mb-5">
                               <div className="card-header" id="headingThree">
                                 <h5 className="mb-0">
-                                  <button className="btn btn-link collapsed text-2 p-0" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  <button className="answer btn btn-link collapsed text-2 p-0 pr-4" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     Come posso sapere se il tatuatore sia abbastanza bravo da poter eseguire il disegno?
                                   </button>
                                   <FontAwesomeIcon icon="angle-right" className="fas fa-angle-right float-right text-2 mt-1 collapsed arrow-accordion" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseOne" />   

@@ -61,7 +61,7 @@ class TattoerDesign extends Component {
             <div className="tattoo_design" id="tattoo_design">
                             <h2 className="text-3 my-4">Tattoo design di {this.props.tattooer.name} {this.props.tattooer.surname}</h2>
                             
-                                <div className="row row-grid">
+                                <div className="row row-grid tattooer">
                                 <SliderSlick ref={c => (this.slider = c)} {...settings}>
                                     {this.props.design.map((item, i) => {
                                         return <div className="col-6 col-sm-6 col-md-3 col-lg-3" key={i}>

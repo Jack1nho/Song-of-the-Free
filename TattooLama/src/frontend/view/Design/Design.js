@@ -90,9 +90,14 @@ class Design extends Component {
                         <h1 className="Text-2-Jumbotron-1" style={{ marginLeft: '20%' }}><span className="Red">TATTOO DESIGN</span></h1>
                     </div>
                 </div>
+                <div className="row div-prezzo-res">
+                    <div className="col prezzo text-center"><h2 className="text-3 mt-2 ml-md-auto"><span className="grey">Prezzo: </span>€ {this.state.Design.price}</h2></div>
+                    <div className="col text-center"><button type="button" className="btn bottone-richiesta mt-0" id="bottone-richiesta" data-toggle="modal" data-target="#myModalEmail">Invia richiesta</button></div>
+                
+                </div>
                 
                 <Link to='/tatuaggi' className="text-back" href="list_design.html"><span className="Red"><FontAwesomeIcon icon="angle-left"/></span>&nbsp;&nbsp;Guarda tutti i tatuaggi</Link>
-                <div className="container-wrapper">
+                <div className="container">
                     <DesignInfo design={this.state.Design} tattooer={this.state.Tattooer}></DesignInfo>
                     <hr className="my-5 d-none d-md-block"></hr>
                     <DesignTattooer design={this.state.Design} tattooer={this.state.Tattooer}></DesignTattooer>

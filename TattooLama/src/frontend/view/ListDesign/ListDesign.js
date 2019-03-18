@@ -10,7 +10,7 @@ const ListDesign = () => (
             </div>    
         </div> 
 
-        <div className="container-wrapper container">
+        <div className="container">
             <h2 className="text-1">Tutti i tattoo design</h2>
             <GrigliaDesign></GrigliaDesign>
         </div>

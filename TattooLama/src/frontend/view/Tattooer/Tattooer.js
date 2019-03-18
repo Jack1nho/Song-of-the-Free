@@ -59,7 +59,7 @@ class Tattooer extends Component {
 
             <Link className="text-back" to='/tatuatori'><span className="Red"><FontAwesomeIcon icon="angle-left"/></span>&nbsp;&nbsp;Guarda tutti i tatuatori</Link>
 
-                <div className="container-wrapper">
+                <div className="container">
                     <div className="row main-row">
                         <div className="sidebar d-none d-md-block col-md-3 p-0">
                             <div className="sticky-menu" id="sticky-menu">

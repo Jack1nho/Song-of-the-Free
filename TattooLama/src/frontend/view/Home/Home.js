@@ -16,19 +16,19 @@ class Home extends Component {
               </div>    
             </div>
 
-              <div className="container-wrapper">
+              <div className="container">
                 <h2 className="text-1 mt-md-0 mt-4">Migliori tatuatori di Milano</h2>
                   <Slider></Slider>
                 <div className="text-center text-md-left mt-3"><Link className="text-2" to='/tatuatori'>Vedi tutti i migliori tatuatori ></Link></div>
               </div>
 
-              <div className="container-wrapper-2">
+              <div className="container container-wrapper">
                 <div className="jumbotron Jumbotron-2">
                     <h2 className="Text-Jumbotron-2">Una selezione di artisti verificati per<br></br><span className="Red-2">QUALITÀ E ORIGINALITÀ.</span></h2>
                 </div>
               </div>
 
-              <div className="container-wrapper">
+              <div className="container">
                 <h2 className="text-3 mb-3">Tutti i tattoo design</h2>
                 <GrigliaHome></GrigliaHome>
                 <div className="text-center text-md-left mt-3"><Link className="text-2" to='/tatuaggi'>Vedi tutti i tatuaggi ></Link></div>

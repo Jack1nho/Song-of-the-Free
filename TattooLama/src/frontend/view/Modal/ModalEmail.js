@@ -52,14 +52,14 @@ class ModalEmail extends Component {
                                         <label className="custom-control-label" htmlFor="customCheck2">Accetto termini e condizioni del servizio</label>
                                     </div>
 
-                                    <div className="custom-control custom-checkbox">
+                                    <div className="custom-control custom-checkbox mb-md-0 mb-5">
                                         <input type="checkbox" className="custom-control-input" id="customCheck3"/>
                                         <label className="custom-control-label" htmlFor="customCheck3">Voglio iscrivermi alla newsletter di Tattoolama! (Opzionale)</label>
                                     </div>
                                         <button type="submit" className="btn bottone-whatsapp mt-4 d-none d-md-block">Richiedi informazioni</button>
                                 </form>
                         </div>
-                        <div className="row div-prezzo d-md-none">
+                        <div className="row div-prezzo-modal d-md-none">
                             <div className="col-6 m-0"><h2 className="text-3 prezzo"><span className="grey">Prezzo: </span>€ {this.props.design.price}</h2></div>
                             <div className="col-6"><button type="button" className="btn bottone-richiesta" id="bottone-richiesta">Invia richiesta</button></div>
                         </div>

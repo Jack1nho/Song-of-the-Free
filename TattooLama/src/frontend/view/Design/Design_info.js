@@ -17,17 +17,24 @@ class DesignInfo extends Component {
                             <h2 className="text-3 mt-md-auto mt-5">{this.props.design.name_design}</h2>
                                 <div className="row">
                                     <div className="col-6 col-md-12">
-                                    <h3 className="description float-md-none float-left"><strong>Tattoo Artist:<br></br></strong> {this.props.tattooer.name} {this.props.tattooer.surname}</h3>
+                                        <h3 className="description float-md-none float-left"><strong>Tattoo Artist:<br></br></strong> {this.props.tattooer.name} {this.props.tattooer.surname}</h3>
+                                    </div>
+                                    <div className="col-6 col-md-12">
+                                        <h3 className="description"><strong>Città dello studio:<br></br></strong> {this.props.tattooer.city}</h3>
+                                        
+                                    </div>
                                 </div>
-                                <div className="col-6 col-md-12">
-                                    <h3 className="description"><strong>Città dello studio:<br></br></strong> {this.props.tattooer.city}</h3>
-                                    <h3 className="description d-none d-md-block"><strong>Dimensione:</strong> {this.props.design.altezza}x{this.props.design.larghezza} cm</h3>
+                                <div className="row">
+                                    <div className="col-6 col-md-12">
+                                        <h3 className="description mt-md-0 mt-4"><strong>Dimensione:<br></br></strong> {this.props.design.altezza}x{this.props.design.larghezza} cm</h3>
+                                    </div>
+                                    <div className="col-6 col-md-12">
+                                        <h3 className="description mt-4"><strong>Stili:<br></br></strong> {(style || []).split(", ").map(function(place, i) {
+                                            return <h3 key={i} className="description mt-0 mt-md-3"><span className="Red">#</span>{place}&nbsp;</h3>
+                                        })}</h3>
+                                        
+                                    </div>
                                 </div>
-                            </div>
-                            <h3 className="description mt-4"><strong>Stili:</strong></h3>
-                            {(style || []).split(", ").map(function(place, i) {
-                                return <h3 key={i} className="description float-md-none float-left"><span className="Red">#</span>{place}&nbsp;</h3>
-                            })}
                             
                             <div className="row div-prezzo">
                                 <div className="col-6 col-md-12 prezzo"><h2 className="text-3 mt-2 ml-md-auto"><span className="grey">Prezzo: </span>€ {this.props.design.price}</h2></div>

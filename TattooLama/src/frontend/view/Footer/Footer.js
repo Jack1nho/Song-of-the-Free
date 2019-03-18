@@ -13,7 +13,7 @@ class Footer extends Component {
                         <div className="row">
                             <div className="col">
                                 <img src={Logo} alt=""/>
-                                <h4 className="text-footer-1">TattooLama è il primo protale Italiano che ti permette di trovare
+                                <h4 className="text-footer-1">TattooLama è il primo portale Italiano che ti permette di trovare
                                 facilmente il tatuaggio, tatuatore o studio che fa al tuo caso. Con
                                 TattooLama è facile trovare i migliori tatuatori della tua città per
                                 chiedere il preventivo per il tuo tatuaggio.

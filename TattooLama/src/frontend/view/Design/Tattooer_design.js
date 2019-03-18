@@ -8,7 +8,7 @@ class TattooerDesign extends Component {
 
         var settings = {
             dots: true,
-            infinite: true,
+            infinite: false,
             lazyLoad: 'ondemand',
             slidesToShow: 5,
             slidesToScroll: 1,
@@ -16,18 +16,26 @@ class TattooerDesign extends Component {
             touchMove: true,
             responsive: [
                 {
+                    breakpoint: 992,
+                    settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 2,
+                    dots: true
+                    }
+                },
+                {
                     breakpoint: 768,
                     settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
+                    slidesToShow: 2.2,
+                    slidesToScroll: 2,
                     dots: true
                     }
                 },
                 {
                     breakpoint: 480,
                     settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
+                    slidesToShow: 2.2,
+                    slidesToScroll: 2,
                     dots: true
                     }
                 }
