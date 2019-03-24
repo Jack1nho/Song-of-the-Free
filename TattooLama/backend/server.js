@@ -506,14 +506,32 @@ app.get('/modificaDesign/:id', (req,res) => {
 //AGGIORNA TATTOO DESIGN
 app.post('/getTattooDesign/:id', (req,res) => {
 
-    let designUpload = req.files.image;
-    let nomeFileDesign = req.files.image.name;
-    designUpload.mv('public/images/design/img/' + nomeFileDesign), function (err) {
-        if (err)
-            return res.status(500).send(err);
+    if(req.files.image !== undefined){
 
-        res.send('File uploaded!')
-    },
+        let designUpload = req.files.image;
+        let nomeFileDesign = req.files.image.name;
+        designUpload.mv('public/images/design/img/' + nomeFileDesign), function (err) {
+            if (err)
+                return res.status(500).send(err);
+
+            res.send('File uploaded!')
+        };
+    
+    }
+    
+    //AGGIORNO COVER SE E CAMBIATA
+    if (req.files.image !== undefined) {
+
+        tattooimages.findOne({
+            _id: req.params.id
+        }).then(tattooimages => {
+            tattooimages.image = nomeFileDesign
+            tattooimages.save()
+                .then(tattooimages => {
+                    //res.redirect('/getTattooDesign');  
+                });
+        });
+    }
 
     tattooimages.findOne({
         _id: req.params.id
@@ -524,7 +542,7 @@ app.post('/getTattooDesign/:id', (req,res) => {
         tattooimages.style= req.body.style,
         tattooimages.altezza= req.body.altezza,
         tattooimages.larghezza= req.body.larghezza,
-        tattooimages.image= nomeFileDesign,
+        // tattooimages.image= nomeFileDesign,
         tattooimages.id_tattoer= req.body.selectpicker,
         tattooimages.hide= req.body.hide,
         tattooimages.data= Date(""),
@@ -673,6 +691,3 @@ app.get('/api/get/tatuatore/design/:id', (req, res) => {
             }
         })
 });
-
-
-

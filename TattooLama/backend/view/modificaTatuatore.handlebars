@@ -8,8 +8,9 @@
         Biografia:<br>
         <textarea rows="5" cols="50" name="bio" class="form-control">{{tatuatori.biography}}</textarea> <br>
         Città:<br>
-        <select type="text" name="city" class="form-control" value="{{tatuatori.city}}">
-            <option selected>Scegli una città</option> 
+        <select type="text" name="city" class="form-control" >
+            <option selected>{{tatuatori.city}}</option> 
+            <option>Scegli una città</option>
             <option>Milano</option>
             <option>Torino</option>
             <option>Roma</option>
@@ -33,11 +34,11 @@
         Email privata:<br>
         <input type="email" name="private" class="form-control" aria-describedby="emailHelp" class="form-control" value="{{tatuatori.private_email}}"><br>
         Cover:<br>
-        <input type="file" id="cvr" name="cover" class="form-control" value="{{tatuatori.cover}}"><br>
+        <input type="file" name="cover" class="form-control" value="{{tatuatori.cover}}"><br>
         Image:<br>
-        <input type="file" id="img" name="image" class="form-control" value="{{tatuatori.image}}"><br>
+        <input type="file" name="image" class="form-control" value="{{tatuatori.image}}"><br>
         Portfolio:<br>
-        <input type="file" id="pfo" name="portfolio" value="" class="form-control" value="{{tatuatori.portfolio}}"><br>
+        <input type="file" name="portfolio" value="" class="form-control" value="{{tatuatori.portfolio}}"><br>
         <input type="file" name="portfolio1" value="{{tatuatori.portfolio1}}" class="form-control" ><br>
         <input type="file" name="portfolio2" value="{{tatuatori.portfolio2}}" class="form-control" ><br>
         <input type="file" name="portfolio3" value="{{tatuatori.portfolio3}}" class="form-control" ><br>
@@ -61,9 +62,3 @@
         <input type="submit" class="btn btn-primary" value="Submit">
     </form>
 </div>
-
-<script>
-    document.getElementById("cvr").required = false;
-    document.getElementById("img").required = false;
-    document.getElementById("pfo").required = false;
-</script>

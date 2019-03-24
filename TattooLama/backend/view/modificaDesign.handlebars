@@ -2,8 +2,9 @@
     <form action="/getTattooDesign/{{tattooimages.id}}?_method=POST" encType="multipart/form-data" method="POST" class="list-inline mx-auto justify-content-center">
         <input type="hidden" name="_method" value="POST">
         
-        <select class="selectpicker form-control" value="{{tattooimages.id_tattoer}}" data-style="btn-info" name="selectpicker">
-            <option selected> Scegli un tatuatore</option> 
+        <select class="selectpicker form-control" value="" data-style="btn-info" name="selectpicker">
+            <option value="{{tattooimages.id_tattoer}}" selected>{{tatuatoris.name}} {{tatuatoris.surname}}</option>
+            <option> Scegli un tatuatore</option> 
             {{#each tatuatori}}
             <option name="table1" value="{{id}}">{{name}} {{surname}} - HIDE: {{hide}}</option>        
             {{/each}}
