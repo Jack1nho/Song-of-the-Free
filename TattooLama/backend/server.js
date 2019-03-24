@@ -197,31 +197,45 @@ app.get('/tattoer/profile/:id', (req,res) => {
 
 //AGGIORNA TATUATORE
 app.post('/getTattoers/:id', (req,res) => {
+    
+    if(req.files.image !== undefined){
 
-    let imageUpload = req.files.image;
-    let nomeFileImage = req.files.image.name;
-    imageUpload.mv('public/images/tatuatori/img/' + nomeFileImage), function (err) {
-        if (err)
-            return res.status(500).send(err);
+        let imageUpload = req.files.image;
+        let nomeFileImage = req.files.image.name;
+        
+        imageUpload.mv('public/images/tatuatori/img/' + nomeFileImage), function (err) {
+            if (err)
+                return res.status(500).send(err);
 
-        res.send('File uploaded!')
-    };
-    let coverUpload = req.files.cover;
-    let nomeFileCover = req.files.cover.name;
-    coverUpload.mv('public/images/tatuatori/cover/' + nomeFileCover), function (err) {
-        if (err)
-            return res.status(500).send(err);
+            res.send('File uploaded!')
+        };
+    }
 
-        res.send('File uploaded!')
-    };
-    let portfolioUpload = req.files.portfolio;
-    let nomeFile = req.files.portfolio.name;
-    portfolioUpload.mv('public/images/tatuatori/portfolio/' + nomeFile), function (err) {
-        if (err)
-            return res.status(500).send(err);
+    if(req.files.cover !== undefined){
 
-        res.send('File uploaded!')
-    };
+        let coverUpload = req.files.cover;
+        let nomeFileCover = req.files.cover.name;
+        coverUpload.mv('public/images/tatuatori/cover/' + nomeFileCover), function (err) {
+            if (err)
+                return res.status(500).send(err);
+
+            res.send('File uploaded!')
+        };
+    }
+
+    if(req.files.portfolio !== undefined){
+        let portfolioUpload = req.files.portfolio;
+        let nomeFile = req.files.portfolio.name;
+        portfolioUpload.mv('public/images/tatuatori/portfolio/' + nomeFile), function (err) {
+            if (err)
+                return res.status(500).send(err);
+
+            res.send('File uploaded!')
+        };
+    }
+
+    if(req.files.portfolio1 !== undefined){
+
     let portfolio1Upload = req.files.portfolio1;
     let nomeFile1 = req.files.portfolio1.name;
     portfolio1Upload.mv('public/images/tatuatori/portfolio/' + nomeFile1), function (err) {
@@ -230,6 +244,11 @@ app.post('/getTattoers/:id', (req,res) => {
 
         res.send('File uploaded!')
     };
+
+    }
+
+    if(req.files.portfolio2 !== undefined){
+
     let portfolio2Upload = req.files.portfolio2;
     let nomeFile2 = req.files.portfolio2.name;
     portfolio2Upload.mv('public/images/tatuatori/portfolio/' + nomeFile2), function (err) {
@@ -238,6 +257,11 @@ app.post('/getTattoers/:id', (req,res) => {
 
         res.send('File uploaded!')
     };
+
+    }
+
+    if(req.files.portfolio3 !== undefined){
+
     let portfolio3Upload = req.files.portfolio3;
     let nomeFile3 = req.files.portfolio3.name;
     portfolio3Upload.mv('public/images/tatuatori/portfolio/' + nomeFile3), function (err) {
@@ -246,6 +270,11 @@ app.post('/getTattoers/:id', (req,res) => {
 
         res.send('File uploaded!')
     };
+
+    }
+
+    if(req.files.portfolio4 !== undefined){
+
     let portfolio4Upload = req.files.portfolio4;
     let nomeFile4 = req.files.portfolio4.name;
     portfolio4Upload.mv('public/images/tatuatori/portfolio/' + nomeFile4), function (err) {
@@ -255,10 +284,11 @@ app.post('/getTattoers/:id', (req,res) => {
         res.send('File uploaded!')
     }
 
-    //AGGIORNO COVER SE E CAMBIATA
-    if(nomeFileImage == "" || nomeFileImage == null || nomeFileImage == undefined){
+    }
 
-    }else{
+    //AGGIORNO COVER SE E CAMBIATA
+    if(req.files.image !== undefined){
+
         tatuatori.findOne({
             _id: req.params.id
         }).then(tatuatori => {
@@ -271,9 +301,8 @@ app.post('/getTattoers/:id', (req,res) => {
     }
 
     //AGGIORNO IMMAGINE SE E CAMBIATA
-    if(nomeFileCover == "" || nomeFileCover == null || nomeFileCover == undefined){
+    if(req.files.cover !== undefined){
 
-    }else{
         tatuatori.findOne({
             _id: req.params.id
         }).then(tatuatori => {
@@ -286,9 +315,8 @@ app.post('/getTattoers/:id', (req,res) => {
     }
 
     //AGGIORNO PORTFOLIO1 SE E CAMBIATA
-    if(nomeFile == "" || nomeFile == null || nomeFile == undefined){
+    if(req.files.portfolio !== undefined){
 
-    }else{
         tatuatori.findOne({
             _id: req.params.id
         }).then(tatuatori => {
@@ -301,9 +329,8 @@ app.post('/getTattoers/:id', (req,res) => {
     }
 
     //AGGIORNO PORTFOLIO2 SE E CAMBIATA
-    if(nomeFile1 == "" || nomeFile1 == null || nomeFile1 == undefined){
+    if(req.files.portfolio1 !== undefined){
 
-    }else{
         tatuatori.findOne({
             _id: req.params.id
         }).then(tatuatori => {
@@ -316,9 +343,8 @@ app.post('/getTattoers/:id', (req,res) => {
     }
 
     //AGGIORNO PORTFOLIO3 SE E CAMBIATA
-    if(nomeFile2 == "" || nomeFile2 == null || nomeFile2 == undefined){
+    if(req.files.portfolio2 !== undefined){
 
-    }else{
         tatuatori.findOne({
             _id: req.params.id
         }).then(tatuatori => {
@@ -331,9 +357,8 @@ app.post('/getTattoers/:id', (req,res) => {
     }
 
     //AGGIORNO PORTFOLIO3 SE E CAMBIATA
-    if(nomeFile3 == "" || nomeFile3 == null || nomeFile3 == undefined){
+    if(req.files.portfolio3 !== undefined){
 
-    }else{
         tatuatori.findOne({
             _id: req.params.id
         }).then(tatuatori => {
@@ -346,9 +371,8 @@ app.post('/getTattoers/:id', (req,res) => {
     }
 
     //AGGIORNO PORTFOLIO4 SE E CAMBIATA
-    if(nomeFile4 == "" || nomeFile4 == null || nomeFile4 == undefined){
+    if(req.files.portfolio4 !== undefined){
 
-    }else{
         tatuatori.findOne({
             _id: req.params.id
         }).then(tatuatori => {
