@@ -3,12 +3,17 @@ import Slider from '../Home/Slider';
 import GrigliaHome from '../Home/GrigliaHome';
 import img_tatuatore from '../../../images/tatuatore-tattoolama.jpg';
 import { Link } from 'react-router-dom';
+import MetaTags from 'react-meta-tags';
 
 class Home extends Component {
     
   render(){
       return(
       <div>
+        <MetaTags>
+          <title>Tattoolama: Prenota online i migliori tatuaggi della tua città</title>
+          <meta name="description" content="Trova i tatuaggi esclusivi dei migliori Tatuatori della tua città. Cerca il tattoo design che ti piace di più e prenota il tuo appuntamento!" />
+        </MetaTags>
             <div className="jumbotron jumbotron-fluid Jumbotron-1">
               <div className="container">
                   <h1 className="Text-1-Jumbotron-1">TROVA IL TUO TATUAGGIO PERFETTO</h1>

@@ -24,30 +24,64 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//SENDINBLUE
-var SibApiV3Sdk = require('sib-api-v3-sdk');
-var defaultClient = SibApiV3Sdk.ApiClient.instance;
+// EMAIL
+app.get('/api/email', (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    var id_t = req.params.id;
+    //SENDINBLUE
+    var SibApiV3Sdk = require('sib-api-v3-sdk');
+    var defaultClient = SibApiV3Sdk.ApiClient.instance;
 
-// Configure API key authorization: api-key
-var apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = "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"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//apiKey.apiKeyPrefix['api-key'] = "Token"
+    // Configure API key authorization: api-key
+    var apiKey = defaultClient.authentications['api-key'];
+    apiKey.apiKey = "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"
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //apiKey.apiKeyPrefix['api-key'] = "Token"
 
-// Configure API key authorization: partner-key
-var partnerKey = defaultClient.authentications['partner-key'];
-partnerKey.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//partnerKey.apiKeyPrefix['partner-key'] = "Token"
+    // Configure API key authorization: partner-key
+    var partnerKey = defaultClient.authentications['partner-key'];
+    partnerKey.apiKey = "YOUR API KEY"
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //partnerKey.apiKeyPrefix['partner-key'] = "Token"
 
-var apiInstance = new SibApiV3Sdk.SMTPApi();
+    var apiInstance = new SibApiV3Sdk.SMTPApi();
 
-var sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail(); // SendSmtpEmail | Values to send a transactional email
+    var sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail(); // SendSmtpEmail | Values to send a transactional email
+    Object.assign(sendSmtpEmail, {
+    to: [{ email: tatuatori.working_email, name: "toName" }],
+    sender: { email: req.body.inputEmail, name: req.body.inputNome },
+    htmlContent: req.body.inputData + req.body.inputOrario + req.body.inputZone + req.body.areaInfo,
+    subject: "My Subject",
+    headers: { "x-mailin-custom": "myV3Custom" },
+    tags: ["myTag1", "myTag2"]
+    //   attachment: [
+    //     { url: "" },
+    //     { url: "" }
+    //   ]
+    });
 
-apiInstance.sendTransacEmail(sendSmtpEmail).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
+    apiInstance.sendTransacEmail(sendSmtpEmail).then(function(data) {
+    console.log('API called successfully. Returned data: ' + data);
+    }, function(error) {
+    console.error(error);
+    });
+
+    // tattooimages.findOne({ _id: "" + id_t + "" },
+    //     function (err, tattoodesign) {
+    //         if (err) { console.log('error..'); } else {
+    //             idTatuatore = tattoodesign.id_tattoer;
+    //             tatuatori.findOne({_id: "" + idTatuatore + ""},
+    //                 function (err, tattoer) {
+    //                     if (err) { console.log('error..'); } else {
+
+
+
+    //                         // res.json(tattoer);
+    //                     }
+    //                 })
+    //         }
+    //     })
 });
 
 //CONNECTION TO MONGODB

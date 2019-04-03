@@ -228,6 +228,13 @@
   }
   
   /*------JUMBOTRON CONSULENZA------*/
+
+  @media screen and (max-width: 768px) {
+    .Jumbotron-artista { 
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
   
   .Jumbotron-artista {
     background-color: #d80e47 !important;

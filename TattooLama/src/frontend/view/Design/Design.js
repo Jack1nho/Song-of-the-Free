@@ -10,6 +10,7 @@ import TattooerDesign from '../Design/Tattooer_design';
 import LastDesign from '../Design/Last_design';
 import Answer from '../Design/Answer';
 import ModalEmail from '../Modal/ModalEmail';
+import MetaTags from 'react-meta-tags';
 //import ModalWhatsapp from '../Modal/ModalWhatsApp';
 //import ModalThanks from '../Modal/ModalThanks';
 
@@ -28,7 +29,6 @@ class Design extends Component {
     }
 
     componentWillMount() {
-        console.log(2);
         const { match: { params } } = this.props;
         
         const request = async () => {
@@ -84,6 +84,10 @@ class Design extends Component {
     render(){
         return(
             <div>
+                <MetaTags>
+                    <title>{this.state.Design.name_design} - tatuaggio {this.state.Design.style} di {this.state.Design.associated_artist} {this.state.Tattooer.city} </title>
+                    <meta name="description" content="" />
+                </MetaTags>
                 <div className="jumbotron jumbotron-fluid Jumbotron-design">
                     <div className="container">
                         <h1 className="Text-2-Jumbotron-1">SCEGLI IL TUO</h1>

@@ -48,7 +48,7 @@ class Header extends Component {
                             <Link className="nav-link" to='/blog'>Blog</Link>
                         </li>
                         <li className="nav-item p-1">
-                            <Link className="nav-link" to='/Contacts'>Contattaci <span role="img" aria-label="emoji">🦄</span></Link>
+                            <a className="nav-link" href = "mailto:gabriele@tattoolama.it?subject=Richiesta Informazioni">Contattaci <span role="img" aria-label="emoji">🦄</span></a>
                         </li>
                     </ul>
                     </div>
@@ -62,7 +62,7 @@ class Header extends Component {
                                 <Link to='/tatuatori' onClick={this.closeNav}>Tatuatori</Link>
                                 <Link to='/tatuaggi' onClick={this.closeNav}>Tattoo Design</Link>
                                 <Link to='/Blog' onClick={this.closeNav}>Blog</Link>
-                                <Link className="mt-5" to='/Contacts' onClick={this.closeNav}>Contattaci <span role="img" aria-label="emoji">🦄</span></Link>
+                                <a className="nav-link" href = "mailto:gabriele@tattoolama.it?subject=Richiesta Informazioni" onClick={this.closeNav}>Contattaci <span role="img" aria-label="emoji">🦄</span></a>
                             </div>
                     </div>
                     <div className="d-flex justify-content-between">

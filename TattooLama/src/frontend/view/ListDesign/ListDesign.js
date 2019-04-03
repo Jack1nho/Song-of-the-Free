@@ -1,8 +1,13 @@
 import React from 'react';
 import GrigliaDesign from '../ListDesign/GrigliaDesign';
+import MetaTags from 'react-meta-tags';
 
 const ListDesign = () => (
     <div>
+        <MetaTags>
+          <title>Tatuaggi a Milano: i migliori tatuaggi della città</title>
+          <meta name="description" content="Guarda i migliori tatuaggi di Milano. I più famosi tattoo design in città, scopri prezzi e dove farlo." />
+        </MetaTags>
         <div className="jumbotron jumbotron-fluid Jumbotron-list-design">
             <div className="container">
                 <h1 className="Text-1-Jumbotron-1">I MIGLIORI TATTOO DESIGN</h1>

@@ -10,7 +10,7 @@ class TattooStudio extends Component {
                     <h3 className="position">{this.props.tattooer.address} <br></br>{this.props.tattooer.cap}, {this.props.tattooer.city} {this.props.tattooer.provincia}</h3>
 
                     <div className="my-5" id="map">
-                        <MyMapComponent></MyMapComponent>
+                        <MyMapComponent tattooer={this.props.tattooer}></MyMapComponent>
                     </div>
             </div>
         );

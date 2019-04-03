@@ -38,7 +38,7 @@ class DesignInfo extends Component {
                             
                             <div className="row div-prezzo">
                                 <div className="col-6 col-md-12 prezzo"><h2 className="text-3 mt-2 ml-md-auto"><span className="grey">Prezzo: </span>€ {this.props.design.price}</h2></div>
-                                <div className="col-6 col-md-12"><button type="button" className="btn bottone-richiesta mt-0" id="bottone-richiesta" data-toggle="modal" data-target="#myModalEmail">Invia richiesta</button></div>
+                                <div className="col-6 col-md-12"><button type="button" className="btn bottone-richiesta mt-0" data-toggle="modal" data-target="#myModalEmail">Invia richiesta</button></div>
                             </div>
                         </div>
                     </div>

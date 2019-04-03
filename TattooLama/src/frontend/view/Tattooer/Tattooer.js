@@ -9,6 +9,7 @@ import Design from '../Tattooer/Tattooer_design';
 import Portfolio from '../Tattooer/Portfolio';
 import Studio from '../Tattooer/Tattoo_studio';
 import ModalEmail from '../Modal/ModalEmail';
+import MetaTags from 'react-meta-tags';
 //import ModalWhatsapp from '../Modal/ModalWhatsApp';
 //import ModalThanks from '../Modal/ModalThanks';
 
@@ -55,6 +56,10 @@ class Tattooer extends Component {
 
         return( 
         <div>
+            <MetaTags>
+                <title>{this.state.Tattooer.name} {this.state.Tattooer.surname} - {this.state.Tattooer.tattoo_studio} {this.state.Tattooer.address  } </title>
+                <meta name="description" content="" />
+            </MetaTags>
             <div className="jumbotron jumbotron-fluid Jumbotron-tattooer" style={styleTattooer}></div> 
 
             <Link className="text-back" to='/tatuatori'><span className="Red"><FontAwesomeIcon icon="angle-left"/></span>&nbsp;&nbsp;Guarda tutti i tatuatori</Link>

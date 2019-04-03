@@ -8,6 +8,7 @@
   .container-wrapper {
     padding-left: 0 !important;
     padding-right: 0 !important;
+    max-width: 100% !important;
   }
 
   .text-2 {
@@ -369,13 +370,13 @@ body{
 
 @media screen and (max-width: 480px){
   .slickHome{
-      width: 110%;
+    width: 110%;
   }
   .slickHome .slick-track{
-      margin-left: 30px;
+    margin-left: 30px;
   }
   .slickHome .slick-dots{
-      margin-left: -8px;
+    margin-left: -8px;
   }
 }
 
@@ -417,10 +418,44 @@ body{
 }
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 480px){
   .tattoo_design .slick-slider .slick-dots {
     margin-bottom: 30px;
     margin-top: 30px;
     bottom: -45px;
   }
+
+  .slick-slider.sliderInHome.slick-initialized .slick-list .slick-track .slick-slide.slick-active.slick-current {
+    width: 230px !important;
+  }
+
+  .slick-slider.sliderInHome.slick-initialized .slick-list .slick-track .slick-slide.slick-active {
+   
+  }
+
+  .slick-slider.sliderInHome.slick-initialized .slick-list .slick-track .slick-slide {
+    
+  }
+
+  .slick-slider.sliderInHome.slick-initialized{ 
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+  }   
+
+  .Rectangle {
+    width: 218.9px !important;
+  }
+
 }
+
+@media (min-width: 481px) and (max-width: 768px){
+  .slick-slider.sliderInHome.slick-initialized{ 
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -20px;
+    margin-left: -20px
+  } 
+  
+}
+
